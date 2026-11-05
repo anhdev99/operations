@@ -5,3 +5,4 @@ shared/morning-brief.html
 reports/
 __pycache__/
 .DS_Store
+.playwright-mcp/
