@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Rủi ro và quay lui · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Rủi ro và quay lui</h1>
+        <p class="dau-trang__phu">Điều có thể hỏng, và cách lùi về trạng thái an toàn.</p>
+      </header>
+
+<h2 id="rui-ro">Rủi ro</h2>
+<div class="pha" id="r1" data-muc="R1 · Lộ token hoặc dữ liệu công ty">
+  <div class="pha__dau"><span class="pha__ma">R1</span><h3 class="pha__ten">Lộ token hoặc dữ liệu công ty</h3><span class="muc muc--cao">Cao</span></div>
+  <dl><dt>Kịch bản</dt><dd>Token trong <code>sources.json</code> bị commit, hoặc snapshot công ty đẩy lên remote công khai.</dd>
+  <dt>Phòng</dt><dd>Token chỉ ở <code>~/.claude/*.env</code>; <code>.gitignore</code> chặn snapshot và env; repo private; không in token ra log.</dd>
+  <dt>Lùi</dt><dd>Thu hồi token ở hệ thống gốc rồi tạo lại.</dd></dl>
+</div>
+<div class="pha" id="r2" data-muc="R2 · Trộn dữ liệu giữa các công ty">
+  <div class="pha__dau"><span class="pha__ma">R2</span><h3 class="pha__ten">Trộn dữ liệu giữa các công ty</h3><span class="muc muc--cao">Cao</span></div>
+  <dl><dt>Kịch bản</dt><dd>Báo cáo hay tin nháp cho LucidTech nhắc nội dung của PHD, vì Claude đọc cả hai trong cùng phiên.</dd>
+  <dt>Phòng</dt><dd>Báo cáo và nháp tin chỉ sinh theo từng nơi; chỉ bản tóm tắt sáng gom nhiều nơi và nó chỉ chứa tiêu đề/hạn. Khi làm việc sâu ở một nơi, mở phiên riêng trong thư mục nơi đó.</dd></dl>
+</div>
+<div class="pha" id="r3" data-muc="R3 · Chính sách công ty không cho phép">
+  <div class="pha__dau"><span class="pha__ma">R3</span><h3 class="pha__ten">Chính sách công ty không cho phép</h3><span class="muc muc--vua">Vừa</span></div>
+  <dl><dt>Kịch bản</dt><dd>Một công ty cấm đưa dữ liệu công việc ra dịch vụ AI ngoài.</dd>
+  <dt>Phòng</dt><dd>Hỏi ở V1.1 trước khi kết nối nơi đó; nơi nào cấm thì chỉ dùng cho phần không nhạy cảm hoặc loại khỏi phạm vi.</dd></dl>
+</div>
+<div class="pha" id="r4" data-muc="R4 · Bản tóm tắt sai hoặc thiếu mà bạn tin">
+  <div class="pha__dau"><span class="pha__ma">R4</span><h3 class="pha__ten">Bản tóm tắt sai hoặc thiếu mà bạn tin</h3><span class="muc muc--vua">Vừa</span></div>
+  <dl><dt>Phòng</dt><dd>Mỗi mục có liên kết về nguồn; nguồn nào lỗi phải ghi rõ; tuần đầu đối chiếu tay với màn hình gốc (kiểm chứng V2.x).</dd></dl>
+</div>
+<div class="pha" id="r5" data-muc="R5 · Làm quá sớm, tốn công mà không dùng">
+  <div class="pha__dau"><span class="pha__ma">R5</span><h3 class="pha__ten">Làm quá sớm, tốn công mà không dùng</h3><span class="muc muc--vua">Vừa</span></div>
+  <dl><dt>Phòng</dt><dd>Mốc giá trị đặt ở V2.4. Dùng một tuần rồi mới sang GĐ3. Nguyên tắc <a href="strategy.html#n5">N5</a>.</dd></dl>
+</div>
+
+<div class="pha" id="r6" data-muc="R6 · AI-DLC quá nặng cho việc nhỏ">
+  <div class="pha__dau"><span class="pha__ma">R6</span><h3 class="pha__ten">AI-DLC quá nặng cho việc nhỏ</h3><span class="muc muc--vua">Vừa</span></div>
+  <dl><dt>Kịch bản</dt><dd>Sửa lỗi nửa giờ mà phải viết inception và bolt, bạn bỏ không dùng.</dd>
+  <dt>Phòng</dt><dd>Chỉ dùng AI-DLC đầy đủ cho intent lớn hơn khoảng nửa ngày. Việc nhỏ chỉ cần một bolt, bỏ qua inception hoặc ghi một dòng.</dd></dl>
+</div>
+
+<h2 id="quay-lui">Quay lui</h2>
+<ul>
+<li>Repo chỉ đọc từ ngoài nên không có gì ngoài repo cần hoàn tác. Xoá <code>snapshot/</code> là về sạch.</li>
+<li>Mỗi giai đoạn là một commit riêng theo tính năng; lùi bằng <code>git revert</code>.</li>
+<li>Tắt lịch chạy: gỡ cron/schedule của V4.2.</li>
+</ul>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

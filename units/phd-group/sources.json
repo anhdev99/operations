@@ -1,0 +1,12 @@
+{
+  "name": "phd-group",
+  "env_file": "~/.claude/phd-group.env",
+  "openproject": {
+    "projects": []
+  },
+  "github": {
+    "owners": [
+      "phd-platform"
+    ]
+  }
+}

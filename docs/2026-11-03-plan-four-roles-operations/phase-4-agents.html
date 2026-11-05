@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>GĐ4 · Giao việc cho agent · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>GĐ4 · Giao việc cho agent</h1>
+        <p class="dau-trang__phu">Mở rộng phạm vi tự chủ của agent theo từng bước, vẫn giữ nguyên tắc ghi có xác nhận.</p>
+      </header>
+
+<h2 id="viec">Việc trong giai đoạn</h2>
+<div class="hop-ghi"><b>Thứ tự.</b> Để cuối vì cần số liệu từ GĐ2–GĐ3 mới phân loại việc đúng, không đoán trước.</div>
+<div class="viec" id="v4-1" data-muc="V4.1 · Phân loại việc giao được cho agent">
+  <div class="viec__dau"><span class="viec__ma">V4.1</span><h3 class="viec__ten">Phân loại việc giao được cho agent</h3><span class="muc muc--chua">Chưa làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Biết việc nào để Claude làm trọn, việc nào chỉ để chuẩn bị, việc nào bạn phải tự làm.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>shared/work-classification.html</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>GĐ2</dd>
+  </dl>
+  <ol class="buoc"><li><b>Xem lại</b> 2–4 tuần việc thật, đánh dấu theo 3 loại: giao trọn (tóm tắt, soạn nháp báo cáo, dựng khung tài liệu, review code sơ bộ), chuẩn bị (soạn nháp tin, nháp ticket để bạn duyệt), tự làm (quyết định, họp, giảng).</li><li><b>Với việc “giao trọn”</b> viết quy trình hoặc skill; với “chuẩn bị” chỉ định rõ điểm bạn duyệt.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> bảng phân loại có ít nhất 10 loại việc thật, mỗi loại có mức tự chủ và người duyệt.</div>
+</div>
+<div class="viec" id="v4-2" data-muc="V4.2 · Chạy định kỳ và có kiểm soát">
+  <div class="viec__dau"><span class="viec__ma">V4.2</span><h3 class="viec__ten">Chạy định kỳ và có kiểm soát</h3><span class="muc muc--chua">Chưa làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Bản tóm tắt sáng và báo cáo tuần tự chạy theo lịch, bạn chỉ mở xem.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--sua">Sửa</span><code>cấu hình lịch chạy (skill schedule/cron)</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V2.4, V3.2</dd>
+  </dl>
+  <ol class="buoc"><li><b>Lập lịch</b> <code>morning-brief</code> sáng các ngày làm việc, <code>weekly-report</code> chiều thứ Sáu.</li><li><b>Ghi nhật ký</b> mỗi lần chạy: thành công/lỗi, nguồn nào lỗi. Nếu một nguồn lỗi, bản tóm tắt phải nói thẳng “thiếu dữ liệu Slack LucidTech”, không bỏ im.</li><li><b>Đội agent song song</b> (skill <code>herdr-team</code>) chỉ dùng cho việc lớn đã phân loại ở V4.1, không dùng cho điều hành hằng ngày.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> tắt máy một đêm, sáng ra bản tóm tắt vẫn có (hoặc nói rõ vì sao không).</div>
+</div>
+<div class="viec" id="v4-3" data-muc="V4.3 · Skill <code>ai-dlc</code>: quy trình Intent → Bolt">
+  <div class="viec__dau"><span class="viec__ma">V4.3</span><h3 class="viec__ten">Skill <code>ai-dlc</code>: quy trình Intent → Bolt</h3><span class="muc muc--chua">Chưa làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Một quy trình lặp lại cho việc phát triển phần mềm ở nơi 2, 3, 4: làm rõ, chia nhỏ, làm theo bolt, đưa ra, rồi rút bài học.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>.claude/skills/ai-dlc/SKILL.md</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>units/&lt;role&gt;/intents/&lt;id&gt;/intent.html</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>units/&lt;role&gt;/intents/&lt;id&gt;/inception.html</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>units/&lt;role&gt;/intents/&lt;id&gt;/bolts/&lt;n&gt;.html</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.3, V4.1</dd>
+  </dl>
+  <ol class="buoc"><li><b>Làm tay trước.</b> Chạy hai intent thật bằng các skill có sẵn (<code>superpowers:brainstorming</code>, <code>anhdev99:dev-spec-writing</code>, <code>superpowers:writing-plans</code>, <code>superpowers:test-driven-development</code>) theo đúng trình tự ở <a href='ai-dlc.html#quy-trinh'>trang AI-DLC</a>. Ghi lại chỗ bạn thấy vướng (theo <a href='strategy.html#n5'>N5</a>).</li><li><b>Viết skill</b> gom trình tự đã ổn định: nhận một intent, chạy Inception (hỏi làm rõ, đề xuất story và unit), dừng ở cổng G1; sau đó lặp bolt, dừng ở G2 mỗi bolt; trước khi ghi ra ngoài dừng ở G3.</li><li><b>Gắn với hệ thống ngoài</b> qua <code>anhdev99:openproject-ticket</code> và <code>anhdev99:dev-ticket-workflow</code>: tạo ticket chỉ sau khi bạn xác nhận (<a href='strategy.html#n2'>N2</a>).</li><li><b>Mỗi bolt</b> sinh một bản ghi giờ nháp cho <code>kimai-gap-check</code>.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> chạy skill trên một intent nhỏ thật: có <code>inception.html</code> đã được bạn duyệt, ít nhất một bolt xong có test chạy, và dừng đúng ba cổng.</div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

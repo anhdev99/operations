@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>GĐ3 · Thời gian và báo cáo · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>GĐ3 · Thời gian và báo cáo</h1>
+        <p class="dau-trang__phu">Gỡ phần ghi giờ và báo cáo tốn thời gian, đồng thời có số liệu để chia sức giữa 4 nơi.</p>
+      </header>
+
+<h2 id="viec">Việc trong giai đoạn</h2>
+<div class="viec" id="v3-1" data-muc="V3.1 · Rà giờ Kimai thiếu">
+  <div class="viec__dau"><span class="viec__ma">V3.1</span><h3 class="viec__ten">Rà giờ Kimai thiếu</h3><span class="muc muc--chua">Chưa làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Cuối ngày biết ngày nào chưa ghi giờ và gợi ý nháp từ hoạt động có thật.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>scripts/kimai_read.py</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>.claude/skills/kimai-gap-check/SKILL.md</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.3</dd>
+  </dl>
+  <ol class="buoc"><li><b>Đọc giờ đã ghi</b> trong tuần từ Kimai của từng nơi.</li><li><b>Gom hoạt động</b>: commit của bạn (<code>gh api</code>), work package bạn cập nhật, cuộc họp trong lịch.</li><li><b>Đề xuất bản nháp</b> mục giờ theo project; hiển thị để bạn sửa. <b>Không tự ghi</b> vào Kimai khi chưa bạn xác nhận (<a href='strategy.html#n2'>N2</a>).</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> tuần thử có đủ bản nháp cho ngày bạn chưa ghi; tổng giờ ghi so với giờ làm thực tế lệch không quá bạn chấp nhận được.</div>
+</div>
+<div class="viec" id="v3-2" data-muc="V3.2 · Báo cáo tuần theo từng nơi">
+  <div class="viec__dau"><span class="viec__ma">V3.2</span><h3 class="viec__ten">Báo cáo tuần theo từng nơi</h3><span class="muc muc--chua">Chưa làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Mỗi chiều thứ Sáu có ba báo cáo ngắn, mỗi nơi một bản, đủ để gửi sếp hoặc tự lưu.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>.claude/skills/weekly-report/SKILL.md</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>reports/&lt;YYYY-Www&gt;/&lt;role&gt;.html</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V2.1, V2.2, V3.1</dd>
+  </dl>
+  <ol class="buoc"><li><b>Nội dung mỗi bản:</b> việc đã xong, đang làm, bị chặn; giờ theo project; kế hoạch tuần tới. Lấy từ snapshot + Kimai.</li><li><b>Mỗi nơi một tệp</b>; không có bản gộp chứa nội dung của nhiều công ty (<a href='strategy.html#n4'>N4</a>).</li><li><b>Khung gửi đi:</b> nếu cần gửi Slack, Claude soạn nháp, bạn tự gửi.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> bản tuần đầu bạn đọc thấy đúng sự thật, không phải sửa số liệu; chỉ cần sửa văn phong.</div>
+</div>
+<div class="viec" id="v3-3" data-muc="V3.3 · Đặt khung phân bổ giờ theo số liệu">
+  <div class="viec__dau"><span class="viec__ma">V3.3</span><h3 class="viec__ten">Đặt khung phân bổ giờ theo số liệu</h3><span class="muc muc--chua">Chưa làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Sau 2–4 tuần dữ liệu, đặt tỉ lệ giờ mong muốn cho từng nơi và so với thực tế.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--sua">Sửa</span><code>shared/week-calendar.html</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V3.1</dd>
+  </dl>
+  <ol class="buoc"><li><b>Xem</b> tổng giờ theo nơi theo tuần.</li><li><b>Chốt</b> khối giờ mục tiêu và ghi vào lịch tuần.</li><li><b>Cho skill morning-brief</b> cảnh báo khi tuần đang lệch khung.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> báo cáo tháng hiển thị giờ thật so với khung và chênh lệch.</div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

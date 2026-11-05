@@ -1,0 +1,7 @@
+# Secrets and local data: never commit
+*.env
+units/*/snapshot/
+shared/morning-brief.html
+reports/
+__pycache__/
+.DS_Store

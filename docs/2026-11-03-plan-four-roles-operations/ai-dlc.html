@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Áp dụng AI-DLC · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Áp dụng AI-DLC</h1>
+        <p class="dau-trang__phu">Cách vòng đời phát triển phần mềm do AI dẫn dắt (AI-DLC) khớp vào repo operations và 4 hệ thống, cho các nơi 2, 3, 4.</p>
+      </header>
+
+<h2 id="la-gi">AI-DLC trong plan này</h2>
+<div class="hop-ghi"><b>Mức tin cậy.</b> Tôi dựa trên cách hiểu AI-DLC (AI-Driven Development Life Cycle, AWS): AI là cộng tác viên chính, tự đề xuất kế hoạch và đặt câu hỏi làm rõ, con người xác nhận ở các cổng; ba pha Inception, Construction, Operations; đơn vị làm việc ngắn gọi là bolt (tính bằng giờ đến ngày) thay cho sprint. Tôi chưa đối chiếu tài liệu gốc, thuật ngữ cần bạn xác nhận ở <a href="open-questions.html#q8">Q8</a>.</div>
+<p>Phạm vi: chỉ phần <b>phát triển phần mềm</b> ở tổ chuyển đổi số, PHD Group, LucidTech. Giảng dạy không dùng. Việc nhỏ hơn khoảng nửa ngày không cần inception (<a href="risks.html#r6">R6</a>).</p>
+
+<h2 id="anh-xa">Ánh xạ khái niệm</h2>
+<div class="bang-boc"><table>
+<thead><tr><th>AI-DLC</th><th>Trong plan này</th><th>Lưu ở đâu</th></tr></thead>
+<tbody>
+<tr><td><b>Intent</b></td><td>Mục tiêu cần đạt ở một nơi: một tính năng, một epic, một lỗi lớn</td><td>Nguồn: OpenProject (feature/epic). Bản làm việc: <code>units/&lt;role&gt;/intents/&lt;id&gt;/intent.html</code></td></tr>
+<tr><td><b>Inception</b> (làm rõ theo nhóm)</td><td>Claude đặt câu hỏi làm rõ, đề xuất user story, chia thành unit và tiêu chí nghiệm thu; bạn (và PO/đồng đội nếu có) xác nhận</td><td><code>inception.html</code>; dùng <code>superpowers:brainstorming</code>, <code>anhdev99:dev-spec-writing</code></td></tr>
+<tr><td><b>Unit</b></td><td>Phần giao độc lập được, có tiêu chí nghiệm thu</td><td>Work package OpenProject (tạo sau khi bạn xác nhận, qua <code>anhdev99:openproject-ticket</code>)</td></tr>
+<tr><td><b>Construction</b></td><td>Claude đề xuất mô hình miền, kiến trúc logic, mã và test; bạn duyệt từng bolt</td><td>Nhánh GitHub + PR; dùng <code>superpowers:writing-plans</code>, <code>superpowers:test-driven-development</code></td></tr>
+<tr><td><b>Bolt</b></td><td>Một vòng ngắn (vài giờ đến 1–2 ngày) cho ra phần chạy được kèm test</td><td><code>bolts/&lt;n&gt;.html</code>; mỗi bolt một mục giờ nháp ở Kimai</td></tr>
+<tr><td><b>Operations</b></td><td>Phát hành, theo dõi, nhận phản hồi; phản hồi thành intent mới</td><td>PR/CI ở GitHub, Slack, <a href="phase-3-time-reports.html">báo cáo tuần</a></td></tr>
+</tbody></table></div>
+
+<h2 id="quy-trinh">Quy trình và ba cổng</h2>
+<figure class="so-do"><div class="svg-khung">
+<svg viewBox="0 0 900 200" role="img" aria-labelledby="sd2-td">
+  <title id="sd2-td">Vòng Intent, Inception, Construction theo bolt, Operations với ba cổng duyệt</title>
+  <defs><marker id="mt2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="s-muiten"/></marker></defs>
+  <rect x="20" y="60" width="140" height="70" rx="10" class="s-hop"/><text x="36" y="90" class="s-chu">Intent</text><text x="36" y="112" class="s-chu-nho">mục tiêu ở 1 nơi</text>
+  <rect x="220" y="60" width="170" height="70" rx="10" class="s-hop-nhan"/><text x="236" y="90" class="s-chu">Inception</text><text x="236" y="112" class="s-chu-nho">làm rõ, story, unit</text>
+  <rect x="450" y="60" width="190" height="70" rx="10" class="s-hop-nhan"/><text x="466" y="90" class="s-chu">Construction</text><text x="466" y="112" class="s-chu-nho">lặp theo bolt, có test</text>
+  <rect x="700" y="60" width="180" height="70" rx="10" class="s-hop-xanh"/><text x="716" y="90" class="s-chu">Operations</text><text x="716" y="112" class="s-chu-nho">phát hành, theo dõi</text>
+  <path d="M160 95 L 220 95" class="s-duong" marker-end="url(#mt2)"/>
+  <path d="M390 95 L 450 95" class="s-duong" marker-end="url(#mt2)"/>
+  <path d="M640 95 L 700 95" class="s-duong" marker-end="url(#mt2)"/>
+  <path d="M790 130 L 790 175 L 90 175 L 90 135" class="s-duong-dut" marker-end="url(#mt2)"/>
+  <rect x="396" y="30" width="48" height="26" rx="13" class="s-hop-do"/><text x="408" y="48" class="s-chu-ma">G1</text>
+  <rect x="580" y="30" width="48" height="26" rx="13" class="s-hop-do"/><text x="592" y="48" class="s-chu-ma">G2</text>
+  <rect x="646" y="30" width="48" height="26" rx="13" class="s-hop-do"/><text x="658" y="48" class="s-chu-ma">G3</text>
+</svg></div>
+<figcaption>Mũi tên đứt: phản hồi từ Operations thành intent mới. G1–G3 là các cổng bạn duyệt.</figcaption>
+</figure>
+<div class="bang-boc"><table>
+<thead><tr><th>Cổng</th><th>Bạn duyệt gì</th><th>Claude phải đưa sẵn</th></tr></thead>
+<tbody>
+<tr><td><b>G1</b> · sau Inception</td><td>Phạm vi và tiêu chí nghiệm thu của intent</td><td>Câu hỏi đã làm rõ, story, danh sách unit, điều ngoài phạm vi, rủi ro</td></tr>
+<tr><td><b>G2</b> · mỗi bolt</td><td>Mã và test của bolt đó</td><td>Diff, kết quả chạy test thật, điều chưa làm; chỉ dùng chữ “xong” khi đã có kết quả (<code>superpowers:verification-before-completion</code>)</td></tr>
+<tr><td><b>G3</b> · trước khi ghi ra ngoài</td><td>Gộp PR, tạo/đổi ticket, gửi tin Slack, ghi giờ Kimai</td><td>Bản nháp đầy đủ của thứ sắp ghi, nêu rõ nơi nào sẽ bị tác động (<a href="strategy.html#n2">N2</a>)</td></tr>
+</tbody></table></div>
+
+<h2 id="thu-muc">Thư mục một intent</h2>
+<pre><code>units/&lt;role&gt;/intents/&lt;id&gt;/
+├── intent.html          mục tiêu, người liên quan, link OpenProject
+├── inception.html       câu hỏi và trả lời, story, unit, tiêu chí nghiệm thu, ngoài phạm vi
+└── bolts/
+    ├── 01.html          mục tiêu bolt, thay đổi, kết quả test, điều còn lại
+    └── 02.html</code></pre>
+<p class="ghi-chu">Intent của mỗi nơi nằm trong thư mục nơi đó, không đặt ở <code>shared/</code> (<a href="strategy.html#n4">N4</a>). Bản tóm tắt sáng chỉ lấy tiêu đề intent và bolt đang mở.</p>
+
+<h2 id="bat-dau">Cách bắt đầu</h2>
+<ol class="buoc">
+<li><b>Chưa cần skill.</b> Chạy hai intent thật bằng các skill có sẵn theo bảng ánh xạ ở trên và ghi chỗ vướng.</li>
+<li><b>Viết skill <code>ai-dlc</code></b> ở <a href="phase-4-agents.html#v4-3">V4.3</a> khi trình tự đã ổn định.</li>
+<li><b>Nối với báo cáo:</b> bolt xong và intent đóng đi vào <code>weekly-report</code> của đúng nơi.</li>
+</ol>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

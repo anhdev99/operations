@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>GĐ1 · Nền tảng và kết nối · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>GĐ1 · Nền tảng và kết nối</h1>
+        <p class="dau-trang__phu">Biết mình có gì để đọc và đọc được thật, trước khi viết bất kỳ tự động hoá nào. Phần lớn việc ở đây cần bạn thao tác trên web để cấp token.</p>
+      </header>
+
+<h2 id="viec">Việc trong giai đoạn</h2>
+<div class="viec" id="v1-1" data-muc="V1.1 · Kiểm kê nguồn của từng nơi">
+  <div class="viec__dau"><span class="viec__ma">V1.1</span><h3 class="viec__ten">Kiểm kê nguồn của từng nơi</h3><span class="muc muc--dang">Đang làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Biết chính xác mỗi nơi có gì để đọc: project, kênh, repo, và bạn có quyền gì.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>units/&lt;role&gt;/sources.json (×3)</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>Không</dd>
+  </dl>
+  <ol class="buoc"><li><b>Liệt kê OpenProject.</b> Với mỗi nơi: URL, project bạn tham gia, vai trò. Với LucidTech chạy <pre><code>set -a; . ~/.claude/lucidtech-openproject.env; set +a
+curl -s -u "apikey:$OP_TOKEN" "$OP_BASE_URL/api/v3/projects"</code></pre></li><li><b>Liệt kê Kimai.</b> URL, có bật API không, project/hoạt động nào bạn ghi giờ.</li><li><b>Liệt kê GitHub.</b> Org và repo của từng nơi; tài khoản dùng (cá nhân hay riêng cho công ty).</li><li><b>Liệt kê Slack.</b> Workspace, kênh bạn cần theo dõi, kênh thông báo CI.</li><li><b>Hỏi chính sách.</b> Mỗi công ty có cho phép đọc dữ liệu bằng công cụ ngoài không (<a href='open-questions.html#q3'>Q3</a>).</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> ba tệp <code>sources.json</code> có đủ 4 mục, không có token; <a href='context.html#chua-biet'>bảng giả định</a> được cập nhật từ “chưa kiểm” sang đúng/sai.</div>
+</div>
+<div class="viec" id="v1-2" data-muc="V1.2 · Dựng khung repo và ngữ cảnh từng nơi">
+  <div class="viec__dau"><span class="viec__ma">V1.2</span><h3 class="viec__ten">Dựng khung repo và ngữ cảnh từng nơi</h3><span class="muc muc--dang">Đang làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Có sẵn cây thư mục và <code>CLAUDE.md</code> để mỗi lần làm việc ở nơi nào, Claude chỉ nạp ngữ cảnh nơi đó.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>CLAUDE.md</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>.gitignore</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>units/*/CLAUDE.md</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>teaching/term-calendar.html</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>shared/week-calendar.html</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.1</dd>
+  </dl>
+  <ol class="buoc"><li><b>Viết <code>CLAUDE.md</code> gốc:</b> ba luật: chỉ đọc mặc định, không trộn dữ liệu giữa các nơi, token ở <code>~/.claude</code>.</li><li><b>Viết <code>CLAUDE.md</code> từng nơi:</b> vai trò của bạn, người liên quan, quy ước đặt tên ticket, giờ làm việc.</li><li><b>Nhập khung giờ cố định</b> vào <code>shared/week-calendar.html</code> (họp định kỳ, giờ lên lớp).</li><li><b>Thêm <code>.gitignore</code>:</b> <code>units/*/snapshot/</code>, <code>*.env</code>.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> <code>git status</code> không liệt kê snapshot hay env; mở từng <code>CLAUDE.md</code> thấy đúng ngữ cảnh của nơi đó.</div>
+</div>
+<div class="viec" id="v1-3" data-muc="V1.3 · Kết nối chỉ đọc 4 hệ thống">
+  <div class="viec__dau"><span class="viec__ma">V1.3</span><h3 class="viec__ten">Kết nối chỉ đọc 4 hệ thống</h3><span class="muc muc--dang">Đang làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Mỗi hệ thống gọi được bằng một lệnh, ra JSON, không ghi gì.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>~/.claude/&lt;role&gt;.env (ngoài repo)</code></li><li><span class="tep__loai tep__loai--sua">Sửa</span><code>cấu hình MCP Slack, GitHub</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.1</dd>
+  </dl>
+  <ol class="buoc"><li><b>Nơi để điền:</b> mỗi nơi một tệp env duy nhất ở <code>~/.claude/&lt;role&gt;.env</code> (chmod 600), chứa <code>OP_BASE_URL</code>/<code>OP_TOKEN</code>, <code>KIMAI_BASE_URL</code>/<code>KIMAI_TOKEN</code>, <code>SLACK_TOKEN</code>. Tệp mẫu đã tạo sẵn, giá trị để trống.</li><li><b>Kiểm tra:</b> chạy <code>python3 scripts/check_setup.py</code>. Lệnh này cho biết nguồn nào đã điền và chạy được, không in token.</li><li><b>OpenProject:</b> My account → Access tokens → API. <b>Kimai:</b> Profile → API Access (đã viết <code>kimai_read.py</code>, chưa kiểm với Kimai thật). <b>Slack:</b> user token <code>xoxp-</code> có <code>search:read</code>; hoặc xác thực plugin Slack nếu không cài được app (<a href='open-questions.html#q3'>Q3</a>).</li><li><b>GitHub:</b> dùng <code>gh</code>, không cần token; MCP GitHub vẫn lỗi HTTP 400, bỏ qua.</ol>
+  <div class="kiem"><b>Kiểm chứng:</b> mỗi nơi có một lệnh đọc trả về dữ liệu thật (5 bản ghi); thử một lệnh ghi bị chặn bởi luật chỉ đọc trong <code>CLAUDE.md</code>.</div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Tổng quan · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Tổng quan</h1>
+        <p class="dau-trang__phu">Chiến lược để repo <code>operations</code> thành nơi điều hành công việc ở 4 nơi, giải quyết đúng một điểm đau: thông tin rời rạc.</p>
+      </header>
+      <div class="dau-trang__meta" style="margin:-14px 0 8px">
+        <span>Ngày: 03/11/2026</span>
+        <span>Nhánh: <code>main</code></span>
+        <span>Trạng thái: Nháp — chờ bạn duyệt</span>
+      </div>
+
+      <h2 id="ket-luan">Kết luận nhanh</h2>
+<div class="the">
+  <h3>Repo này là lớp nhìn chung và điều phối, không phải hệ thống mới để nhập liệu.</h3>
+  <p>Slack, OpenProject, Kimai, GitHub vẫn là nơi giữ dữ liệu gốc. Repo <code>operations</code> chỉ đọc từ chúng, gom thành một bản tóm tắt mỗi sáng, và giữ phần việc không nằm ở đâu khác (giảng dạy). Claude làm phần gom và soạn; bạn quyết định và chịu trách nhiệm phần ghi. Với việc phát triển phần mềm ở nơi 2, 3, 4, vòng làm việc theo <a href="ai-dlc.html">AI-DLC</a>: Claude đề xuất, bạn duyệt ở các cổng.</p>
+</div>
+
+<div class="luoi-diem">
+  <div class="diem"><div class="diem__ten">Điểm đau chính</div><div class="diem__gia cam">Rời rạc</div><div class="diem__mo">Phải mở 4 loại hệ thống × 3 nơi mới nắm tình hình</div></div>
+  <div class="diem"><div class="diem__ten">Nguyên tắc ghi</div><div class="diem__gia xanh">Chỉ đọc</div><div class="diem__mo">Tạo/sửa/xoá ở hệ thống ngoài phải hỏi bạn trước</div></div>
+  <div class="diem"><div class="diem__ten">Giảng dạy</div><div class="diem__gia">Ngoài hệ thống</div><div class="diem__mo">Quản lý bằng tệp trong repo, không ép vào OpenProject</div></div>
+  <div class="diem"><div class="diem__ten">Lộ trình</div><div class="diem__gia">4 giai đoạn</div><div class="diem__mo">Giá trị đầu tiên (bản tóm tắt sáng) ở cuối GĐ2</div></div>
+</div>
+
+<h2 id="tien-do">Tiến độ</h2>
+<div class="bang-boc"><table>
+<thead><tr><th>Mã</th><th>Việc</th><th>Trạng thái</th></tr></thead>
+<tbody>
+<tr><td>V1.1</td><td><a href="phase-1-foundation.html#v1-1">Kiểm kê nguồn của từng nơi</a></td><td><span class="muc muc--dang">Đang làm</span></td></tr>
+<tr><td>V1.2</td><td><a href="phase-1-foundation.html#v1-2">Dựng khung repo và ngữ cảnh từng nơi</a></td><td><span class="muc muc--dang">Đang làm</span></td></tr>
+<tr><td>V1.3</td><td><a href="phase-1-foundation.html#v1-3">Kết nối chỉ đọc 4 hệ thống</a></td><td><span class="muc muc--dang">Đang làm</span></td></tr>
+<tr><td>V2.1</td><td><a href="phase-2-dashboard.html#v2-1">Lấy việc từ OpenProject (3 nơi)</a></td><td><span class="muc muc--dang">Đang làm</span></td></tr>
+<tr><td>V2.2</td><td><a href="phase-2-dashboard.html#v2-2">Lấy PR/issue từ GitHub</a></td><td><span class="muc muc--xong">Xong</span></td></tr>
+<tr><td>V2.3</td><td><a href="phase-2-dashboard.html#v2-3">Lấy nhắc tên và tin chưa đọc từ Slack</a></td><td><span class="muc muc--dang">Đang làm</span></td></tr>
+<tr><td>V2.4</td><td><a href="phase-2-dashboard.html#v2-4">Lịch giảng dạy và skill <code>morning-brief</code></a></td><td><span class="muc muc--dang">Đang làm</span></td></tr>
+<tr><td>V3.1</td><td><a href="phase-3-time-reports.html#v3-1">Rà giờ Kimai thiếu</a></td><td><span class="muc muc--chua">Chưa làm</span></td></tr>
+<tr><td>V3.2</td><td><a href="phase-3-time-reports.html#v3-2">Báo cáo tuần theo từng nơi</a></td><td><span class="muc muc--chua">Chưa làm</span></td></tr>
+<tr><td>V3.3</td><td><a href="phase-3-time-reports.html#v3-3">Đặt khung phân bổ giờ theo số liệu</a></td><td><span class="muc muc--chua">Chưa làm</span></td></tr>
+<tr><td>V4.1</td><td><a href="phase-4-agents.html#v4-1">Phân loại việc giao được cho agent</a></td><td><span class="muc muc--chua">Chưa làm</span></td></tr>
+<tr><td>V4.2</td><td><a href="phase-4-agents.html#v4-2">Chạy định kỳ và có kiểm soát</a></td><td><span class="muc muc--chua">Chưa làm</span></td></tr>
+<tr><td>V4.3</td><td><a href="phase-4-agents.html#v4-3">Skill <code>ai-dlc</code>: quy trình Intent → Bolt</a></td><td><span class="muc muc--chua">Chưa làm</span></td></tr>
+</tbody></table></div>
+
+<h2 id="doc-tiep">Đọc tiếp</h2>
+<div class="bang-boc"><table>
+<thead><tr><th>Trang</th><th>Nội dung</th></tr></thead>
+<tbody>
+<tr><td><a href="context.html">Bối cảnh và ràng buộc</a></td><td>4 nơi, công cụ dùng, điều đã chốt và điều chưa biết</td></tr>
+<tr><td><a href="strategy.html">Chiến lược điều hành</a></td><td>Nguyên tắc ưu tiên, cách chia sức giữa 4 nơi</td></tr>
+<tr><td><a href="cadence.html">Nhịp làm việc</a></td><td>Việc làm mỗi ngày, mỗi tuần, mỗi tháng</td></tr>
+<tr><td><a href="ai-dlc.html">Áp dụng AI-DLC</a></td><td>Intent, Inception, Bolt, Operations ánh xạ vào repo và 4 hệ thống</td></tr>
+<tr><td><a href="architecture.html">Kiến trúc hệ thống</a></td><td>Dữ liệu chảy từ đâu về đâu</td></tr>
+<tr><td><a href="repo-layout.html">Cấu trúc repo</a></td><td>Thư mục và tệp sẽ có</td></tr>
+<tr><td><a href="risks.html">Rủi ro và quay lui</a></td><td>Bảo mật, tách bạch giữa các công ty, cách lùi</td></tr>
+<tr><td><a href="open-questions.html">Câu hỏi mở</a></td><td>Cần bạn chốt trước khi bắt đầu</td></tr>
+</tbody></table></div>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

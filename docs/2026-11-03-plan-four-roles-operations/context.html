@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Bối cảnh và ràng buộc · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Bối cảnh và ràng buộc</h1>
+        <p class="dau-trang__phu">Bạn đang làm gì ở đâu, dùng công cụ nào, và phần nào của plan này dựa trên điều chưa kiểm chứng.</p>
+      </header>
+
+<h2 id="4-noi">4 nơi bạn đang làm</h2>
+<div class="bang-boc"><table>
+<thead><tr><th>#</th><th>Nơi</th><th>Vai trò</th><th>Cơ chế quản lý</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Giảng dạy ở đại học</td><td>Giảng viên</td><td><b>Ngoài hệ thống</b> (đã chốt): lịch dạy, giáo án, chấm bài, nghiên cứu quản lý bằng tệp trong repo</td></tr>
+<tr><td>2</td><td>Tổ chuyển đổi số, đại học</td><td>Phát triển phần mềm</td><td>Slack · OpenProject · Kimai · GitHub</td></tr>
+<tr><td>3</td><td>PHD Group</td><td>Chưa ghi rõ</td><td>Slack · OpenProject · Kimai · GitHub</td></tr>
+<tr><td>4</td><td>LucidTech</td><td>Chưa ghi rõ</td><td>Slack · OpenProject (<code>tasks.lucidtech.vn</code>, project <code>dthu-cees</code>) · Kimai · GitHub</td></tr>
+</tbody></table></div>
+<p>Nơi 2, 3, 4 dùng cùng một bộ 4 công cụ. Đây là điểm mấu chốt: một khuôn kết nối viết một lần, áp cho cả ba nơi bằng cách đổi cấu hình.</p>
+
+<h2 id="da-chot">Điều đã chốt</h2>
+<ul class="tot-list">
+<li>Mục tiêu: bảng nhìn chung, quản lý thời gian, tự động hoá báo cáo, giao việc cho agent.</li>
+<li>Điểm đau lớn nhất: thông tin rời rạc, phải mở nhiều hệ thống mới nắm được tình hình.</li>
+<li>Giảng dạy quản lý ngoài hệ thống, không đưa vào OpenProject/Kimai.</li>
+<li>Phạm vi plan: chiến lược cộng lộ trình triển khai.</li>
+<li>Theo <code>CLAUDE.md</code> của bạn: OpenProject chỉ đọc mặc định; tạo/sửa/xoá phải hỏi trước; token nằm ở <code>~/.claude/*.env</code>, không vào repo.</li>
+</ul>
+
+<h2 id="chua-biet">Điều chưa kiểm chứng</h2>
+<div class="hop-ghi"><b>Mức tin cậy.</b> Repo <code>operations</code> đang trống (chưa có commit). Tôi chưa xem thực tế cấu hình OpenProject, Kimai, Slack, GitHub của từng nơi. Các điểm dưới đây là giả định.</div>
+<div class="bang-boc"><table>
+<thead><tr><th>Giả định</th><th>Mức</th><th>Cách kiểm</th></tr></thead>
+<tbody>
+<tr><td>Cả 3 nơi có OpenProject riêng và bạn có API token ở mỗi nơi</td><td><span class="muc muc--thap">chưa kiểm</span></td><td>V1.1 — chỉ LucidTech đã có token trong <code>~/.claude</code></td></tr>
+<tr><td>Kimai ở mỗi nơi có API và bạn tạo được token</td><td><span class="muc muc--thap">chưa kiểm</span></td><td>V1.3</td></tr>
+<tr><td>Slack: cài được app hoặc dùng được plugin Slack của Claude Code cho cả 3 workspace</td><td><span class="muc muc--thap">chưa kiểm</span></td><td>V1.3 — plugin Slack hiện cần xác thực</td></tr>
+<tr><td>GitHub: dùng <code>gh</code> CLI; MCP GitHub đang lỗi kết nối (HTTP 400, header xác thực sai định dạng)</td><td><span class="muc muc--vua">đã thấy lỗi</span></td><td>V1.3 — dùng <code>gh</code>, sửa MCP sau</td></tr>
+<tr><td>Chính sách từng công ty cho phép đọc dữ liệu công việc bằng công cụ ngoài</td><td><span class="muc muc--thap">chưa kiểm</span></td><td><a href="open-questions.html#q3">Q3</a></td></tr>
+</tbody></table></div>
+
+<h2 id="ngoai-pham-vi">Ngoài phạm vi</h2>
+<ul>
+<li>Thay thế hay di chuyển dữ liệu khỏi Slack/OpenProject/Kimai/GitHub.</li>
+<li>Quản lý lớp học ở mức hệ thống (LMS), chấm điểm tự động.</li>
+<li>Ghi tự động vào hệ thống ngoài khi chưa có bạn xác nhận.</li>
+</ul>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

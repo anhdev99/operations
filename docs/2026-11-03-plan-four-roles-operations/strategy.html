@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Chiến lược điều hành · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Chiến lược điều hành</h1>
+        <p class="dau-trang__phu">Nguyên tắc để quyết định việc nào làm trước, và cách repo phục vụ các nguyên tắc đó.</p>
+      </header>
+
+<h2 id="nguyen-tac">Sáu nguyên tắc</h2>
+<div class="pha" id="n1" data-muc="N1 · Một nguồn sự thật cho mỗi loại dữ liệu">
+  <div class="pha__dau"><span class="pha__ma">N1</span><h3 class="pha__ten">Một nguồn sự thật cho mỗi loại dữ liệu</h3><span class="muc muc--tot">Nền</span></div>
+  <dl><dt>Quy tắc</dt><dd>Task ở OpenProject, giờ ở Kimai, mã ở GitHub, trao đổi ở Slack, giảng dạy ở repo. Repo không sao chép nội dung để sửa; nó chỉ đọc và tóm tắt.</dd>
+  <dt>Vì sao</dt><dd>Sao chép hai chiều sẽ lệch nhau và bạn mất niềm tin vào bảng tổng hợp.</dd></dl>
+</div>
+<div class="pha" id="n2" data-muc="N2 · Đọc nhiều, ghi ít, ghi có xác nhận">
+  <div class="pha__dau"><span class="pha__ma">N2</span><h3 class="pha__ten">Đọc nhiều, ghi ít, ghi có xác nhận</h3><span class="muc muc--tot">An toàn</span></div>
+  <dl><dt>Quy tắc</dt><dd>Mặc định chỉ đọc. Mọi thao tác tạo/sửa/xoá ở hệ thống ngoài, hoặc gửi tin Slack, Claude soạn sẵn rồi bạn duyệt.</dd>
+  <dt>Vì sao</dt><dd>Một tin Slack gửi nhầm hoặc một ticket sai ở công ty khác ảnh hưởng người khác, không lùi lại được.</dd></dl>
+</div>
+<div class="pha" id="n3" data-muc="N3 · Cam kết cứng trước, việc dẻo sau">
+  <div class="pha__dau"><span class="pha__ma">N3</span><h3 class="pha__ten">Cam kết cứng trước, việc dẻo sau</h3><span class="muc muc--vua">Đề xuất</span></div>
+  <dl><dt>Thứ tự</dt><dd>1) Giờ lên lớp và hạn thi/chấm của trường. 2) Hạn giao cho khách hoặc sản phẩm đang chạy (sự cố). 3) Việc có người khác đang chờ bạn (review PR, trả lời). 4) Việc của riêng bạn có hạn. 5) Cải tiến, nghiên cứu.</dd>
+  <dt>Cần bạn chốt</dt><dd>Thứ tự này là đề xuất của tôi, xem <a href="open-questions.html#q2">Q2</a>.</dd></dl>
+</div>
+<div class="pha" id="n4" data-muc="N4 · Tách bạch dữ liệu giữa các công ty">
+  <div class="pha__dau"><span class="pha__ma">N4</span><h3 class="pha__ten">Tách bạch dữ liệu giữa các công ty</h3><span class="muc muc--cao">Bắt buộc</span></div>
+  <dl><dt>Quy tắc</dt><dd>Mỗi nơi một thư mục, một bộ token. Bản tóm tắt chung chỉ chứa tiêu đề và hạn, không chứa nội dung kỹ thuật hay thương mại của từng công ty.</dd>
+  <dt>Vì sao</dt><dd>Bạn làm cho nhiều bên; dữ liệu của PHD không được lọt vào ngữ cảnh làm việc cho LucidTech và ngược lại.</dd></dl>
+</div>
+<div class="pha" id="n5" data-muc="N5 · Tự động hoá việc lặp lại sau khi làm tay hai lần">
+  <div class="pha__dau"><span class="pha__ma">N5</span><h3 class="pha__ten">Tự động hoá việc lặp lại, sau khi làm tay hai lần</h3><span class="muc muc--tot">Kỷ luật</span></div>
+  <dl><dt>Quy tắc</dt><dd>Chỉ viết skill/script cho việc đã làm tay ít nhất hai lần và ổn định.</dd></dl>
+</div>
+
+<div class="pha" id="n6" data-muc="N6 · Con người duyệt ở các cổng, AI đề xuất giữa các cổng">
+  <div class="pha__dau"><span class="pha__ma">N6</span><h3 class="pha__ten">Con người duyệt ở các cổng, AI đề xuất giữa các cổng</h3><span class="muc muc--tot">AI-DLC</span></div>
+  <dl><dt>Quy tắc</dt><dd>Với việc phát triển phần mềm, Claude dẫn dắt phần làm rõ, chia nhỏ và làm; bạn chỉ dừng lại duyệt ở ba cổng cố định (chốt phạm vi, duyệt từng bolt, phát hành). Chi tiết ở <a href="ai-dlc.html">Áp dụng AI-DLC</a>.</dd>
+  <dt>Vì sao</dt><dd>Bạn có ít giờ; duyệt đúng chỗ quan trọng tiết kiệm hơn là nhìn từng bước, và vẫn giữ <a href="strategy.html#n2">N2</a>.</dd></dl>
+</div>
+
+<h2 id="chia-suc">Chia sức giữa 4 nơi</h2>
+<p>Không đặt tỉ lệ giờ cố định khi chưa có số liệu. Dùng Kimai trong 2–4 tuần đầu để thấy thực tế (V3.1), rồi mới đặt khung.</p>
+<div class="bang-boc"><table>
+<thead><tr><th>Nơi</th><th>Tính chất thời gian</th><th>Cách xếp</th></tr></thead>
+<tbody>
+<tr><td>Giảng dạy</td><td>Cố định theo lịch trường, đều theo kỳ</td><td>Khoá sẵn các khối giờ lên lớp, chuẩn bị bài, chấm bài; đầu kỳ và cuối kỳ nặng hơn</td></tr>
+<tr><td>Tổ chuyển đổi số</td><td>Theo dự án nội bộ, có thể co giãn</td><td>Khối giờ riêng trong tuần, tránh trùng giờ lên lớp</td></tr>
+<tr><td>PHD Group</td><td>Chưa rõ</td><td>Xác định ở V1.1</td></tr>
+<tr><td>LucidTech</td><td>Chưa rõ (có project <code>dthu-cees</code>)</td><td>Xác định ở V1.1</td></tr>
+</tbody></table></div>
+<p class="ghi-chu">Rủi ro đáng chú ý: xung đột giờ giữa 3 nơi không phải giảng dạy, nhất là họp cố định. Bản tóm tắt sáng sẽ cảnh báo trùng lịch khi có lịch để đọc (<a href="open-questions.html#q4">Q4</a>).</p>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

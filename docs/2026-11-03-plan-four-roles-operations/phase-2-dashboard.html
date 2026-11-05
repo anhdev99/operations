@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>GĐ2 · Bảng nhìn chung · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>GĐ2 · Bảng nhìn chung</h1>
+        <p class="dau-trang__phu">Gỡ điểm đau rời rạc: một trang mỗi sáng thay cho việc mở 10 màn hình.</p>
+      </header>
+
+<h2 id="viec">Việc trong giai đoạn</h2>
+<div class="hop-ghi"><b>Mốc giá trị.</b> Hết V2.4 bạn đã dùng được. Các giai đoạn sau là tối ưu thêm.</div>
+<div class="viec" id="v2-1" data-muc="V2.1 · Lấy việc từ OpenProject (3 nơi)">
+  <div class="viec__dau"><span class="viec__ma">V2.1</span><h3 class="viec__ten">Lấy việc từ OpenProject (3 nơi)</h3><span class="muc muc--dang">Đang làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Danh sách việc giao cho bạn, chưa đóng, kèm hạn, theo từng nơi.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>scripts/op_read.py</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.3</dd>
+  </dl>
+  <ol class="buoc"><li><b>Viết script</b> nhận tên nơi, đọc <code>sources.json</code> và env, gọi <pre><code>/api/v3/projects/{id}/work_packages?filters=[{"status":{"operator":"o","values":[]}},{"assignee":{"operator":"=","values":["me"]}}]</code></pre></li><li><b>Phân trang</b> bằng <code>pageSize</code>/<code>offset</code>; trả JSON gồm mã, tiêu đề, hạn, trạng thái, liên kết.</li><li><b>Ghi snapshot</b> vào <code>units/&lt;role&gt;/snapshot/op.json</code>.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> <code>python3 scripts/op_read.py lucidtech</code> in danh sách khớp với màn hình “My page” trên web.</div>
+</div>
+<div class="viec" id="v2-2" data-muc="V2.2 · Lấy PR và issue từ GitHub">
+  <div class="viec__dau"><span class="viec__ma">V2.2</span><h3 class="viec__ten">Lấy PR và issue từ GitHub</h3><span class="muc muc--xong">Xong</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>PR chờ bạn review, PR của bạn chưa merge, issue giao cho bạn.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>scripts/github_read.py</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.3</dd>
+  </dl>
+  <ol class="buoc"><li><pre><code>gh search prs --review-requested=@me --state=open --json repository,title,url,updatedAt
+gh search prs --author=@me --state=open --json repository,title,url,updatedAt
+gh search issues --assignee=@me --state=open --json repository,title,url</code></pre></li><li>Gộp theo nơi bằng <code>sources.json</code> (danh sách repo/org).</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> danh sách khớp tab “Review requests” trên github.com/pulls.</div>
+</div>
+<div class="viec" id="v2-3" data-muc="V2.3 · Lấy nhắc tên và tin chưa đọc từ Slack">
+  <div class="viec__dau"><span class="viec__ma">V2.3</span><h3 class="viec__ten">Lấy nhắc tên và tin chưa đọc từ Slack</h3><span class="muc muc--dang">Đang làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Biết tin nào đang chờ bạn trả lời, mà không đọc cả kênh.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>scripts/slack_read.py</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V1.3</dd>
+  </dl>
+  <ol class="buoc"><li><b>Truy vấn</b> tin nhắc tên bạn và tin trực tiếp 48 giờ gần nhất theo từng workspace, qua plugin Slack hoặc API tuỳ kết quả V1.3.</li><li><b>Trạng thái:</b> <code>scripts/slack_read.py</code> đã viết và chạy đúng trên máy chủ giả; <span class="muc muc--thap">chưa kiểm</span> với workspace thật.</li><li><b>Chỉ lưu</b> người gửi, kênh, 1 dòng đầu và liên kết; không lưu cả cuộc trò chuyện vào snapshot.</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> tin nhắc tên hiện trong snapshot khớp thanh “Mentions” của Slack.</div>
+</div>
+<div class="viec" id="v2-4" data-muc="V2.4 · Lịch giảng dạy và skill <code>morning-brief</code>">
+  <div class="viec__dau"><span class="viec__ma">V2.4</span><h3 class="viec__ten">Lịch giảng dạy và skill <code>morning-brief</code></h3><span class="muc muc--dang">Đang làm</span></div>
+  <dl>
+    <dt>Mục tiêu</dt><dd>Một trang HTML mỗi sáng gom lịch dạy, việc đến hạn, PR, tin Slack. Đây là giá trị đầu tiên bạn nhìn thấy.</dd>
+    <dt>Tệp</dt><dd><ul class="tep"><li><span class="tep__loai tep__loai--tao">Tạo</span><code>.claude/skills/morning-brief/SKILL.md</code></li><li><span class="tep__loai tep__loai--sua">Sửa</span><code>teaching/term-calendar.html</code></li><li><span class="tep__loai tep__loai--tao">Tạo</span><code>shared/morning-brief.html (sinh ra, ngoài git)</code></li></ul></dd>
+    <dt>Phụ thuộc</dt><dd>V2.1, V2.2, V2.3</dd>
+  </dl>
+  <ol class="buoc"><li><b>Nhập lịch kỳ</b> vào <code>term-calendar.html</code> một lần (lớp, thi, hạn nộp điểm); skill đọc phần của hôm nay và 7 ngày tới.</li><li><b>Skill chạy 3 script</b> rồi soạn trang theo bố cục: (1) cảnh báo trùng giờ hoặc quá hạn, (2) lịch hôm nay, (3) việc đến hạn ≤ 3 ngày theo từng nơi, (4) PR/Slack chờ trả lời.</li><li><b>Giới hạn nội dung:</b> chỉ tiêu đề, hạn và liên kết (<a href='strategy.html#n4'>N4</a>).</li></ol>
+  <div class="kiem"><b>Kiểm chứng:</b> chạy <code>/morning-brief</code> trong dưới 2 phút, bản ra có đủ 4 phần; bạn thử một tuần và chỉnh bố cục theo điều bạn thật sự đọc.</div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "lucidtech",
+  "env_file": "~/.claude/lucidtech.env",
+  "openproject": {
+    "projects": [
+      "dthu-cees"
+    ]
+  },
+  "github": {
+    "owners": [
+      "lucidtechnology"
+    ]
+  }
+}

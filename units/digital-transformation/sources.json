@@ -1,0 +1,12 @@
+{
+  "name": "digital-transformation",
+  "env_file": "~/.claude/digital-transformation.env",
+  "openproject": {
+    "projects": []
+  },
+  "github": {
+    "owners": [
+      "Dong-Thap-University"
+    ]
+  }
+}

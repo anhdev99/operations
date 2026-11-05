@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Nhịp làm việc · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Nhịp làm việc</h1>
+        <p class="dau-trang__phu">Việc làm mỗi sáng, mỗi chiều, mỗi tuần, mỗi tháng sau khi hệ thống chạy. Mục tiêu là mất dưới 10 phút mỗi ngày cho phần điều hành.</p>
+      </header>
+
+<h2 id="hang-ngay">Hằng ngày</h2>
+<div class="bang-boc"><table>
+<thead><tr><th>Lúc</th><th>Việc</th><th>Ai làm</th><th>Thời lượng</th></tr></thead>
+<tbody>
+<tr><td>Sáng</td><td>Chạy <code>morning-brief</code>. Đọc bản tóm tắt một trang: lịch dạy hôm nay, việc đến hạn/quá hạn ở 3 nơi, PR chờ review, tin Slack nhắc tên</td><td>Claude gom, bạn đọc</td><td>~5 phút</td></tr>
+<tr><td>Sáng</td><td>Chọn tối đa 3 việc trọng tâm, ghi vào tệp <code>shared/today.html</code></td><td>Bạn</td><td>~3 phút</td></tr>
+<tr><td>Cuối ngày</td><td>Ghi giờ Kimai (Claude gợi ý nháp từ commit/việc đã đóng, bạn xác nhận)</td><td>Bạn</td><td>~5 phút</td></tr>
+</tbody></table></div>
+
+<h2 id="hang-tuan">Hằng tuần</h2>
+<ul>
+<li><b>Chiều thứ Sáu:</b> chạy <code>weekly-report</code>, ra một báo cáo cho mỗi nơi (việc xong, việc dở, giờ đã ghi, rủi ro).</li>
+<li><b>Chủ nhật tối hoặc sáng thứ Hai:</b> xem tuần tới: lịch dạy, hạn, khối giờ. Chốt 3–5 mục tiêu tuần.</li>
+<li>Với việc phát triển phần mềm: chọn các <b>bolt</b> cho tuần (mỗi bolt vài giờ đến 1–2 ngày), xem <a href="ai-dlc.html">AI-DLC</a>.</li>
+<li>Dọn: việc quá hạn nào bỏ, việc nào hoãn, việc nào giao lại.</li>
+</ul>
+
+<h2 id="hang-thang">Hằng tháng và theo kỳ</h2>
+<ul>
+<li>Đối chiếu giờ Kimai với kế hoạch: nơi nào lấy nhiều/ít hơn dự kiến.</li>
+<li>Đầu kỳ học: nhập lịch dạy cả kỳ, hạn nộp điểm, hạn thi vào <code>teaching/term-calendar.html</code>.</li>
+<li>Rà lại plan này: bỏ phần không dùng, thêm phần thiếu.</li>
+</ul>
+
+<h2 id="khi-co-su-co">Khi có sự cố ở một nơi</h2>
+<p>Sự cố ở sản phẩm đang chạy ưu tiên trên việc dẻo (<a href="strategy.html#n3">N3</a>), nhưng không được đè lên giờ lên lớp. Bản tóm tắt sáng phải làm rõ chỗ này khi có xung đột.</p>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>

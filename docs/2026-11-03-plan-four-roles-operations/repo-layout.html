@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Cấu trúc repo · Plan điều hành 4 nơi</title>
+<link rel="stylesheet" href="_chung/style.css">
+</head>
+<body>
+<div class="khung">
+  <aside class="ben" data-khung-ben>
+    <a class="ben__ten" href="index.html">← Mục lục</a>
+  </aside>
+
+  <main class="noi-dung" data-khung-noi-dung>
+    <div class="trong">
+      <header class="dau-trang">
+        <div class="dau-trang__nhan">operations · Plan</div>
+        <h1>Cấu trúc repo</h1>
+        <p class="dau-trang__phu">Thư mục và tệp sẽ có trong repo sau khi làm xong GĐ1–GĐ2. Tên thư mục dùng không dấu.</p>
+      </header>
+
+<h2 id="cay">Cây thư mục</h2>
+<pre><code>operations/
+├── CLAUDE.md                     quy tắc chung: chỉ đọc, tách bạch, nơi để token
+├── .gitignore                    snapshot/, *.env, reports/ nhạy cảm
+├── units/
+│   ├── digital-transformation/         nơi 2
+│   │   ├── CLAUDE.md             ngữ cảnh: vai trò, người liên quan, quy ước riêng
+│   │   ├── sources.json            map: project OpenProject, kênh Slack, project Kimai, repo GitHub
+│   │   ├── intents/&lt;id&gt;/        AI-DLC: intent.html, inception.html, bolts/
+│   │   └── snapshot/             (ngoài git)
+│   ├── phd-group/                nơi 3, cùng khuôn
+│   └── lucidtech/                nơi 4, cùng khuôn (dthu-cees)
+├── teaching/                    nơi 1, không có hệ thống nguồn
+│   ├── term-calendar.html              lịch cả kỳ: lớp, thi, hạn nộp điểm
+│   ├── courses/&lt;course-code&gt;/        giáo án, đề, danh sách
+│   └── research/
+├── shared/
+│   ├── today.html              3 việc trọng tâm của ngày
+│   └── week-calendar.html            khối giờ cố định trong tuần
+├── scripts/
+│   ├── common.py                 hàm dùng chung (đọc cấu hình, snapshot)
+│   ├── op_read.py                đọc OpenProject theo tên nơi
+│   ├── collect.py                chạy mọi script đọc, ra một JSON
+│   ├── render_brief.py           dựng trang tóm tắt sáng từ JSON đó
+│   ├── kimai_read.py
+│   ├── github_read.py             dùng gh CLI
+│   └── slack_read.py
+├── .claude/skills/
+│   ├── morning-brief/SKILL.md
+│   ├── weekly-report/SKILL.md
+│   ├── kimai-gap-check/SKILL.md
+│   └── ai-dlc/SKILL.md
+├── reports/&lt;YYYY-Www&gt;/          báo cáo tuần đã sinh
+└── docs/                         tài liệu này</code></pre>
+
+<h2 id="nguon-json">Ví dụ <code>sources.json</code></h2>
+<p>Chỉ chứa tên và định danh, không chứa token. Token nằm ở <code>~/.claude/&lt;role&gt;.env</code>.</p>
+<pre><code>{
+  "name": "lucidtech",
+  "env_file": "~/.claude/lucidtech.env",
+  "openproject": { "projects": ["dthu-cees"] },
+  "github": { "owners": ["lucidtechnology"] }
+}</code></pre>
+<p class="ghi-chu">Mỗi nơi một tệp env chứa mọi token (<code>OP_*</code>, <code>KIMAI_*</code>, <code>SLACK_TOKEN</code>). Script đọc thẳng tệp này, không đưa token vào môi trường chung. Hệ thống nào còn trống thì script báo <code>not_configured</code> chứ không bỏ im.</p>
+
+<h2 id="git">Git</h2>
+<ul>
+<li>Repo private. Snapshot và báo cáo chứa dữ liệu công ty phải nằm trong <code>.gitignore</code> hoặc không đẩy lên remote chung (<a href="open-questions.html#q5">Q5</a>).</li>
+<li>Commit theo tính năng, không theo bước, message tiếng Anh.</li>
+</ul>
+    </div>
+  </main>
+</div>
+<script src="muc-luc.js"></script>
+<script src="_chung/khung.js"></script>
+</body>
+</html>
