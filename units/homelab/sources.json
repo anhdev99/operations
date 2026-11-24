@@ -1,0 +1,9 @@
+{
+  "name": "homelab",
+  "github": {
+    "owners": [
+      "anhdev99"
+    ],
+    "watch": "all_open"
+  }
+}

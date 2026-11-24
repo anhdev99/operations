@@ -9,6 +9,7 @@
   "github": {
     "owners": [
       "lucidtechnology"
-    ]
+    ],
+    "watch": "review_requested"
   }
 }
