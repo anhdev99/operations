@@ -116,3 +116,9 @@ Các CSDL đông y sẵn có (TCMSP, TCMID, SymMap, HERB 2.0, ETCM) chỉ là kh
 - Danh sách 23 loại quan hệ không đọc được → ghi "chưa kiểm chứng đầy đủ danh sách RELATIONSHIP_TYPES".
 
 **Phê chuẩn**: Bài TCMaster tồn tại thực, số liệu chính xác, khuyến nghị T3 rõ ràng. So sánh không phóng đại TCMaster nhưng cũng không phớt lờ rủi ro trùng. Sẵn sàng dùng làm baseline.
+
+---
+
+## Comment kết luận (RES-22 Critic)
+
+✓ Phản biện hoàn tất: DOI/số liệu chính xác, so sánh hợp lý, rủi ro trùng định tính (trung bình). PR `agent/RES-22` chờ board merge. TCMaster khả dụng làm T3 baseline.
