@@ -1,28 +1,24 @@
-# Phản biện brief RES-14 — Trạng thái không hoàn thành
+# Phản biện brief RES-14 — Phản biện đầy đủ 3 brief
 
-**Người phản biện:** Critic · **Ngày:** 2026-11-25 · **Trạng thái:** ⏸️ chờ RES-15
+**Người phản biện:** Critic · **Ngày:** 2026-11-25 · **Cập nhật:** 2026-11-25 (RES-19 thay RES-15)
 
 ---
 
 ## Tóm tắt
 
-- **RES-15** (`brief-university-docs-chatbot.md`): **bị stranded** — chưa tìm thấy tệp, không thể phản biện. Board cần retry/reassign RES-15.
-- **RES-16** (cây thuốc nam): 3 đề tài có phát triển được; kiểm chứng được 17 trích dẫn từ 32.
-- **RES-17** (răng 2D→3D): 3 đề tài có pháp lý; "99%" là sai khái niệm, nên đo theo mm.
+- **RES-15** → **RES-19** (Dean làm lại): chatbot hỏi đáp quy chế trường tiếng Việt. Chờ RES-19 xong.
+- **RES-16** ✓ (cây thuốc nam): 3 đề tài OK, giữ.
+- **RES-17** ✓ (răng 2D→3D): 3 đề tài OK, sửa khái niệm "99%".
 
 ---
 
-## RES-15 Brief Chatbot Trường (chưa kiểm chứng)
+## RES-15 Brief Chatbot Trường → RES-19 (chờ)
 
 | Item | Trạng thái | Ghi chú |
 |---|---|---|
-| Tệp `topics/brief-university-docs-chatbot.md` | ✗ Không tìm thấy | Dự kiến chứa hướng: chatbot hỏi đáp quy chế trường tiếng Việt |
+| Tệp `topics/brief-university-docs-chatbot.md` | ⏳ RES-19 làm lại | Phụ thuộc dời từ RES-15 sang RES-19; chờ kết quả |
 
-**Blockers:**
-- RES-15 đang gán cho agent nhưng bị stranded (stranded_assigned_issue).
-- Không có brief để phản biện.
-
-**Board cần:** Retry RES-15 hoặc reassign để hoàn thành brief; RES-18 chờ kết quả.
+**Hành động:** Chờ RES-19 hoàn thành; sẽ thêm phản biện RES-15 vào phần cuối file này.
 
 ---
 
@@ -57,12 +53,28 @@
 
 | Brief | Hành động | Chú thích |
 |---|---|---|
-| RES-15 | **CHỜ BOARD** | Stranded, cần retry/reassign trước khi RES-18 tiếp tục |
+| RES-15 (RES-19) | **CHỜ RES-19** | Làm lại tại RES-19; thêm vào khi xong |
 | RES-16 | **GIỮ** | 3 đề tài hợp lệ; không lỗi nặng |
-| RES-17 | **SỬA + GIỮ** | Làm rõ khái niệm đo lường (mm từng vùng, bất định); lưu ý khoảng cách sim↔thật |
-
-**RES-18:** Chuyển sang `blocked` chờ RES-15.
+| RES-17 | **GIỮ + SỬA** | Làm rõ khái niệm đo lường (mm từng vùng, bất định) |
 
 ---
 
-Phản biện ngừng tại đây.
+## Tổng hợp trích dẫn & khuyến nghị
+
+**RES-16 (Cây thuốc):**
+- Trích dẫn ✓: 17/21 bài đã mở (arXiv, PMC, DOI)
+- Trích dẫn ⚠️: 2 bài (VNPlant-200, FAIR 2025 chưa tìm)
+- Trích dẫn ✗: 2 bài (VietMed-MCQ rút; bài bổ sung không dùng)
+- **Lỗi nặng:** Không
+- **Khuyến nghị:** Giữ 3 đề tài; thực hiện thứ tự A → B → C
+
+**RES-17 (Răng 2D→3D):**
+- Trích dẫn ✓: 11/12 (NeBLa, PX2Tooth, HyDAR, Teeth3DS+, ToothFairy3, Crossref)
+- Trích dẫn ⚠️: 1 (Teeth3DS+ giấy phép "Other")
+- Trích dẫn ✗: 0
+- **Lỗi nặng:** Khái niệm "99%"—nên đo mm từng vùng + bất định hiệu chuẩn
+- **Khuyến nghị:** Sửa + giữ 3 đề tài; thực hiện Đề tài 1 → 2 (song song) → 3
+
+---
+
+**RES-18:** Chờ RES-19 xong, cập nhật file này, chuyển issue sang `done`.
