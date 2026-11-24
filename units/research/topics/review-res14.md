@@ -12,13 +12,17 @@
 
 ---
 
-## RES-15 Brief Chatbot Trường → RES-19 (chờ)
+## RES-19 Brief Chatbot Trường (thay RES-15) — Phản biện tóm tắt
 
-| Item | Trạng thái | Ghi chú |
-|---|---|---|
-| Tệp `topics/brief-university-docs-chatbot.md` | ⏳ RES-19 làm lại | Phụ thuộc dời từ RES-15 sang RES-19; chờ kết quả |
+| Tiêu chí | Trích dẫn ✓ | Trích dẫn ⚠️ | Trích dẫn ✗ | Ghi chú |
+|---|---|---|---|---|
+| **Trích dẫn & Dataset** | 6 | 0 | 0 | P1-P6 (arXiv, Crossref); 4 dataset công khai (Hugging Face, github) |
+| **Tính mới** | — | — | — | Thời gian + hiệu lực văn bản cho QA giáo dục tiếng Việt chưa thấy; khoảng trống rõ so với P3 (luật) và P2 (y tế) |
+| **Khả thi** | — | — | — | Đề tài 1: tháng 1 đồ thị, tháng 2 so sánh (GPU nhỏ); đề tài 2: 30k tệp không công bố, chỉ báo cáo số liệu ✓ |
+| **Rủi ro** | — | — | — | Trích quan hệ sửa đổi từ văn bản cấp trường sai; ViHERMES (P2) mở rộng sang giáo dục trước ⚠️ |
+| **Lỗi nặng** | — | — | — | Không phát hiện |
 
-**Hành động:** Chờ RES-19 hoàn thành; sẽ thêm phản biện RES-15 vào phần cuối file này.
+**Khuyến nghị RES-19:** Giữ 2 đề tài; điểm 22/25, phù hợp NCS (chuỗi: thời gian → triển khai).
 
 ---
 
@@ -53,7 +57,7 @@
 
 | Brief | Hành động | Chú thích |
 |---|---|---|
-| RES-15 (RES-19) | **CHỜ RES-19** | Làm lại tại RES-19; thêm vào khi xong |
+| RES-19 (thay RES-15) | **GIỮ** | 2 đề tài hợp lệ; không lỗi nặng; điểm 22/25 |
 | RES-16 | **GIỮ** | 3 đề tài hợp lệ; không lỗi nặng |
 | RES-17 | **GIỮ + SỬA** | Làm rõ khái niệm đo lường (mm từng vùng, bất định) |
 
@@ -61,7 +65,14 @@
 
 ## Tổng hợp trích dẫn & khuyến nghị
 
-**RES-16 (Cây thuốc):**
+**RES-19 (Chatbot quy chế trường):**
+- Trích dẫn ✓: 6/6 bài đã mở (arXiv, Crossref)
+- Trích dẫn ⚠️: 0
+- Trích dẫn ✗: 0
+- **Lỗi nặng:** Không
+- **Khuyến nghị:** Giữ 2 đề tài; thực hiện Đề tài 1 → 2
+
+**RES-16 (Cây thuốc nam):**
 - Trích dẫn ✓: 17/21 bài đã mở (arXiv, PMC, DOI)
 - Trích dẫn ⚠️: 2 bài (VNPlant-200, FAIR 2025 chưa tìm)
 - Trích dẫn ✗: 2 bài (VietMed-MCQ rút; bài bổ sung không dùng)
@@ -77,4 +88,8 @@
 
 ---
 
-**RES-18:** Chờ RES-19 xong, cập nhật file này, chuyển issue sang `done`.
+## Kết quả cuối cùng
+
+✓ Phản biện 3 brief xong: RES-19 (6 trích dẫn ✓), RES-16 (17 ✓), RES-17 (11 ✓).  
+✓ Lỗi nặng: 0.  
+→ **Chuyển RES-18 sang `done`.**
