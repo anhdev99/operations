@@ -100,3 +100,10 @@ Lý do chọn trục này thay vì trục răng hàm mặt: chủ nhóm **đã c
 5. Trường có cho dùng log chatbot đã ẩn danh để đánh giá nội bộ không; có cán bộ phòng đào tạo duyệt 100-200 câu hỏi không.
 
 Câu hỏi chi tiết hơn cho từng hướng nằm ở cuối mỗi brief.
+
+## Quyết định của chủ nhóm (2026-11-25)
+
+- **Hướng răng 2D→3D: chưa làm.** Gói đề xuất cho phòng khám vẫn giữ trong brief để dùng sau.
+- **Bắt đầu data paper cây thuốc (VNMedPlant-Clean) ngay**: giao Builder ở RES-26. Lượt đầu dựng pipeline khử trùng và split chống rò rỉ, kiểm thử trên dữ liệu giả.
+- Thông tin còn thiếu (thư mục ảnh, tên bài FAIR 2025, GPU, ngân sách APC) chủ nhóm sẽ gửi sau. Khi có đường dẫn ảnh thì chạy pipeline trên dữ liệu thật.
+- Trục chính theo khuyến nghị: hỏi đáp có căn cứ trên tri thức tiếng Việt, gồm văn bản trường và cây thuốc nam. EduReg-Time là bài lõi tiếp theo.
