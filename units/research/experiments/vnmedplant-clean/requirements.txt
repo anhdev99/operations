@@ -1,0 +1,6 @@
+﻿numpy>=2.0
+pillow
+scikit-learn
+# tuy chon, chi can cho --dino / --backend dinov2:
+# torch
+# transformers
