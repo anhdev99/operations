@@ -4,7 +4,9 @@ Issue: RES-48 (con của RES-36 / RES-27). Người viết: Scholar. Ngày đọ
 Phục vụ **ViMeLeaf Bài 2** (RES-38): nhận dạng loài cây thuốc dễ nhầm, đuôi dài, biết từ chối; nộp Computers and Electronics in Agriculture (hạn 2027-04-30).
 Bối cảnh: `units/research/papers/brief-vimeleaf-novelty.md` (mục B) và `units/research/topics/vimeleaf-3-paper-series.md`.
 
-## Bài đã đọc trong lượt này (7)
+## Bài đã đọc trong lượt này
+
+**7 note full** (`units/research/papers/`): 2 nền (Geifman & El-Yaniv) + 5 cây. **4 nền/bổ trợ chung** (đoạn dưới) mở lại abstract theo gợi ý Dean. Tổng 11 bài được xác nhận tồn tại.
 
 | Slug | Tên | Loại | Link |
 |---|---|---|---|
@@ -17,6 +19,19 @@ Bối cảnh: `units/research/papers/brief-vimeleaf-novelty.md` (mục B) và `u
 | `2026-11-26-few-shot-plant-disease-calibration.md` | Few-shot plant disease + calibration | cây, few-shot, calibration | arXiv:2611.16373 |
 
 Mỗi bài: `units/research/papers/<slug>.md` (trích dẫn đầy đủ + DOI, vấn đề, phương pháp, dữ liệu, số chính, hạn chế, liên quan Bài 2). Số "chưa kiểm chứng" (chưa mở lại bảng) được ghi rõ trong từng note.
+
+### Bài nền/bổ trợ (chung, không cây) — mở lại theo gợi ý Dean (comment RES-48)
+
+Dean gợi ý "mở và kiểm lại từng bài" trong brief RES-29 (B1-B4). Đã mở abstract arXiv để xác nhận tồn tại + tóm tắt 1 dòng (không mở full note riêng vì là phương pháp chung, đã có trong brief):
+
+| Bài | arXiv | Xác nhận | Ghi chú cho P2 |
+|---|---|---|---|
+| Know When to Abstain (Neyman-Pearson selective) | 2505.15008 | ✓ (abstract) | Selection function tối ưu = likelihood-ratio test; đo vision + VLM + **covariate shift** (liên quan OOD điện thoại P2). So trực tiếp nếu P2 làm selective. |
+| HolUE (holistic uncertainty open-set biometrics) | 2408.14229 | ✓ (abstract) | Uncertainty "toàn phần" (gallery + embedding) cho open-set (thân thế học). Khung tham khảo cho open-set, không cây. |
+| CCL-SC (confidence-aware contrastive, ICML 2024) | 2406.04745 | ✓ (abstract) | Confidence-aware contrastive learning cho selective; benchmark CIFAR/CelebA/ImageNet. Baseline "contrastive + selective". |
+| Towards Better Selective Classification (NeurIPS 2022) | 2206.09034 | ✓ (abstract) | Challenge selective-by-architecture; cho rằng classification scores + entropy regularizer đủ tốt. Argument ủng hộ "threshold-naive trên model tốt" (so với SelectiveNet end-to-end). |
+
+4 bài này là **phương pháp tổng quát** (không cây) — P2 trích làm nền phương pháp, phần mới vẫn ở **miền cây thuốc + an toàn + OOD + risk–coverage**.
 
 ## Câu 1: thước đo chuẩn (định nghĩa + công thức)
 
