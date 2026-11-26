@@ -69,3 +69,33 @@ Truy xuất **Điều luật** (Article) tiếng Việt phù hợp cho câu hỏ
 - Tác giả: **UIT HCM** (cùng cộng đồng P2 ViHERMES, P5 ViLegalExpert, P6 VLegal-Bench trong brief). Cần theo dõi xem họ có mở rộng DRiLL sang giáo dục không (rủi ro nêu trong brief).
 - Bài này **không** dùng GraphRAG; đồ thị citation/amendment là nguồn đặc trưng, không phải truy vấn graph. T1 dùng GraphRAG đồ thị phiên bản — khác biệt rõ.
 - SOICT 2026: không thấy ghi Scopus trong bài; **chưa kiểm chứng** trạng thái Scopus.
+
+## Phản biện (Critic)
+
+Ngày: 2026-11-26. Đã mở lại toàn văn HTML arXiv v1 (mục 1–8, Bảng 1–11) + arXiv API metadata để đối chiếu từng mục bài đọc.
+
+### 1. Thông tin bài (mở lại arXiv 2611.09200)
+✓ Khớp: tiêu đề; tác giả Duc-Vu Nguyen, Ngan Luu-Thuy Nguyen (affiliation trong paper: UIT + VNU-HCM, khớp); publish 06/11/2026 v1 (arXiv API: `published 2026-11-06T09:21:59Z`); cs.IR (primary category); arXiv comment "Accepted at SOICT 2026" khớp ghi chú. DOI `10.48550/arXiv.2611.09200` là quy ước arXiv (chưa mở trang DOI) — bài đọc ghi đúng như vậy, không thổi phồng.
+
+### 2. Số liệu mục "Dữ liệu và kết quả"
+- ✓ DRiLL (mục 3, Bảng 1): 59.636 Điều; 2.190 train / 312 dev / 627 test; test sau dedup: 474 single / 121 two / 32 ≥3; 24,4% multi-Article — khớp đúng.
+- ✓ F₂ (mục 6.2, Bảng 6): Control P=57,13 ± 0,80, R=76,68 ± 0,51, F₂=71,77 ± 0,47; Proposed P=59,11 ± 0,35, R=77,43 ± 1,03, F₂=72,91 ± 0,68; ΔF₂=+1,14 pp, p_BH=0,00078 — khớp đúng. Ghi chú "± SD 5-seed" khớp mục 5.2.
+- ✓ R@k (mục 6.1, Bảng 4): R@10 87,33→88,27 (+0,95), R@100 96,75→97,52 (+0,77); chỉ R@100 có ý nghĩa sau BH — bài đọc nói "có ý nghĩa thống kê sau BH" đúng (R@100). ⚠ Nhỏ: bài đọc nói "R@10 ... (+0,95)" không kèm đánh dấu không ý nghĩa — không sai, chỉ thiếu; paper nói ranker hyperparameters khác nhau nên không quy được cho đặc trưng riêng.
+- ✓ Theo gold set (mục 7.2, Bảng 8): two-Article F₂,q 61,34→65,79 (+4,45, 61W/42T/18L); single +0,42 pp; ≥3 +2,89 pp — khớp đúng.
+- ✓ Split-gain (mục 7.1, Bảng 7, selector): same-law 8,04 ± 0,57; citation/lineage 7,28 ± 0,32 (gồm local ref 4,83 + intro/amend/guidance 1,32); identity/form 2,87 ± 0,16; tổng 18,20% — khớp đúng.
+- ✓ Case Q8360 (Bảng 9): gold {49460, 49474}; control chỉ {49460}; proposed đủ cả hai ở 4/5 seed (thiếu ở seed 3) — khớp "4/5".
+- ✓ Case Q411 (Bảng 10): proposed loại Điều cùng-luật gây nhiễu (652) trong 5/5 seed nhưng vẫn thiếu Điều 650 — khớp.
+- ⚠ Bài đọc không nhắc **Table 11 (Q7758, failure: proposed bỏ amendment ở 2/5 seed)** — paper đưa ra case failure để cân bằng; bỏ qua không sai nhưng thiếu một case quan trọng khi nhận định "case study minh hoạ ... hoạt động thực tế".
+- ✓ "Đặc trưng 1–4, 20 zero gain mọi model" (mục 7.1) — khớp.
+
+### 3. Phát biểu "Điểm mới"
+✓ Không thổi phồng: "lần đầu (theo bài)" dùng đúng scope trong bài; so sánh control/proposed cùng Top-100, cùng LLM, cùng learner — khớp mục 4.1/6.2; F₂ +1,14 pp có ý nghĩa thống kê (BH) — khớp; case study hai hướng (companion recovery + distractor removal) — khớp Bảng 9–10; lợi ích lớn nhất ở two-Article — khớp Bảng 8 (Δ +4,45 pp).
+
+### 4. Phần "So với đề tài T1 EduReg-Time"
+✓ Công bằng: bài này đúng là retrieval Article tĩnh + tag amendment (mục 4.3: "Action tags label citing Articles, not verified edges", "These cues do not verify legislative histories or effective dates") — không mô hình hoá trục thời gian/hiệu lực, khớp nhận định (a). (b) 4 khoảng trống nêu đều có cơ sở trong paper (không có date hiệu lực, không có graph động, không so LLM khác). (c) Rủi ro "thấp đến vừa" hợp lý: khác mục tiêu (retrieval Điều vs QA theo hiệu lực + mốc thời gian). (d) Khuyến nghị baseline EDM+27 đặc trưng và so F₂/R@k trên DRiLL — hợp lý, DRiLL công khai (ref [17]).
+⚠ Nhỏ: mục (b) điểm (4) "so sánh API vs LLM cục bộ trên kho 30k tệp — bài dùng Qwen2.5-72B API": paper không nói đây là "API" (chỉ nói "external LLM services", không đo latency/chi phí) — ghi chú của bài đọc đưa thêm suy luận, nên tách khỏi nội dung bài.
+
+### Kết luận chung
+✓ — Thông tin và số liệu khớp toàn văn; nhận định so với T1 công bằng. ⚠ hai điểm nhỏ (thiếu case failure Table 11; suy luận "API" về Qwen2.5) không làm sai kết luận chính.
+
+*Command tái lập:* mở https://arxiv.org/html/2611.09200v1 (đã lưu snapshot `drill.html.txt`, 43.748 ký tự, ngày 2026-11-26) + `http://export.arxiv.org/api/query?id_list=2611.09200`.
