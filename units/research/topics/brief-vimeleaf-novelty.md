@@ -44,12 +44,12 @@ Tìm kiếm arXiv bổ sung (đã chạy, 2026-11-26):
 ### Điểm còn mới (so với các bộ trên)
 - **Ảnh tự chụp Việt Nam, 3 tỉnh, ~165 loài**: TCMP-300/IndoHerb/MED117/MedLEA/IndoHerb-2025 đều từ nước khác (TC, ID, SL, NP, IN).
   VNPlant-200 (A1) cùng Việt Nam nhưng chưa mở được bài gốc; theo trích dẫn trong P1 là 20.000 ảnh, 200 loài.
-- **Quy mô ảnh/loài**: ViMeLeaf ~62k ảnh / ~165 loài (≈375 ảnh/loài trung vị 247); lớn hơn VNPlant-200, P7 (A4), MedLEA (A5)
+- **Quy mô ảnh/loài**: ViMeLeaf ~62k ảnh / ~165 loài (≈375 ảnh/loài trung vị 49); lớn hơn VNPlant-200, P7 (A4), MedLEA (A5)
   về số ảnh/loài; ngang TCMP-300 (A2) về tổng số ảnh nhưng ảnh tự chụp, không phải web-scrape.
 - **Khử trùng + split chống rò rỉ có log nhóm**: A2 (TCMP-300) có lọc trùng nhưng bằng VLM+người, ảnh từ web,
   không công bố split theo nhóm trùng/đợt chụp. A8 (Barz & Denzler) chứng minh vấn đề ở CIFAR nhưng
   **không đo trên dataset cây thuốc**. Chưa thấy bài nào đo "độ thổi phồng accuracy" cho ảnh cây thuốc Việt.
-- **Đuôi dài**: 72/165 tên < 100 ảnh (dữ kiện từ đề xuất) — điểm khác biệt so với TCMP-300 (300 loài, phân bố không mô tả).
+- **Đuôi dài**: 102/165 tên < 100 ảnh (số Critic đếm lại RES-30) — điểm khác biệt so với TCMP-300 (300 loài, phân bố không mô tả).
 
 ### Rủi ro trùng / việc phải làm
 - Trùng một phần với **VNPlant-200** nếu bộ đó đã công bố ảnh cây thuốc Việt. Cần chủ nhóm cung cấp
@@ -88,7 +88,7 @@ Tìm kiếm arXiv bổ sung (đã chạy, 2026-11-26):
 - MLLM nhận dạng cây (P3 trong brief-medicinal-plants: Jiang 2026, DOI 10.3389/fpls.2026.1765281,
   200 ảnh trắc nghiệm, Qwen3-VL-235B 90,5%) **chưa mở lại trong lượt này** (lượt trước). Trích vào bài 2 như đối chứng MLLM,
   ghi "chưa kiểm chứng lại" nếu chưa đọc lại abstract.
-- Duôi dài (72 loài <100 ảnh): chưa thấy benchmark cây thuốc ĐNA công bố; nếu không thu thêm ảnh, bài chỉ có 72/165 loài đuôi.
+- Duôi dài (102 loài <100 ảnh): chưa thấy benchmark cây thuốc ĐNA công bố; nếu không thu thêm ảnh, bài chỉ có 102/165 loài đuôi.
 - Cần **chuyên gia dược** đánh dấu cặp nào nhầm thì nguy hiểm (độc/không dùng được); không có thì "an toàn khi nhầm" không đo được.
 - B3 (Neyman-Pearson + covariate shift) nên so trực tiếp vì cùng đo OOD; nếu chỉ so threshold-naive thì bị chê phương pháp cũ.
 
