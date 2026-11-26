@@ -1,169 +1,84 @@
-# ViMeLeaf Paper 1: Image Duplication Effects on DL-based Plant Recognition
+# Dàn ý chi tiết — Bài 1 ViMeLeaf (data paper)
 
-**Journal**: Computers and Electronics in Agriculture  
-**Deadline**: 2027-01-31  
-**Status**: Outline — awaiting RES-40 paper details & RES-29 brief for final structure
+Issue: RES-47 (con RES-37). Nộp: Computers and Electronics in Agriculture, hạn 2027-01-31.
+Nguồn đầu vào: `vimeleaf-p1-cea-structure.md` (RES-40), `brief-vimeleaf-novelty.md` (RES-29), plan RES-37. Số liệu nền RES-30 (trung vị 49 ảnh/tên, 102 tên < 100 ảnh).
 
----
+## Câu đóng góp chính (gợi ý)
 
-## 1. Introduction
+ViMeLeaf là bộ dữ liệu ảnh cây thuốc Việt Nam đầu tiên (62.102 ảnh, ~165 loài, 3 tỉnh An Giang/Tây Ninh/Đồng Tháp) được (1) khử trùng có log nhóm, (2) chia split chống rò rỉ theo nhóm trùng + đợt chụp, và (3) đo được độ thổi phồng accuracy do ảnh trùng — điểm mới so với mọi dataset cây/cây thuốc đã công bố (CWD30, PAGS8, TCMP-300, VNPlant-200...). Không bài nào đo "độ thổi phồng" cho ảnh cây thuốc.
 
-### 1.1 Background & Motivation
-- Medicinal plant recognition: clinical & agricultural importance
-- Deep learning success in plant image classification (cite CEA papers from RES-40)
-- Dataset quality issues: data leakage, train/test overlap, duplication artifacts
-- Vietnamese medicinal plants: knowledge gap in public ML datasets
+## 1. Abstract
+- Quy mô: 62.102 ảnh + 268 video, ~165 loài, 3 tỉnh; 195 thư mục (tên cây địa phương).
+- Đóng góp: khử trùng (log 37.980 ảnh gần trùng + 4.188 rác), split chống rò rỉ (theo nhóm trùng + đợt chụp An Giang gốc ↔ bổ sung v1, 30 loài), baseline 3 model × 3 seed, đo chênh lệch accuracy split ngẫu nhiên (trước khử trùng) vs split sạch.
+- Kết quả headline: [chỗ trống — số liệu từ RES-28/RES-30: độ thổi phồng accuracy = ? điểm, ghi kèm lệnh tái lập + seed].
+- Nơi lưu + giấy phép: [Zenodo — chưa kiểm chứng, chờ board duyệt chi phí], đề xuất CC BY 4.0 (theo PAGS8; CWD30 không ghi → tránh).
 
-### 1.2 Problem Statement
-- Published plant recognition studies often show inflated accuracy due to dataset design flaws
-- Duplicate images in training/validation splits artificially boost metrics
-- Lack of transparent, public medicinal plant dataset with known quality baseline
+## 2. Introduction
+- 2.1 Bối cảnh: nhận dạng cây thuốc nam bằng DL; ý nghĩa nông nghiệp/dược liệu; cây thuốc VN ít dataset (trích RES-29: TCMP-300 từ web, VNPlant-200 chưa kiểm chứng, IndoHerb/MedLEA nước khác).
+- 2.2 Vấn đề: ảnh trùng trong train/val làm accuracy thổi phồng. Tiền lệ: Barz & Denzler (A8, ciFAIR: test trùng train → accuracy tụt 9-14%); chưa bài nào đo trên dataset cây thuốc.
+- 2.3 Khoảng trống (gap): chưa có data paper ảnh cây thuốc VN có split chống rò rỉ theo nhóm trùng (RES-29: tìm arXiv `deduplication + plant` → 0 kết quả phù hợp).
+- 2.4 Đóng góp của bài (3 điểm như câu chính).
 
-### 1.3 Main Contributions
-1. **Quantify duplication impact**: Measure accuracy degradation when duplicate images injected into train/val splits (quantitative analysis from RES-28)
-2. **ViMeLeaf dataset release**: First public Vietnamese medicinal plant image dataset with metadata, known quality profile, benchmark results
-3. **Validation protocol**: Best-practice guidelines for image-based plant recognition dataset curation
+## 3. Data Collection and Properties (theo CWD30 §III + PAGS8 §2)
+### 3.1 Taxonomy & danh mục loài
+- ~165 loài từ 195 thư mục tên địa phương; taxonomy kingdom→species (phụ lục, theo CWD30).
+- Xung đột nhãn đã biết: Dây giác/Sục sạc (RES-30) → ghi rõ xử lý, metadata 80 loài.
+- **Bảng 1** (theo Table 1 PAGS8 / Table I CWD30): thống kê dataset — số ảnh/loài, phân bố (trung vị 49 ảnh/tên, 102/195 tên < 100 ảnh = đuôi dài), so với TCMP-300/VNPlant-200/CWD30 (cột so sánh theo RES-40).
+- **Hình 1** (theo Fig. 1 CWD30): ví dụ ảnh, 2-3 ảnh/loài × N loài đại diện. LUẬT: không đưa ảnh vào git → dẫn link Zenodo + thumbnail không có PII.
+- **Hình 2**: histogram số ảnh theo loài (đuôi dài).
 
----
+### 3.2 Data collection (thu thập)
+- 3 tỉnh An Giang/Tây Ninh/Đồng Tháp + 2 đợt bổ sung; thiết bị (điện thoại/camera — ghi theo manifest RES-30), thời gian, người thu (ẩn danh theo luật dữ liệu).
+- 268 video (cắt khung) — mô tả nguồn.
 
-## 2. Related Work
+### 3.3 Data filtering & deduplication (log khử trùng)
+- Pipeline RES-26: phát hiện ảnh gần trùng (phash/dhash), log `deleted_near_dups_log.csv` (37.980 ảnh) + rác (4.188).
+- **Giữ log "trước khử trùng"** để phần 4-5 đo được độ thổi phồng (điểm mới so với CWD30/PAGS8 — 2 bài này không đo).
+- Lọc mờ/nhiễu (theo CWD30 3.C).
 
-### 2.1 Plant Recognition Datasets & Benchmarks
-- Key public datasets (cite RES-40 papers: CEA recent surveys)
-- DL architectures for plant classification: CNNs, transfer learning, vision transformers
-- Benchmark results on major datasets
+### 3.4 Data splits (split chống rò rỉ — điểm khác biệt chính)
+- Split theo **nhóm trùng** (log `kept_path`) + theo **đợt chụp** (An Giang gốc ↔ bổ sung v1, 30 loài) — theo RES-40 "phần mới so với mọi bài đã đọc".
+- So sánh: CWD30 K-fold micro-class (không theo nhóm trùng), PAGS8 stratified Monte Carlo theo metadata/vị trí (không theo nhóm trùng).
+- Tỷ lệ train/val/test: [chỗ trống — RES-30/RES-28, ghi seed + lệnh tái lập].
 
-### 2.2 Data Quality & Dataset Artifacts
-- Duplicate image detection methods
-- Train/test contamination in published studies
-- Strategies to mitigate data leakage (cite RES-40)
-- Vietnamese plant recognition: existing work (if any; note gaps)
+## 4. Experiments and Evaluation (theo CWD30 §IV + PAGS8 §2.4)
+### 4.1 Baseline
+- 3 model (ResNet-50/EfficientNet-B0 + 1 kiến trúc theo CWD30 Table IV: CNN hoặc ViT; ghi repo link + phiên bản như PAGS8 Table 2), 3 seed mỗi model.
+- Hyperparameter theo CWD30 (AdamW, batch 32, lr, cosine decay, 50 epochs, PyTorch) — [chỗ trống: config thực từ RES-28].
+- Scratch vs ImageNet pretrain (theo CWD30).
+### 4.2 Thiết kế đo thổi phồng
+- Chạy baseline trên (a) split ngẫu nhiên **trước khử trùng** (chứa trùng) và (b) split **sạch** (chống rò rỉ).
+- Chênh lệch accuracy = độ thổi phồng. Metric phù hợp đuôi dài (102/195): per-class mean accuracy + macro-F1 (theo RES-40), không chỉ overall accuracy.
+- [Chỗ trống: kết quả từ RES-28/RES-30 + lệnh tái lập + seed theo luật repo].
+### 4.3 Phân tích
+- Theo nhóm loài dễ nhầm (Dây giác/Sục sạc), theo giai đoạn/điều kiện chụp nếu có.
 
-### 2.3 Medicinal Plant Recognition
-- Clinical relevance of automated identification
-- Challenges: morphological similarity, lighting/angle variation, occlusion
+## 5. Results and Discussion
+- **Bảng 2** (theo Table IV CWD30 / Table 3 PAGS8): kết quả baseline 3 model × 3 seed (F1/accuracy, scratch vs pretrain).
+- **Bảng 3**: so sánh split trước khử trùng vs split sạch → chênh lệch accuracy per model.
+- **Hình 3**: đường cong accuracy theo tỉ lệ ảnh trùng (nếu có số liệu tỉ lệ — chưa kiểm chứng).
+- Discussion: so CWD30/PAGS8 (không có split chống trùng → baseline của họ cũng có thể bị thổi phồng), so TCMP-300 (A2: lọc trùng bằng VLM+người, không công bố split theo nhóm), so Barz & Denzler (A8: CIFAR, tụt 9-14% tương đối).
+- Giới hạn: 3 tỉnh (không toàn quốc), đuôi dài 102/195 loài, video chưa khai thác hết.
 
----
+## 6. Data Availability and Licensing (theo RES-40 bảng so sánh)
+- Nơi lưu: Zenodo [chờ duyệt chi phí — ghi "chưa kiểm chứng"], manifest + log khử trùng + split files công khai.
+- Giấy phép: đề xuất CC BY 4.0 (PAGS8 có, CWD30 thiếu → ghi rõ tránh như họ).
+- Tái lập: lệnh + seed (luật repo: mọi số liệu kèm lệnh tái lập + seed; pipeline RES-26, baseline RES-28).
 
-## 3. Materials & Methods
+## 7. Conclusion
+- Tóm 3 đóng góp; khuyến nghị: split chống rò rỉ theo nhóm trùng nên là tiêu chuẩn cho dataset ảnh cây; hướng tới Bài 2 (cặp dễ nhầm + từ chối) và Bài 3 (KG + GraphRAG an toàn).
 
-### 3.1 ViMeLeaf Dataset
-- **Source**: Field collection from [region/herbarium] (from RES-28 dataset details)
-- **Species**: N = [X] medicinal plant species (from RES-28)
-- **Images**: Total [Y] RGB images; resolution [H×W]; standardization pipeline
-- **Metadata**: Species ID, collection date, location, acquisition conditions
-- **Preprocessing**: Resizing, augmentation strategy, train/val/test splits (reference RES-28)
-- **Availability**: Public release via [platform/DOI] — *[pending RES-29 brief]*
+## References (đã kiểm chứng trong RES-29/RES-40, trích bắt buộc)
+- A8 Barz & Denzler 2019 (ciFAIR, arXiv:1902.00423) — điểm gốc "đo thổi phồng do trùng".
+- A9 Morra & Lamberti 2019 (arXiv:1907.02821) — công cụ khử trùng.
+- A2 TCMP-300 (DOI 10.1038/s41597-025-05522-7) + A1 VNPlant-200 (ghi "chưa kiểm chứng" nếu chưa mở bài gốc).
+- CWD30 (DOI 10.1016/j.compag.2024.109737), PAGS8 (DOI 10.1016/j.compag.2024.108622).
+- A3-A7 (IndoHerb, P7, MedLEA, Nepal, Indian self-curated) — so sánh dataset cây thuốc.
 
-### 3.2 Duplication Injection Experiment (RES-28)
-- **Baseline model**: ResNet-50 / EfficientNet-B[X] pretrained (from RES-28 setup)
-- **Training hyperparameters**: Learning rate, batch size, epochs, optimizer (from RES-28)
-- **Duplication protocol**: 
-  - Create copies of randomly selected training images
-  - Inject into training set at ratios: 0%, 5%, 10%, 20%, 50% duplication rates
-  - Keep validation/test sets pristine (no duplication)
-- **Metrics**: Accuracy, Precision, Recall, F1-score, AUC-ROC per species
-- **Statistical analysis**: Error bars, significance tests (from RES-28)
-
-### 3.3 Validation & Cross-Checks
-- 5-fold cross-validation on clean dataset
-- Duplicate detection using image hashing (phash, dhash) to verify injection
-
----
-
-## 4. Results
-
-### 4.1 Main Findings
-
-#### Table 1: Accuracy Degradation vs. Duplication Ratio
-| Duplication Ratio | Top-1 Accuracy (%) | Drop from Baseline | F1-Score | Precision |
-|------|---------|---------|---------|---------|
-| 0% (Clean) | [RES-28 value] | — | [RES-28 value] | [RES-28 value] |
-| 5% | [RES-28 value] | X% | [RES-28 value] | [RES-28 value] |
-| 10% | [RES-28 value] | X% | [RES-28 value] | [RES-28 value] |
-| 20% | [RES-28 value] | X% | [RES-28 value] | [RES-28 value] |
-| 50% | [RES-28 value] | X% | [RES-28 value] | [RES-28 value] |
-
-**Caption**: Each row shows performance on the same validation set; duplication only affects training set.
-
-#### Figure 1: Accuracy Degradation Curve
-- X-axis: Duplication ratio (%)
-- Y-axis: Top-1 accuracy (%)
-- Multiple lines: per-species breakdown (top-5 species)
-- **Finding**: [RES-28 qualitative result — e.g., ~1% accuracy loss per 10% duplication]
-
-#### Figure 2: Per-Class Accuracy Impact
-- Heatmap: Species (rows) vs. Duplication Ratio (cols)
-- Cell value: Accuracy degradation (%)
-- **Finding**: Some species more robust to duplication than others (imbalance in training data?)
-
-#### Figure 3: Example ViMeLeaf Images
-- Grid: 2–3 images per species (N=8 species) showing dataset diversity
-- Captions: Species name, acquisition date, field location
-
-### 4.2 Dataset Statistics
-- **Class distribution**: [histogram or table from RES-28]
-- **Image resolution range**: [min–max pixels]
-- **Annotation consistency**: [inter-rater agreement if applicable]
-
----
-
-## 5. Discussion
-
-### 5.1 Interpretation of Duplication Effects
-- Accuracy inflation magnitude aligns with dataset size bias (cite RES-40 on data leakage)
-- Species-wise variation suggests morphological similarity matters (harder to confuse botanically distinct species even with duplicates)
-- Practical implication: **Transparent metadata critical** for downstream users
-
-### 5.2 ViMeLeaf Contributions to Field
-- First public Vietnamese medicinal plant dataset → enables regional ML research
-- Known quality baseline → reference for future studies
-- Benchmark results on modern architectures (ViT, etc.) provided
-
-### 5.3 Limitations & Future Work
-- Geographic scope: Limited to [region]; future versions expand nationwide
-- Species count: [X] species; rare medicinal plants underrepresented
-- Image conditions: Mostly daylight field photos; lighting variation limited
-- Future: Herbarium specimens, synthetic augmentation, cross-camera robustness studies
-
----
-
-## 6. Conclusion
-
-Duplicate images in training sets can inflate plant recognition accuracy by [RES-28 estimate]%, highlighting the importance of rigorous dataset curation in agricultural ML. ViMeLeaf provides a transparent, public benchmark for medicinal plant recognition research, with documented quality profile and reproducible train/val/test splits. This study emphasizes validation best practices for botany-focused datasets.
-
----
-
-## 7. Data Availability & Reproducibility
-
-**ViMeLeaf Dataset**: 
-- **URL/DOI**: [From RES-29 release plan]
-- **License**: [e.g., CC-BY-4.0]
-- **Code repository**: [Github link from RES-28 or RES-29]
-- **Reproducibility**: 
-  - All hyperparameters: Appendix A
-  - Random seeds for train/val/test splits: [seed value from RES-28]
-  - Train script: [github.com/...]/train_duplication_exp.py
-
----
-
-## Figures & Tables Summary
-
-| Item | Description | Source | Status |
-|------|-------------|--------|--------|
-| Table 1 | Accuracy vs. Duplication % | RES-28 experiments | ⏳ awaiting data |
-| Figure 1 | Degradation curve | RES-28 experiments | ⏳ awaiting data |
-| Figure 2 | Per-class heatmap | RES-28 experiments | ⏳ awaiting data |
-| Figure 3 | Sample images | RES-28 dataset | ⏳ awaiting data |
-| Appendix A | Hyperparameters | RES-28 config | ⏳ awaiting data |
-| Appendix B | Class distribution | RES-28 dataset | ⏳ awaiting data |
-
----
-
-## References (To Fill)
-
-*Pending RES-40 papers review. Expected structure:*
-1. 2–3 recent CEA papers on plant recognition datasets
-2. Seminal DL plant classification papers (ResNet, EfficientNet applications)
-3. Data leakage/duplication detection literature
-4. Vietnam botany/agriculture context (if applicable)
+## Chỗ trống số liệu (issue nào cung cấp)
+| Dữ liệu | Issue nguồn | Trạng thái |
+|---|---|---|
+| Chênh lệch accuracy (split trước/sau khử trùng) | RES-28 (chạy thử) | chưa kiểm chứng — Builder chạy kèm seed |
+| Phân bố ảnh/loài chính xác | RES-30 (manifest) | đã có: trung vị 49, 102/195 <100 |
+| Config baseline 3 model | RES-28 | chưa kiểm chứng |
+| Zenodo DOI | Board duyệt chi phí | chưa kiểm chứng |
