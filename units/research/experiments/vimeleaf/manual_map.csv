@@ -1,0 +1,196 @@
+folder,key,status,note
+1. Cây bạch hoa xà tiền thảo ( cỏ lưỡi rắn)(lữ đồng),#1,fuzzy,"tên gọi khác trùng alias xlsx (cỏ lưỡi rắn, lữ đồng); folder ghi 'tiền thảo', xlsx 'thiệt thảo'"
+Bạch hoa xà,#1,fuzzy,tên rút gọn của 'Bạch hoa xà thiệt thảo'
+2. Dây choạy,#32,fuzzy,xlsx alias 'Rau chạy' của Rau choại
+Rau choại,#32,exact,
+3. đơn lá đỏ ( đơn mặt trời),#5,exact,
+Đơn lá đỏ,#5,exact,
+4. Hổ vĩ mép vàng,#50,exact,
+Hổ vĩ mép vàng,#50,exact,
+5. Cây số 5 là cây càng cua ( Rau càng cua),#31,exact,
+Rau càng cua,#31,exact,
+5. cây bầu đất tía,Gynura procumbens (Lour.) Merr.,ambiguous,đề xuất từ tên thông dụng 'bầu đất'; chưa kiểm chứng
+6. cây ngải hổ ( ngãi hắc hổ),,unknown,"chưa xác định (nhóm ngải, Curcuma/Kaempferia?); không có trong xlsx/luận văn"
+Ngải hắc hổ,,unknown,cùng loài với '6. cây ngải hổ (ngãi hắc hổ)'; chưa xác định
+6. cây Huỳnh Anh,#71,exact,tên khoa học lấy từ luận văn Phụ lục A (xlsx để trống)
+"7. cây dõ dẽ,( rõ rẽ)(Nam kỳ hương)",,unknown,danh sách V2 An Giang ghi 'dơ đề (rễ) (Nam kỳ hương)'; chưa xác định
+7. cây hoa ngủ sắc ( cây trăm ổi),Lantana camara L.,ambiguous,đề xuất từ tên thông dụng (hoa ngũ sắc/trâm ổi); chưa kiểm chứng
+8. cây bùm sụm (cây chùm rụm),#46,ambiguous,xlsx ghi 2 tên khoa học (Carmona microphylla; Ehretia buxifolia) - cần chọn
+Bùm sụm,#46,ambiguous,xlsx ghi 2 tên khoa học (Carmona microphylla; Ehretia buxifolia) - cần chọn
+8.  cây lá gai,#72,exact,tên khoa học lấy từ luận văn Phụ lục A
+9. cây thù lù (cây thù lù bao),#36,exact,
+Thù lù,#36,exact,
+9. cây Hoàng Ngọc Âm,,unknown,chưa xác định
+10. cây ngãi quắng,,unknown,danh sách V2 An Giang ghi 'ngãi quáng'; chưa xác định
+Ngải quắn,,unknown,cùng loài với '10. cây ngãi quắng'?; chưa xác định
+10. cây đuôi chuột,#73,exact,tên khoa học lấy từ luận văn Phụ lục A
+11. Bạc hà núi (gáy núi),#24,ambiguous,xlsx ghi 2 tên khoa học (Alocasia odora; Colocasia macrorhiza) - cần chọn
+Bạc hà núi,#24,ambiguous,xlsx ghi 2 tên khoa học (Alocasia odora; Colocasia macrorhiza) - cần chọn
+11. cây dáng bay ( cốt toái bổ),#34,fuzzy,xlsx alias 'Cốt toái bổ' của Tắc kè đá (Drynaria)
+Cốt toái bổ,#34,fuzzy,xlsx alias 'Cốt toái bổ' của Tắc kè đá (Drynaria)
+12. Mắc cỡ gai (hoa trinh nữ),Mimosa diplotricha C.Wright,ambiguous,"đề xuất; 'mắc cỡ gai' có thể là Mimosa diplotricha hoặc M. pigra, 'hoa trinh nữ' thường là M. pudica; chưa kiểm chứng"
+Mắc cỡ gai,Mimosa diplotricha C.Wright,ambiguous,đề xuất; có thể là M. diplotricha / M. pigra / M. pudica; chưa kiểm chứng
+12. cây sung,Ficus racemosa L.,ambiguous,đề xuất từ tên thông dụng 'sung'; chưa kiểm chứng
+13. Cỏ lồng chầu ( cỏ mần chầu)( màn chầu),#9,fuzzy,tên trong ngoặc 'cỏ mần chầu' = Cỏ Mần trầu (xlsx)
+Cỏ Mần trầu,#9,exact,
+13. cây chó đẻ ( Diệp hạ châu),#75,exact,tên khoa học lấy từ luận văn Phụ lục A
+14. Ngũ gia bì chân chim,#8,exact,
+Chân chim,#8,fuzzy,xlsx alias 'Cây chân chim' của Ngũ gia bì chân chim
+14. cây thương lục,Phytolacca acinosa Roxb.,ambiguous,đề xuất từ tên thông dụng 'thương lục'; chưa kiểm chứng
+"15. Rau má lá rau muống,( nhất điểm hồng)(rau mặt trời)",,unknown,chưa xác định
+15. cây cà gai Leo,#21,exact,tên khoa học lấy từ luận văn Phụ lục A
+16. Huyết rồng,#41,exact,
+Huyết rồng,#41,exact,
+16. cây Ngọc bút,,unknown,chưa xác định
+17. Bí Kỳ Nam,#51,exact,
+Kỳ nam,#51,fuzzy,tên rút gọn của 'Bí kỳ nam'
+17. cây sống đời ( cây thuốc bổng),Kalanchoe pinnata (Lam.) Pers.,ambiguous,"xlsx STT 74 tên 'Sống đời' nhưng bỏ trống tên khoa học; luận văn Phụ lục A STT 74 lại là Cát lồi (Costus speciosus); tên Kalanchoe pinnata là đề xuất, chưa kiểm chứng"
+18. cây lược vàng,#67,exact,
+Lược vàng,#67,exact,
+18. cây ngãi tượng,,unknown,chưa xác định
+19. Ngô Đồng (sen tàu)(sen cạn),#37,exact,
+Sen tàu,#37,exact,
+19. cây Rau chai ( thài lài lá nhỏ),,unknown,chưa xác định
+2. cây câu đằng,#70,exact,tên khoa học lấy từ luận văn Phụ lục A (Uncaria sp.; chưa chắc loài)
+20. Dằn xoay (cây cối xoay)(vằn xoay),#2,fuzzy,'cối xoay' ~ Cây cối xay (xlsx Abutilon indicum); chưa kiểm chứng
+Vần xây,#2,fuzzy,'vần xây' ~ 'vằn xoay'/cối xay; chưa kiểm chứng
+20. cây vẫy ốc ( vẫy tê tê),,unknown,chưa xác định
+21. Dây giác ba lá ( giây vác),#26,exact,
+"Dây giác ( 3 lá, giây vác )",#26,exact,
+21. cây dầu mè tía,Jatropha gossypiifolia L.,ambiguous,đề xuất từ tên thông dụng; chưa kiểm chứng
+22. dây Hồ đằng ( chìa vôi 4 cạnh)( dây quan tài),Cissus quadrangularis L.,ambiguous,đề xuất từ tên thông dụng 'chìa vôi 4 cạnh'; chưa kiểm chứng
+"22. tiên toạ,( cây tổ quạ) ( tổ chim)",#25,fuzzy,tên trong ngoặc 'tổ chim' = Cây tổ chim (xlsx Asplenium nidus)
+Cây tổ chim ( tổ quạ ),#25,exact,
+Ổ Phụng,#25,fuzzy,xlsx alias 'Ráng ổ phụng' của Tổ chim; chưa kiểm chứng
+23. Sen,#45,exact,
+Sen,#45,exact,
+23. cây xương tế,,unknown,chưa xác định
+24. Ngãi đen mép lá đỏ,,unknown,nhóm ngải (Curcuma?); chưa xác định
+Ngải đen lá đỏ,,unknown,cùng loài với '24. Ngãi đen mép lá đỏ'; chưa xác định
+24. cây gối hạt,,unknown,chưa xác định
+25. Cây sò huyết,#47,exact,
+Cây sò huyết,#47,exact,
+25. cây thài lài lá sọc,,unknown,chưa xác định
+26. cây khế chua,#76,exact,tên khoa học lấy từ luận văn Phụ lục A
+26. Ô Dước,Lindera aggregata (Sims) Kosterm.,ambiguous,"đề xuất 'Ô dược'; danh sách V2 An Giang ghi 'Ô Dược', folder ghi 'Ô Dước'; chưa kiểm chứng"
+Ô dước,Lindera aggregata (Sims) Kosterm.,ambiguous,đề xuất 'Ô dược'; chưa kiểm chứng
+27. Lục lạc 3 lá (xột xạc),#33,fuzzy,Sục sạc (lục lạc) 3 lá trong xlsx
+Sục sạc ( lục lạc) 3 lá,#33,exact,
+27. cây ngáy,,unknown,chưa xác định
+28. Dây chân chó,,unknown,chưa xác định
+28. cây mắt nay ( ngưu tất tím),,unknown,chưa xác định
+29. Hà thủ ô đỏ,#49,exact,xlsx/luận văn ghi tên dược liệu 'Radix Fallopiae multiflorae' thay vì tên cây
+Hà thủ ô đỏ,#49,exact,xlsx/luận văn ghi tên dược liệu 'Radix Fallopiae multiflorae' thay vì tên cây
+29. cây cát loài ( cát lồi)(mía dò),#74T,exact,tên khoa học lấy từ luận văn Phụ lục A (STT 74 Cát lồi)
+Cát lồi,#74T,exact,tên khoa học lấy từ luận văn Phụ lục A (STT 74 Cát lồi)
+3. cây cần sen,,unknown,chưa xác định
+30. Thổ nhân sâm ba cạnh,#35,exact,
+Thổ nhân sâm 3 cạnh,#35,exact,
+30. cây đinh lăng nếp,#13,fuzzy,biến thể 'nếp' của Đinh lăng (xlsx Polyscias fruticosa); chưa kiểm chứng
+Đinh lăng,#13,exact,
+31. Ngãi tú cầu ( Hồng tú cầu),,unknown,chưa xác định
+Ngải tú cầu,,unknown,cùng loài với '31. Ngãi tú cầu'; chưa xác định
+31. cây cúc áo (nụ áo the),,unknown,chưa xác định
+32. Cây Địa Liền,#4,exact,
+Địa liền,#4,exact,
+32. dây thiên môn đông,Asparagus cochinchinensis (Lour.) Merr.,ambiguous,đề xuất từ tên thông dụng; chưa kiểm chứng
+33. cây cỏ xước ( ngưu tất nam),#3,exact,
+Cỏ xước,#3,exact,
+Cỏ xước nhỏ,#3,ambiguous,biến thể 'nhỏ' của Cỏ xước; chưa kiểm chứng
+33. cây xích đồng nam,#77,exact,tên khoa học lấy từ luận văn Phụ lục A
+34. Cây thanh táo,#53,ambiguous,xlsx ghi 2 tên khoa học (Justicia gendarussa; Gendarussa vulgaris - đồng nghĩa)
+Thanh Táo,#53,ambiguous,xlsx ghi 2 tên khoa học (Justicia gendarussa; Gendarussa vulgaris - đồng nghĩa)
+34. cây mật nhân,#78T,exact,tên khoa học lấy từ luận văn Phụ lục A (STT 78 Mật nhân); xlsx STT 78 ghi 'Vú sữa'
+35. Huỳnh Kỳ,#42,exact,
+Huỳnh kỳ,#42,exact,
+35.  cây lá lốt,#22,exact,tên khoa học lấy từ luận văn Phụ lục A
+36. dúi lá nhám,#48,fuzzy,folder 'dúi' = 'duối' (xlsx Duối nhám)
+Dúi nhám,#48,fuzzy,folder 'dúi' = 'duối' (xlsx Duối nhám)
+36. cây vú sữa,Chrysophyllum cainito L.,ambiguous,"xlsx STT 78 'Vú sữa' bỏ trống tên khoa học; luận văn STT 78 là Mật nhân; Chrysophyllum cainito là đề xuất, chưa kiểm chứng"
+"37. dây nhãn lồng ( chớp mau, chết mau,dây chôm chôm)",#52,fuzzy,folder 'nhãn lồng' = Nhãn lồng (xlsx Passiflora foetida)
+Nhãn lòng,#52,fuzzy,folder 'nhãn lòng' = 'nhãn lồng' (xlsx)
+37. cây hoàng ngọc dương ( hoàng ngọc đỏ),,unknown,chưa xác định
+38. dây cức quạ( lá nhỏ),#40,ambiguous,xlsx alias 'Dây cứt quạ lá nguyên' của khổ qua rừng; folder ghi 'lá nhỏ' - có thể khác; chưa kiểm chứng
+Cứt quạ (giống giống khổ qua rừng),#40,ambiguous,xlsx alias 'Dây cứt quạ lá nguyên'; folder ghi 'giống khổ qua rừng'; chưa kiểm chứng
+38. cây xuyên tam liên ( xuyên tâm liên),#23,exact,tên khoa học lấy từ luận văn Phụ lục A
+39. cây sâm bố chính,#79,exact,tên khoa học lấy từ luận văn Phụ lục A
+39. dây lăng chung,,unknown,chưa xác định
+Dây lăng chung ( chưa tìm thấy ),,unknown,chưa xác định
+4. cây mua ( hoa mua rừng),Melastoma malabathricum L.,ambiguous,đề xuất từ tên thông dụng 'mua'; chưa kiểm chứng
+40. dây cốc ( dây ký ninh),Tinospora crispa (L.) Hook.f. & Thomson,ambiguous,đề xuất từ tên thông dụng 'dây ký ninh'; chưa kiểm chứng
+40. cây dành dành,#11,exact,
+Dành dành,#11,exact,
+41. cây cà dâm,#38,fuzzy,folder 'dâm' = 'dăm' (xlsx Cà dăm)
+Cà dăm,#38,exact,
+41. dây cam thảo núi,#80,exact,tên khoa học lấy từ luận văn Phụ lục A
+42. An so hoa tím,,unknown,chưa xác định (không rõ có phải An xoa Helicteres hirsuta)
+An xoa,#54,exact,
+42. mướp gai,#43,exact,xlsx/luận văn ghi tên dược liệu 'Rhizoma Lasiae spinosae' thay vì tên cây
+Mướp gai,#43,exact,xlsx/luận văn ghi tên dược liệu 'Rhizoma Lasiae spinosae' thay vì tên cây
+43. cây Giềng gió,,unknown,chưa xác định
+43. cây chùm mồi ( chồi mồi),#39,fuzzy,folder 'chùm mồi' = 'chòi mòi/chùm mòi' (xlsx)
+Chòi mòi ( chùm mòi ),#39,exact,
+44. cây rau muôi ( cây cộng sản)( cây thuốc cỏ Lào),Chromolaena odorata (L.) R.M.King & H.Rob.,ambiguous,đề xuất từ tên thông dụng 'cỏ Lào/cộng sản'; chưa kiểm chứng
+44. cây xạ can,#6,exact,
+Xạ can,#6,exact,
+45. cây me,#29,ambiguous,xlsx ghi Phyllanthus emblica (me rừng/chùm ruột núi) nhưng 'cây me' thông dụng là Tamarindus indica - cần chủ nhóm chọn
+Me,#29,ambiguous,xlsx ghi Phyllanthus emblica (me rừng/chùm ruột núi) nhưng 'me' thông dụng là Tamarindus indica - cần chủ nhóm chọn
+45. cây nở ngày đất,Gomphrena celosioides Mart.,ambiguous,đề xuất từ tên thông dụng; chưa kiểm chứng
+46. cây mè đất,,unknown,chưa xác định
+46. hoàng tinh hoa trắng,#28,exact,
+Hoàng tinh hoa trắng,#28,exact,
+47. cây tắc kè đá,#34,exact,
+Tắc kè đá,#34,exact,
+47. cây đu đủ dầu tía,,unknown,chưa xác định
+48. cây bông giấy,Bougainvillea spectabilis Willd.,ambiguous,đề xuất từ tên thông dụng 'bông giấy'; chưa kiểm chứng
+Bông giấy,Bougainvillea spectabilis Willd.,ambiguous,đề xuất từ tên thông dụng 'bông giấy'; chưa kiểm chứng
+48. dây chìa vôi,,unknown,chưa xác định
+49. cây Ngà voi,#30,exact,
+Ngà voi,#30,exact,
+49. dây cam thảo nam,,unknown,chưa xác định (khác 'dây cam thảo núi'?)
+50. cây bọ mẫy ( bọ mắm),,unknown,chưa xác định
+50. cây bụp xước,,unknown,danh sách V2 An Giang ghi 'búp xước'; chưa xác định
+"Bụt dâm ( giống bụp giấm, chưa tra cứu được )",,unknown,chưa tra cứu được (theo ghi chú trong tên folder)
+51. cây Rau mương,#44,exact,
+Rau mương,#44,exact,
+52. cây kiết cánh nam,,unknown,chưa xác định
+Kiết cánh nam ( chưa tra được ),,unknown,chưa xác định
+1. cây bèo cái,Pistia stratiotes L.,ambiguous,đề xuất từ tên thông dụng 'bèo cái'; chưa kiểm chứng
+Bông trang lá nhỏ,Ixora chinensis Lam.,ambiguous,đề xuất từ tên thông dụng 'bông trang'; chưa kiểm chứng
+Bông trang lá to,Ixora coccinea L.,ambiguous,đề xuất từ tên thông dụng 'bông trang'; chưa kiểm chứng
+Cây Hoàn Ngọc,#63,exact,
+Cây cối xay,#2,exact,
+Cây dừa cạn,#7,exact,
+Cây móng tay,#55,exact,
+Cây mạn kinh,Vitex trifolia L.,ambiguous,đề xuất từ tên thông dụng 'mạn kinh'; chưa kiểm chứng
+Cây pháo hoa,,unknown,chưa xác định
+Cây rái voi,,unknown,chưa xác định
+Cây vối,#56,exact,
+Cây ổi,#12,exact,
+Dây đa đực ( chưa tra được ),,unknown,chưa tra được (theo ghi chú trong tên folder)
+Diệu bò vằn,,unknown,chưa xác định
+Găng tu hú,Catunaregam spinosa (Thunb.) Tirveng.,ambiguous,đề xuất từ tên thông dụng 'găng tu hú'; chưa kiểm chứng
+Gừng,#14,exact,
+Húng chanh (rau tần),#15,exact,
+Kim vàng,#65,exact,
+Lấu,#66,exact,
+Mần ri,#57,exact,
+Nghệ vàng,Curcuma longa L.,ambiguous,đề xuất từ tên thông dụng 'nghệ vàng'; không có trong xlsx; chưa kiểm chứng
+Nghệ đen,#58,ambiguous,xlsx ghi 2 tên khoa học (Curcuma zedoaria; C. zerumbet) - cần chọn
+Ngải cứu,#16,exact,
+Rau bợ,#68,exact,
+Rau muống tây ( tra chưa thấy ),,unknown,chưa tra được (theo ghi chú trong tên folder)
+Rau trai,#59,exact,
+Sả,#17,ambiguous,xlsx ghi 'Cymbopogon spp' - chưa tới loài
+Tai tượng xanh,#60,exact,
+Tam phỏng,#69,exact,
+Thanh xà trắng,,unknown,chưa xác định
+Thạch anh,#61,exact,
+Trinh nữ hoàng cung,#19,exact,
+Trúc bách hợp,,unknown,chưa xác định
+Trắc Bách Diệp,#18,exact,
+Vú sữa đất,#10,exact,
+Xạ đen,#62,exact,
+É tía,#20,exact,
+Đông Hầu Vàng,#64,exact,
+Hoài sơn nếp ( củ mài ),#27,exact,

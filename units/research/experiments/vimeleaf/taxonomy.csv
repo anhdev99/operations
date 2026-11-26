@@ -1,0 +1,196 @@
+﻿folder,vietnamese_name,scientific_name,genus,authorship,family,gbif_key,gbif_accepted_name,gbif_status,match_status,note,name_source,source_dirs
+1. Cây bạch hoa xà tiền thảo ( cỏ lưỡi rắn)(lữ đồng),Cây bạch hoa xà tiền thảo ( cỏ lưỡi rắn)(lữ đồng),Hedyotis diffusa Willd,Hedyotis,Willd,Rubiaceae,9264048,Scleromitrion diffusum,SYNONYM,fuzzy,"tên gọi khác trùng alias xlsx (cỏ lưỡi rắn, lữ đồng); folder ghi 'tiền thảo', xlsx 'thiệt thảo'; GBIF: 'Hedyotis diffusa' là synonym của Scleromitrion diffusum",xlsx#1,supplement_v1
+1. cây bèo cái,cây bèo cái,Pistia stratiotes L.,Pistia,L.,Araceae,2870583,Pistia stratiotes,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'bèo cái'; chưa kiểm chứng,manual-proposal,supplement_v2
+10. cây ngãi quắng,cây ngãi quắng,,,,,,,,unknown,danh sách V2 An Giang ghi 'ngãi quáng'; chưa xác định,,supplement_v1
+10. cây đuôi chuột,cây đuôi chuột,Stachytarpheta jamaicensis,Stachytarpheta,,Verbenaceae,2925463,Stachytarpheta jamaicensis,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#73,supplement_v2
+11. Bạc hà núi (gáy núi),Bạc hà núi (gáy núi),Alocazia odora (Roxb) C. Koch,Alocazia,(Roxb) C. Koch,Araceae,9506227,Alocasia odora,ACCEPTED,ambiguous,xlsx ghi 2 tên khoa học (Alocasia odora; Colocasia macrorhiza) - cần chọn; xlsx có nhiều tên: Alocazia odora (Roxb) C. Koch; Colocasia macrorhiza Schotl; lấy tên đầu; sửa chính tả chi (Alocazia -> Alocasia) ('Alocasia odora'),xlsx#24,supplement_v1
+11. cây dáng bay ( cốt toái bổ),cây dáng bay ( cốt toái bổ),Drynaria bonii Christ,Drynaria,Christ,Polypodiaceae,4025506,Drynaria bonii,ACCEPTED,fuzzy,xlsx alias 'Cốt toái bổ' của Tắc kè đá (Drynaria),xlsx#34,supplement_v2
+12. Mắc cỡ gai (hoa trinh nữ),Mắc cỡ gai (hoa trinh nữ),Mimosa diplotricha C.Wright,Mimosa,C.Wright,Fabaceae,7808904,Mimosa diplotricha,ACCEPTED,ambiguous,"đề xuất; 'mắc cỡ gai' có thể là Mimosa diplotricha hoặc M. pigra, 'hoa trinh nữ' thường là M. pudica; chưa kiểm chứng",manual-proposal,supplement_v1
+12. cây sung,cây sung,Ficus racemosa L.,Ficus,L.,Moraceae,5361904,Ficus racemosa,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'sung'; chưa kiểm chứng,manual-proposal,supplement_v2
+13. Cỏ lồng chầu ( cỏ mần chầu)( màn chầu),Cỏ lồng chầu ( cỏ mần chầu)( màn chầu),Eleusine indica (L.) Gaertn,Eleusine,(L.) Gaertn,Poaceae,2705953,Eleusine indica,ACCEPTED,fuzzy,tên trong ngoặc 'cỏ mần chầu' = Cỏ Mần trầu (xlsx),xlsx#9,supplement_v1
+13. cây chó đẻ ( Diệp hạ châu),cây chó đẻ ( Diệp hạ châu),Phyllanthus urinaria L.,Phyllanthus,L.,Phyllanthaceae,5382780,Phyllanthus urinaria,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#75,supplement_v2
+14. Ngũ gia bì chân chim,Ngũ gia bì chân chim,Schefflera heptaphylla (L.) Frodin,Schefflera,(L.) Frodin,Araliaceae,11047823,Heptapleurum heptaphyllum,SYNONYM,exact,GBIF: 'Schefflera heptaphylla' là synonym của Heptapleurum heptaphyllum,xlsx#8,supplement_v1
+14. cây thương lục,cây thương lục,Phytolacca acinosa Roxb.,Phytolacca,Roxb.,Phytolaccaceae,3084022,Phytolacca acinosa,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'thương lục'; chưa kiểm chứng,manual-proposal,supplement_v2
+"15. Rau má lá rau muống,( nhất điểm hồng)(rau mặt trời)","Rau má lá rau muống,( nhất điểm hồng)(rau mặt trời)",,,,,,,,unknown,chưa xác định,,supplement_v1
+15. cây cà gai Leo,cây cà gai Leo,Solanum procumbens Lour,Solanum,Lour,Solanaceae,2931076,Solanum procumbens,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#21,supplement_v2
+16. Huyết rồng,Huyết rồng,Sargentodoxa cuneata,Sargentodoxa,,Lardizabalaceae,3782041,Sargentodoxa cuneata,ACCEPTED,exact,,xlsx#41,supplement_v1
+16. cây Ngọc bút,cây Ngọc bút,,,,,,,,unknown,chưa xác định,,supplement_v2
+17. Bí Kỳ Nam,Bí Kỳ Nam,Hydnophytum formicarum Jack,Hydnophytum,Jack,Rubiaceae,2895700,Hydnophytum formicarum,ACCEPTED,exact,,xlsx#51,supplement_v1
+17. cây sống đời ( cây thuốc bổng),cây sống đời ( cây thuốc bổng),Kalanchoe pinnata (Lam.) Pers.,Kalanchoe,(Lam.) Pers.,Crassulaceae,2985930,Kalanchoe pinnata,ACCEPTED,ambiguous,"xlsx STT 74 tên 'Sống đời' nhưng bỏ trống tên khoa học; luận văn Phụ lục A STT 74 lại là Cát lồi (Costus speciosus); tên Kalanchoe pinnata là đề xuất, chưa kiểm chứng",manual-proposal,supplement_v2
+18. cây lược vàng,cây lược vàng,Callisia fragrans (Lindl.) Woodson,Callisia,(Lindl.) Woodson,Commelinaceae,5303453,Callisia fragrans,ACCEPTED,exact,,xlsx#67,supplement_v1
+18. cây ngãi tượng,cây ngãi tượng,,,,,,,,unknown,chưa xác định,,supplement_v2
+19. Ngô Đồng (sen tàu)(sen cạn),Ngô Đồng (sen tàu)(sen cạn),Firmiana simplex (L.),Firmiana,(L.),Malvaceae,3152111,Firmiana simplex,ACCEPTED,exact,họ xlsx=Sterculiaceae khác GBIF=Malvaceae,xlsx#37,supplement_v1
+19. cây Rau chai ( thài lài lá nhỏ),cây Rau chai ( thài lài lá nhỏ),,,,,,,,unknown,chưa xác định,,supplement_v2
+2. Dây choạy,Dây choạy,Stenochlaena palustris (Burm. f.) Bedd,Stenochlaena,(Burm. f.) Bedd,Blechnaceae,4079023,Stenochlaena palustris,ACCEPTED,fuzzy,xlsx alias 'Rau chạy' của Rau choại,xlsx#32,supplement_v1
+2. cây câu đằng,cây câu đằng,Uncaria sp. (Uncaria rhynchophylla),Uncaria,(Uncaria rhynchophylla),Rubiaceae,8104601,Uncaria rhynchophylla,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A (Uncaria sp.; chưa chắc loài); luận văn ghi 'Uncaria sp.' ('Uncaria rhynchophylla'),thesis#70,supplement_v2
+20. Dằn xoay (cây cối xoay)(vằn xoay),Dằn xoay (cây cối xoay)(vằn xoay),Abutilon indicum (L.) Sweet,Abutilon,(L.) Sweet,Malvaceae,3152634,Abutilon indicum,ACCEPTED,fuzzy,'cối xoay' ~ Cây cối xay (xlsx Abutilon indicum); chưa kiểm chứng,xlsx#2,supplement_v1
+20. cây vẫy ốc ( vẫy tê tê),cây vẫy ốc ( vẫy tê tê),,,,,,,,unknown,chưa xác định,,supplement_v2
+21. Dây giác ba lá ( giây vác),Dây giác ba lá ( giây vác),Cayratia trifolia (L.) Domino,Cayratia,(L.) Domino,Vitaceae,10995009,Causonis trifolia,SYNONYM,exact,GBIF: 'Cayratia trifolia' là synonym của Causonis trifolia,xlsx#26,supplement_v1
+21. cây dầu mè tía,cây dầu mè tía,Jatropha gossypiifolia L.,Jatropha,L.,Euphorbiaceae,3072900,Jatropha gossypiifolia,ACCEPTED,ambiguous,đề xuất từ tên thông dụng; chưa kiểm chứng,manual-proposal,supplement_v2
+22. dây Hồ đằng ( chìa vôi 4 cạnh)( dây quan tài),dây Hồ đằng ( chìa vôi 4 cạnh)( dây quan tài),Cissus quadrangularis L.,Cissus,L.,Vitaceae,7130673,Cissus quadrangularis,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'chìa vôi 4 cạnh'; chưa kiểm chứng,manual-proposal,supplement_v2
+"22. tiên toạ,( cây tổ quạ) ( tổ chim)","tiên toạ,( cây tổ quạ) ( tổ chim)",Asplenium nidus L,Asplenium,L,Aspleniaceae,2650676,Asplenium nidus,ACCEPTED,fuzzy,tên trong ngoặc 'tổ chim' = Cây tổ chim (xlsx Asplenium nidus),xlsx#25,supplement_v1
+23. Sen,Sen,Nelumbo nuciera Gaertn,Nelumbo,Gaertn,Nelumbonaceae,2882449,Nelumbo nucifera,ACCEPTED,exact,sửa chính tả epithet ('Nelumbo nucifera'),xlsx#45,supplement_v1
+23. cây xương tế,cây xương tế,,,,,,,,unknown,chưa xác định,,supplement_v2
+24. Ngãi đen mép lá đỏ,Ngãi đen mép lá đỏ,,,,,,,,unknown,nhóm ngải (Curcuma?); chưa xác định,,supplement_v1
+24. cây gối hạt,cây gối hạt,,,,,,,,unknown,chưa xác định,,supplement_v2
+25. Cây sò huyết,Cây sò huyết,Tradescantia discolor L'Hér,Tradescantia,L'Hér,Commelinaceae,2765230,Tradescantia spathacea,SYNONYM,exact,GBIF: 'Tradescantia discolor' là synonym của Tradescantia spathacea,xlsx#47,supplement_v1
+25. cây thài lài lá sọc,cây thài lài lá sọc,,,,,,,,unknown,chưa xác định,,supplement_v2
+26. cây khế chua,cây khế chua,Averrhoa carambola L.,Averrhoa,L.,Oxalidaceae,2891641,Averrhoa carambola,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#76,supplement_v2
+26. Ô Dước,Ô Dước,Lindera aggregata (Sims) Kosterm.,Lindera,(Sims) Kosterm.,Lauraceae,7304587,Lindera aggregata,ACCEPTED,ambiguous,"đề xuất 'Ô dược'; danh sách V2 An Giang ghi 'Ô Dược', folder ghi 'Ô Dước'; chưa kiểm chứng",manual-proposal,supplement_v1
+27. Lục lạc 3 lá (xột xạc),Lục lạc 3 lá (xột xạc),Crotalaria mucronata Desv,Crotalaria,Desv,Fabaceae,2942716,Crotalaria pallida,SYNONYM,fuzzy,Sục sạc (lục lạc) 3 lá trong xlsx; GBIF: 'Crotalaria mucronata' là synonym của Crotalaria pallida,xlsx#33,supplement_v1
+27. cây ngáy,cây ngáy,,,,,,,,unknown,chưa xác định,,supplement_v2
+28. Dây chân chó,Dây chân chó,,,,,,,,unknown,chưa xác định,,supplement_v1
+28. cây mắt nay ( ngưu tất tím),cây mắt nay ( ngưu tất tím),,,,,,,,unknown,chưa xác định,,supplement_v2
+29. Hà thủ ô đỏ,Hà thủ ô đỏ,Radix Fallopiae multiflorae,Radix,,Polygonaceae,4038333,Reynoutria multiflora,SYNONYM,exact,"xlsx/luận văn ghi tên dược liệu 'Radix Fallopiae multiflorae' thay vì tên cây; tên dược liệu, truy vấn theo tên cây ('Fallopia multiflora'); GBIF: 'Fallopia multiflora' là synonym của Reynoutria multiflora",xlsx#49,supplement_v1
+29. cây cát loài ( cát lồi)(mía dò),cây cát loài ( cát lồi)(mía dò),Costus speciosus Smith,Costus,Smith,Costaceae,7584507,Hellenia speciosa,SYNONYM,exact,tên khoa học lấy từ luận văn Phụ lục A (STT 74 Cát lồi); GBIF: 'Costus speciosus' là synonym của Hellenia speciosa,thesis#74,supplement_v2
+3. cây cần sen,cây cần sen,,,,,,,,unknown,chưa xác định,,supplement_v2
+3. đơn lá đỏ ( đơn mặt trời),đơn lá đỏ ( đơn mặt trời),Excoecaria cochinchinensis Lour,Excoecaria,Lour,Euphorbiaceae,3071716,Excoecaria cochinchinensis,ACCEPTED,exact,,xlsx#5,supplement_v1
+30. Thổ nhân sâm ba cạnh,Thổ nhân sâm ba cạnh,Talinum triangulare (Jacq.) Willd,Talinum,(Jacq.) Willd,Talinaceae,3084670,Talinum fruticosum,SYNONYM,exact,GBIF: 'Talinum triangulare' là synonym của Talinum fruticosum; họ xlsx=Portulacaceae khác GBIF=Talinaceae,xlsx#35,supplement_v1
+30. cây đinh lăng nếp,cây đinh lăng nếp,Polyscias fruticosa (L.) Harms,Polyscias,(L.) Harms,Araliaceae,3035652,Polyscias fruticosa,ACCEPTED,fuzzy,biến thể 'nếp' của Đinh lăng (xlsx Polyscias fruticosa); chưa kiểm chứng,xlsx#13,supplement_v2
+31. Ngãi tú cầu ( Hồng tú cầu),Ngãi tú cầu ( Hồng tú cầu),,,,,,,,unknown,chưa xác định,,supplement_v1
+31. cây cúc áo (nụ áo the),cây cúc áo (nụ áo the),,,,,,,,unknown,chưa xác định,,supplement_v2
+32. Cây Địa Liền,Cây Địa Liền,Kaempferia galanga L,Kaempferia,L,Zingiberaceae,5301451,Kaempferia galanga,ACCEPTED,exact,,xlsx#4,supplement_v1
+32. dây thiên môn đông,dây thiên môn đông,Asparagus cochinchinensis (Lour.) Merr.,Asparagus,(Lour.) Merr.,Asparagaceae,2768772,Asparagus cochinchinensis,ACCEPTED,ambiguous,đề xuất từ tên thông dụng; chưa kiểm chứng,manual-proposal,supplement_v2
+33. cây cỏ xước ( ngưu tất nam),cây cỏ xước ( ngưu tất nam),Achyranthes aspera L,Achyranthes,L,Amaranthaceae,3085168,Achyranthes aspera,ACCEPTED,exact,,xlsx#3,supplement_v1
+33. cây xích đồng nam,cây xích đồng nam,Clerodendrum japonicum (Thunb.) Sweet,Clerodendrum,(Thunb.) Sweet,Lamiaceae,2925348,Clerodendrum japonicum,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#77,supplement_v2
+34. Cây thanh táo,Cây thanh táo,Justicia gendarussa L. f.,Justicia,L. f.,Acanthaceae,7447231,Justicia gendarussa,ACCEPTED,ambiguous,xlsx ghi 2 tên khoa học (Justicia gendarussa; Gendarussa vulgaris - đồng nghĩa); xlsx có nhiều tên: Justicia gendarussa L. f.; Gendarussa vulgaris Nees; lấy tên đầu,xlsx#53,supplement_v1
+34. cây mật nhân,cây mật nhân,Eurycoma longifolia,Eurycoma,,Simaroubaceae,3709190,Eurycoma longifolia,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A (STT 78 Mật nhân); xlsx STT 78 ghi 'Vú sữa',thesis#78,supplement_v2
+35.  cây lá lốt,cây lá lốt,Piper lolot C. DC,Piper,C. DC,Piperaceae,4191172,Piper sarmentosum,SYNONYM,exact,tên khoa học lấy từ luận văn Phụ lục A; GBIF: 'Piper lolot' là synonym của Piper sarmentosum,thesis#22,supplement_v2
+35. Huỳnh Kỳ,Huỳnh Kỳ,Astragalus membranaceus (Fisch.) Bunge,Astragalus,(Fisch.) Bunge,Fabaceae,5345341,Astragalus mongholicus,SYNONYM,exact,GBIF: 'Astragalus membranaceus' là synonym của Astragalus mongholicus,xlsx#42,supplement_v1
+36. cây vú sữa,cây vú sữa,Chrysophyllum cainito L.,Chrysophyllum,L.,Sapotaceae,2885828,Chrysophyllum cainito,ACCEPTED,ambiguous,"xlsx STT 78 'Vú sữa' bỏ trống tên khoa học; luận văn STT 78 là Mật nhân; Chrysophyllum cainito là đề xuất, chưa kiểm chứng",manual-proposal,supplement_v2
+36. dúi lá nhám,dúi lá nhám,Streblus asper Lour,Streblus,Lour,Moraceae,10242935,Streblus asper,ACCEPTED,fuzzy,folder 'dúi' = 'duối' (xlsx Duối nhám),xlsx#48,supplement_v1
+37. cây hoàng ngọc dương ( hoàng ngọc đỏ),cây hoàng ngọc dương ( hoàng ngọc đỏ),,,,,,,,unknown,chưa xác định,,supplement_v2
+"37. dây nhãn lồng ( chớp mau, chết mau,dây chôm chôm)","dây nhãn lồng ( chớp mau, chết mau,dây chôm chôm)",Passiflora foetida L,Passiflora,L,Passifloraceae,2874211,Passiflora foetida,ACCEPTED,fuzzy,folder 'nhãn lồng' = Nhãn lồng (xlsx Passiflora foetida),xlsx#52,supplement_v1
+38. cây xuyên tam liên ( xuyên tâm liên),cây xuyên tam liên ( xuyên tâm liên),Andrographis paniculata (Burm.f.) Nees,Andrographis,(Burm.f.) Nees,Acanthaceae,3173178,Andrographis paniculata,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#23,supplement_v2
+38. dây cức quạ( lá nhỏ),dây cức quạ( lá nhỏ),Gymnopetalum integrifolium (Roxb.) Kurz,Gymnopetalum,(Roxb.) Kurz,Cucurbitaceae,3623176,Trichosanthes scabra,SYNONYM,ambiguous,xlsx alias 'Dây cứt quạ lá nguyên' của khổ qua rừng; folder ghi 'lá nhỏ' - có thể khác; chưa kiểm chứng; GBIF: 'Gymnopetalum integrifolium' là synonym của Trichosanthes scabra,xlsx#40,supplement_v1
+39. cây sâm bố chính,cây sâm bố chính,Abelmoschus sagittifolius,Abelmoschus,,Malvaceae,3940600,Abelmoschus sagittifolius,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#79,supplement_v2
+39. dây lăng chung,dây lăng chung,,,,,,,,unknown,chưa xác định,,supplement_v1
+4. Hổ vĩ mép vàng,Hổ vĩ mép vàng,Sansevieria trifasciata Hort,Sansevieria,Hort,Asparagaceae,11041822,Dracaena trifasciata,SYNONYM,exact,GBIF: 'Sansevieria trifasciata' là synonym của Dracaena trifasciata; họ xlsx=Dracaenaceae khác GBIF=Asparagaceae,xlsx#50,supplement_v1
+4. cây mua ( hoa mua rừng),cây mua ( hoa mua rừng),Melastoma malabathricum L.,Melastoma,L.,Melastomataceae,3188511,Melastoma malabathricum,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'mua'; chưa kiểm chứng,manual-proposal,supplement_v2
+40. cây dành dành,cây dành dành,Gardenia jasminoides J. Ellis,Gardenia,J. Ellis,Rubiaceae,5335125,Gardenia jasminoides,ACCEPTED,exact,,xlsx#11,supplement_v1
+40. dây cốc ( dây ký ninh),dây cốc ( dây ký ninh),Tinospora crispa (L.) Hook.f. & Thomson,Tinospora,(L.) Hook.f. & Thomson,Menispermaceae,8298918,Tinospora crispa,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'dây ký ninh'; chưa kiểm chứng,manual-proposal,supplement_v2
+41. cây cà dâm,cây cà dâm,Anogeissus acuminata (Roxb. ex DC.) Guillaum. et Perr,Anogeissus,(Roxb. ex DC.) Guillaum. et Perr,Combretaceae,9357375,Terminalia phillyreifolia,SYNONYM,fuzzy,folder 'dâm' = 'dăm' (xlsx Cà dăm); GBIF: 'Anogeissus acuminata' là synonym của Terminalia phillyreifolia,xlsx#38,supplement_v1
+41. dây cam thảo núi,dây cam thảo núi,Abrus precatorius L.,Abrus,L.,Fabaceae,5348711,Abrus precatorius,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#80,supplement_v2
+42. An so hoa tím,An so hoa tím,,,,,,,,unknown,chưa xác định (không rõ có phải An xoa Helicteres hirsuta),,supplement_v2
+42. mướp gai,mướp gai,Rhizoma Lasiae spinosae,Rhizoma,,Araceae,5330870,Lasia spinosa,ACCEPTED,exact,"xlsx/luận văn ghi tên dược liệu 'Rhizoma Lasiae spinosae' thay vì tên cây; tên dược liệu, truy vấn theo tên cây ('Lasia spinosa')",xlsx#43,supplement_v1
+43. cây Giềng gió,cây Giềng gió,,,,,,,,unknown,chưa xác định,,supplement_v2
+43. cây chùm mồi ( chồi mồi),cây chùm mồi ( chồi mồi),Antidesma ghaesembilla Gaertn,Antidesma,Gaertn,Phyllanthaceae,3076438,Antidesma ghaesembilla,ACCEPTED,fuzzy,folder 'chùm mồi' = 'chòi mòi/chùm mòi' (xlsx),xlsx#39,supplement_v1
+44. cây rau muôi ( cây cộng sản)( cây thuốc cỏ Lào),cây rau muôi ( cây cộng sản)( cây thuốc cỏ Lào),Chromolaena odorata (L.) R.M.King & H.Rob.,Chromolaena,(L.) R.M.King & H.Rob.,Asteraceae,3087725,Chromolaena odorata,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'cỏ Lào/cộng sản'; chưa kiểm chứng,manual-proposal,supplement_v2
+44. cây xạ can,cây xạ can,Belamcanda chinensis (L.) DC,Belamcanda,(L.) DC,Iridaceae,5298546,Iris domestica,SYNONYM,exact,GBIF: 'Belamcanda chinensis' là synonym của Iris domestica,xlsx#6,supplement_v1
+45. cây me,cây me,Phyllanthus emblica,Phyllanthus,,Phyllanthaceae,5381660,Phyllanthus emblica,ACCEPTED,ambiguous,xlsx ghi Phyllanthus emblica (me rừng/chùm ruột núi) nhưng 'cây me' thông dụng là Tamarindus indica - cần chủ nhóm chọn; họ xlsx=danh khác GBIF=Phyllanthaceae,xlsx#29,supplement_v1
+45. cây nở ngày đất,cây nở ngày đất,Gomphrena celosioides Mart.,Gomphrena,Mart.,Amaranthaceae,3084911,Gomphrena celosioides,ACCEPTED,ambiguous,đề xuất từ tên thông dụng; chưa kiểm chứng,manual-proposal,supplement_v2
+46. cây mè đất,cây mè đất,,,,,,,,unknown,chưa xác định,,supplement_v2
+46. hoàng tinh hoa trắng,hoàng tinh hoa trắng,Disporopsis longifolia Craib,Disporopsis,Craib,Asparagaceae,2768088,Disporopsis longifolia,ACCEPTED,exact,,xlsx#28,supplement_v1
+47. cây tắc kè đá,cây tắc kè đá,Drynaria bonii Christ,Drynaria,Christ,Polypodiaceae,4025506,Drynaria bonii,ACCEPTED,exact,,xlsx#34,supplement_v1
+47. cây đu đủ dầu tía,cây đu đủ dầu tía,,,,,,,,unknown,chưa xác định,,supplement_v2
+48. cây bông giấy,cây bông giấy,Bougainvillea spectabilis Willd.,Bougainvillea,Willd.,Nyctaginaceae,7167078,Bougainvillea spectabilis,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'bông giấy'; chưa kiểm chứng,manual-proposal,supplement_v1
+48. dây chìa vôi,dây chìa vôi,,,,,,,,unknown,chưa xác định,,supplement_v2
+49. cây Ngà voi,cây Ngà voi,Sansevieria cylindrica Bojor,Sansevieria,Bojor,Asparagaceae,10961470,Dracaena angolensis,SYNONYM,exact,GBIF: 'Sansevieria cylindrica' là synonym của Dracaena angolensis; họ xlsx=Liliaceae khác GBIF=Asparagaceae,xlsx#30,supplement_v1
+49. dây cam thảo nam,dây cam thảo nam,,,,,,,,unknown,chưa xác định (khác 'dây cam thảo núi'?),,supplement_v2
+5. Cây số 5 là cây càng cua ( Rau càng cua),Cây số 5 là cây càng cua ( Rau càng cua),Peperomia pellucida,Peperomia,,Piperaceae,3086412,Peperomia pellucida,ACCEPTED,exact,,xlsx#31,supplement_v1
+5. cây bầu đất tía,cây bầu đất tía,Gynura procumbens (Lour.) Merr.,Gynura,(Lour.) Merr.,Asteraceae,3139818,Gynura procumbens,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'bầu đất'; chưa kiểm chứng,manual-proposal,supplement_v2
+50. cây bọ mẫy ( bọ mắm),cây bọ mẫy ( bọ mắm),,,,,,,,unknown,chưa xác định,,supplement_v2
+50. cây bụp xước,cây bụp xước,,,,,,,,unknown,danh sách V2 An Giang ghi 'búp xước'; chưa xác định,,supplement_v1
+51. cây Rau mương,cây Rau mương,Ludwigia prostrate,Ludwigia,,Onagraceae,5545149,Ludwigia prostrata,ACCEPTED,exact,sửa chính tả epithet ('Ludwigia prostrata'),xlsx#44,supplement_v1
+52. cây kiết cánh nam,cây kiết cánh nam,,,,,,,,unknown,chưa xác định,,supplement_v1
+6. cây Huỳnh Anh,cây Huỳnh Anh,Allamanda cathartica L.,Allamanda,L.,Apocynaceae,3169836,Allamanda cathartica,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A (xlsx để trống),thesis#71,supplement_v2
+6. cây ngải hổ ( ngãi hắc hổ),cây ngải hổ ( ngãi hắc hổ),,,,,,,,unknown,"chưa xác định (nhóm ngải, Curcuma/Kaempferia?); không có trong xlsx/luận văn",,supplement_v1
+"7. cây dõ dẽ,( rõ rẽ)(Nam kỳ hương)","cây dõ dẽ,( rõ rẽ)(Nam kỳ hương)",,,,,,,,unknown,danh sách V2 An Giang ghi 'dơ đề (rễ) (Nam kỳ hương)'; chưa xác định,,supplement_v1
+7. cây hoa ngủ sắc ( cây trăm ổi),cây hoa ngủ sắc ( cây trăm ổi),Lantana camara L.,Lantana,L.,Verbenaceae,2925303,Lantana camara,ACCEPTED,ambiguous,đề xuất từ tên thông dụng (hoa ngũ sắc/trâm ổi); chưa kiểm chứng,manual-proposal,supplement_v2
+8.  cây lá gai,cây lá gai,Boehmeria nivea,Boehmeria,,Urticaceae,2984359,Boehmeria nivea,ACCEPTED,exact,tên khoa học lấy từ luận văn Phụ lục A,thesis#72,supplement_v2
+8. cây bùm sụm (cây chùm rụm),cây bùm sụm (cây chùm rụm),Carmona microphylla (Lam.) Don,Carmona,(Lam.) Don,Ehretiaceae,4066311,Ehretia microphylla,SYNONYM,ambiguous,xlsx ghi 2 tên khoa học (Carmona microphylla; Ehretia buxifolia) - cần chọn; xlsx có nhiều tên: Carmona microphylla (Lam.) Don; Ehretia buxifolia Roxb; lấy tên đầu; GBIF: 'Carmona microphylla' là synonym của Ehretia microphylla,xlsx#46,supplement_v1
+9. cây Hoàng Ngọc Âm,cây Hoàng Ngọc Âm,,,,,,,,unknown,chưa xác định,,supplement_v2
+9. cây thù lù (cây thù lù bao),cây thù lù (cây thù lù bao),Physalis angulata L,Physalis,L,Solanaceae,5341792,Physalis angulata,ACCEPTED,exact,,xlsx#36,supplement_v1
+An xoa,An xoa,Helicteres hirsuta Lour,Helicteres,Lour,Malvaceae,8217389,Helicteres hirsuta,ACCEPTED,exact,họ xlsx=Sterculiaceae khác GBIF=Malvaceae,xlsx#54,raw/dongthap
+Bông giấy,Bông giấy,Bougainvillea spectabilis Willd.,Bougainvillea,Willd.,Nyctaginaceae,7167078,Bougainvillea spectabilis,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'bông giấy'; chưa kiểm chứng,manual-proposal,raw/angiang
+Bông trang lá nhỏ,Bông trang lá nhỏ,Ixora chinensis Lam.,Ixora,Lam.,Rubiaceae,2905600,Ixora chinensis,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'bông trang'; chưa kiểm chứng,manual-proposal,raw/dongthap
+Bông trang lá to,Bông trang lá to,Ixora coccinea L.,Ixora,L.,Rubiaceae,2905493,Ixora coccinea,DOUBTFUL,ambiguous,đề xuất từ tên thông dụng 'bông trang'; chưa kiểm chứng,manual-proposal,raw/dongthap
+Bùm sụm,Bùm sụm,Carmona microphylla (Lam.) Don,Carmona,(Lam.) Don,Ehretiaceae,4066311,Ehretia microphylla,SYNONYM,ambiguous,xlsx ghi 2 tên khoa học (Carmona microphylla; Ehretia buxifolia) - cần chọn; xlsx có nhiều tên: Carmona microphylla (Lam.) Don; Ehretia buxifolia Roxb; lấy tên đầu; GBIF: 'Carmona microphylla' là synonym của Ehretia microphylla,xlsx#46,raw/angiang
+Bạc hà núi,Bạc hà núi,Alocazia odora (Roxb) C. Koch,Alocazia,(Roxb) C. Koch,Araceae,9506227,Alocasia odora,ACCEPTED,ambiguous,xlsx ghi 2 tên khoa học (Alocasia odora; Colocasia macrorhiza) - cần chọn; xlsx có nhiều tên: Alocazia odora (Roxb) C. Koch; Colocasia macrorhiza Schotl; lấy tên đầu; sửa chính tả chi (Alocazia -> Alocasia) ('Alocasia odora'),xlsx#24,raw/angiang
+Bạch hoa xà,Bạch hoa xà,Hedyotis diffusa Willd,Hedyotis,Willd,Rubiaceae,9264048,Scleromitrion diffusum,SYNONYM,fuzzy,tên rút gọn của 'Bạch hoa xà thiệt thảo'; GBIF: 'Hedyotis diffusa' là synonym của Scleromitrion diffusum,xlsx#1,raw/angiang
+"Bụt dâm ( giống bụp giấm, chưa tra cứu được )","Bụt dâm ( giống bụp giấm, chưa tra cứu được )",,,,,,,,unknown,chưa tra cứu được (theo ghi chú trong tên folder),,raw/angiang
+Chân chim,Chân chim,Schefflera heptaphylla (L.) Frodin,Schefflera,(L.) Frodin,Araliaceae,11047823,Heptapleurum heptaphyllum,SYNONYM,fuzzy,xlsx alias 'Cây chân chim' của Ngũ gia bì chân chim; GBIF: 'Schefflera heptaphylla' là synonym của Heptapleurum heptaphyllum,xlsx#8,raw/angiang
+Chòi mòi ( chùm mòi ),Chòi mòi ( chùm mòi ),Antidesma ghaesembilla Gaertn,Antidesma,Gaertn,Phyllanthaceae,3076438,Antidesma ghaesembilla,ACCEPTED,exact,,xlsx#39,raw/angiang
+Cà dăm,Cà dăm,Anogeissus acuminata (Roxb. ex DC.) Guillaum. et Perr,Anogeissus,(Roxb. ex DC.) Guillaum. et Perr,Combretaceae,9357375,Terminalia phillyreifolia,SYNONYM,exact,GBIF: 'Anogeissus acuminata' là synonym của Terminalia phillyreifolia,xlsx#38,raw/angiang
+Cát lồi,Cát lồi,Costus speciosus Smith,Costus,Smith,Costaceae,7584507,Hellenia speciosa,SYNONYM,exact,tên khoa học lấy từ luận văn Phụ lục A (STT 74 Cát lồi); GBIF: 'Costus speciosus' là synonym của Hellenia speciosa,thesis#74,raw/dongthap
+Cây Hoàn Ngọc,Cây Hoàn Ngọc,Pseuderanthemum palatiferum (Nees) Radlk,Pseuderanthemum,(Nees) Radlk,Acanthaceae,3772966,Pseuderanthemum latifolium,SYNONYM,exact,GBIF: 'Pseuderanthemum palatiferum' là synonym của Pseuderanthemum latifolium,xlsx#63,raw/tayninh
+Cây cối xay,Cây cối xay,Abutilon indicum (L.) Sweet,Abutilon,(L.) Sweet,Malvaceae,3152634,Abutilon indicum,ACCEPTED,exact,,xlsx#2,raw/angiang
+Cây dừa cạn,Cây dừa cạn,Catharanthus roseus (L.) G. Don,Catharanthus,(L.) G. Don,Apocynaceae,3169830,Catharanthus roseus,ACCEPTED,exact,,xlsx#7,raw/angiang
+Cây móng tay,Cây móng tay,Impatiens balsamina L,Impatiens,L,Balsaminaceae,2891773,Impatiens balsamina,ACCEPTED,exact,,xlsx#55,raw/dongthap
+Cây mạn kinh,Cây mạn kinh,Vitex trifolia L.,Vitex,L.,Lamiaceae,2925561,Vitex trifolia,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'mạn kinh'; chưa kiểm chứng,manual-proposal,raw/tayninh
+Cây pháo hoa,Cây pháo hoa,,,,,,,,unknown,chưa xác định,,raw/tayninh
+Cây rái voi,Cây rái voi,,,,,,,,unknown,chưa xác định,,raw/tayninh
+Cây sò huyết,Cây sò huyết,Tradescantia discolor L'Hér,Tradescantia,L'Hér,Commelinaceae,2765230,Tradescantia spathacea,SYNONYM,exact,GBIF: 'Tradescantia discolor' là synonym của Tradescantia spathacea,xlsx#47,raw/angiang
+Cây tổ chim ( tổ quạ ),Cây tổ chim ( tổ quạ ),Asplenium nidus L,Asplenium,L,Aspleniaceae,2650676,Asplenium nidus,ACCEPTED,exact,,xlsx#25,raw/angiang
+Cây vối,Cây vối,Cleistocalyx Operculatus,Cleistocalyx,,Myrtaceae,3184115,Syzygium nervosum,SYNONYM,exact,chuẩn hoá chữ hoa ('Cleistocalyx operculatus'); GBIF: 'Cleistocalyx operculatus' là synonym của Syzygium nervosum,xlsx#56,raw/dongthap
+Cây ổi,Cây ổi,Psidium guajava L,Psidium,L,Myrtaceae,5420380,Psidium guajava,ACCEPTED,exact,,xlsx#12,raw/dongthap
+Cỏ Mần trầu,Cỏ Mần trầu,Eleusine indica (L.) Gaertn,Eleusine,(L.) Gaertn,Poaceae,2705953,Eleusine indica,ACCEPTED,exact,,xlsx#9,raw/angiang
+Cỏ xước,Cỏ xước,Achyranthes aspera L,Achyranthes,L,Amaranthaceae,3085168,Achyranthes aspera,ACCEPTED,exact,,xlsx#3,raw/angiang
+Cỏ xước nhỏ,Cỏ xước nhỏ,Achyranthes aspera L,Achyranthes,L,Amaranthaceae,3085168,Achyranthes aspera,ACCEPTED,ambiguous,biến thể 'nhỏ' của Cỏ xước; chưa kiểm chứng,xlsx#3,raw/angiang
+Cốt toái bổ,Cốt toái bổ,Drynaria bonii Christ,Drynaria,Christ,Polypodiaceae,4025506,Drynaria bonii,ACCEPTED,fuzzy,xlsx alias 'Cốt toái bổ' của Tắc kè đá (Drynaria),xlsx#34,raw/tayninh
+Cứt quạ (giống giống khổ qua rừng),Cứt quạ (giống giống khổ qua rừng),Gymnopetalum integrifolium (Roxb.) Kurz,Gymnopetalum,(Roxb.) Kurz,Cucurbitaceae,3623176,Trichosanthes scabra,SYNONYM,ambiguous,xlsx alias 'Dây cứt quạ lá nguyên'; folder ghi 'giống khổ qua rừng'; chưa kiểm chứng; GBIF: 'Gymnopetalum integrifolium' là synonym của Trichosanthes scabra,xlsx#40,raw/angiang
+Diệu bò vằn,Diệu bò vằn,,,,,,,,unknown,chưa xác định,,raw/tayninh
+Dành dành,Dành dành,Gardenia jasminoides J. Ellis,Gardenia,J. Ellis,Rubiaceae,5335125,Gardenia jasminoides,ACCEPTED,exact,,xlsx#11,raw/angiang
+"Dây giác ( 3 lá, giây vác )","Dây giác ( 3 lá, giây vác )",Cayratia trifolia (L.) Domino,Cayratia,(L.) Domino,Vitaceae,10995009,Causonis trifolia,SYNONYM,exact,GBIF: 'Cayratia trifolia' là synonym của Causonis trifolia,xlsx#26,_review/conflict_day_giac_vs_suc_sac
+Dây lăng chung ( chưa tìm thấy ),Dây lăng chung ( chưa tìm thấy ),,,,,,,,unknown,chưa xác định,,raw/angiang
+Dây đa đực ( chưa tra được ),Dây đa đực ( chưa tra được ),,,,,,,,unknown,chưa tra được (theo ghi chú trong tên folder),,raw/angiang
+Dúi nhám,Dúi nhám,Streblus asper Lour,Streblus,Lour,Moraceae,10242935,Streblus asper,ACCEPTED,fuzzy,folder 'dúi' = 'duối' (xlsx Duối nhám),xlsx#48,raw/angiang
+Găng tu hú,Găng tu hú,Catunaregam spinosa (Thunb.) Tirveng.,Catunaregam,(Thunb.) Tirveng.,Rubiaceae,2910886,Catunaregam spinosa,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'găng tu hú'; chưa kiểm chứng,manual-proposal,raw/tayninh
+Gừng,Gừng,Zingiber officinale Rosc,Zingiber,Rosc,Zingiberaceae,2757280,Zingiber officinale,ACCEPTED,exact,,xlsx#14,raw/dongthap
+Hoài sơn nếp ( củ mài ),Hoài sơn nếp ( củ mài ),Dioscorea Persimilis,Dioscorea,,Dioscoreaceae,2754651,Dioscorea hamiltonii,SYNONYM,exact,GBIF: 'Dioscorea persimilis' là synonym của Dioscorea hamiltonii,xlsx#27,raw/angiang
+Hoàng tinh hoa trắng,Hoàng tinh hoa trắng,Disporopsis longifolia Craib,Disporopsis,Craib,Asparagaceae,2768088,Disporopsis longifolia,ACCEPTED,exact,,xlsx#28,raw/angiang
+Huyết rồng,Huyết rồng,Sargentodoxa cuneata,Sargentodoxa,,Lardizabalaceae,3782041,Sargentodoxa cuneata,ACCEPTED,exact,,xlsx#41,raw/angiang
+Huỳnh kỳ,Huỳnh kỳ,Astragalus membranaceus (Fisch.) Bunge,Astragalus,(Fisch.) Bunge,Fabaceae,5345341,Astragalus mongholicus,SYNONYM,exact,GBIF: 'Astragalus membranaceus' là synonym của Astragalus mongholicus,xlsx#42,raw/angiang
+Hà thủ ô đỏ,Hà thủ ô đỏ,Radix Fallopiae multiflorae,Radix,,Polygonaceae,4038333,Reynoutria multiflora,SYNONYM,exact,"xlsx/luận văn ghi tên dược liệu 'Radix Fallopiae multiflorae' thay vì tên cây; tên dược liệu, truy vấn theo tên cây ('Fallopia multiflora'); GBIF: 'Fallopia multiflora' là synonym của Reynoutria multiflora",xlsx#49,raw/angiang
+Húng chanh (rau tần),Húng chanh (rau tần),Plectranthus amboinicus (Lour.) Spreng,Plectranthus,(Lour.) Spreng,Lamiaceae,5341313,Coleus amboinicus,SYNONYM,exact,GBIF: 'Plectranthus amboinicus' là synonym của Coleus amboinicus,xlsx#15,raw/dongthap
+Hổ vĩ mép vàng,Hổ vĩ mép vàng,Sansevieria trifasciata Hort,Sansevieria,Hort,Asparagaceae,11041822,Dracaena trifasciata,SYNONYM,exact,GBIF: 'Sansevieria trifasciata' là synonym của Dracaena trifasciata; họ xlsx=Dracaenaceae khác GBIF=Asparagaceae,xlsx#50,raw/angiang
+Kim vàng,Kim vàng,Barleria lupulina Lindl,Barleria,Lindl,Acanthaceae,3173126,Barleria lupulina,ACCEPTED,exact,,xlsx#65,raw/tayninh
+Kiết cánh nam ( chưa tra được ),Kiết cánh nam ( chưa tra được ),,,,,,,,unknown,chưa xác định,,raw/angiang
+Kỳ nam,Kỳ nam,Hydnophytum formicarum Jack,Hydnophytum,Jack,Rubiaceae,2895700,Hydnophytum formicarum,ACCEPTED,fuzzy,tên rút gọn của 'Bí kỳ nam',xlsx#51,raw/angiang
+Lược vàng,Lược vàng,Callisia fragrans (Lindl.) Woodson,Callisia,(Lindl.) Woodson,Commelinaceae,5303453,Callisia fragrans,ACCEPTED,exact,,xlsx#67,raw/angiang;raw/tayninh
+Lấu,Lấu,Psychotria rubra (Lour.) Poir,Psychotria,(Lour.) Poir,Rubiaceae,2920037,Psychotria asiatica,SYNONYM,exact,GBIF: 'Psychotria rubra' là synonym của Psychotria asiatica,xlsx#66,raw/tayninh
+Me,Me,Phyllanthus emblica,Phyllanthus,,Phyllanthaceae,5381660,Phyllanthus emblica,ACCEPTED,ambiguous,xlsx ghi Phyllanthus emblica (me rừng/chùm ruột núi) nhưng 'me' thông dụng là Tamarindus indica - cần chủ nhóm chọn; họ xlsx=danh khác GBIF=Phyllanthaceae,xlsx#29,raw/angiang
+Mướp gai,Mướp gai,Rhizoma Lasiae spinosae,Rhizoma,,Araceae,5330870,Lasia spinosa,ACCEPTED,exact,"xlsx/luận văn ghi tên dược liệu 'Rhizoma Lasiae spinosae' thay vì tên cây; tên dược liệu, truy vấn theo tên cây ('Lasia spinosa')",xlsx#43,raw/angiang
+Mần ri,Mần ri,Cleome viscosa L,Cleome,L,Cleomaceae,6370562,Arivela viscosa,SYNONYM,exact,GBIF: 'Cleome viscosa' là synonym của Arivela viscosa; họ xlsx=Capparaceae khác GBIF=Cleomaceae,xlsx#57,raw/dongthap
+Mắc cỡ gai,Mắc cỡ gai,Mimosa diplotricha C.Wright,Mimosa,C.Wright,Fabaceae,7808904,Mimosa diplotricha,ACCEPTED,ambiguous,đề xuất; có thể là M. diplotricha / M. pigra / M. pudica; chưa kiểm chứng,manual-proposal,raw/angiang
+Nghệ vàng,Nghệ vàng,Curcuma longa L.,Curcuma,L.,Zingiberaceae,2757624,Curcuma longa,ACCEPTED,ambiguous,đề xuất từ tên thông dụng 'nghệ vàng'; không có trong xlsx; chưa kiểm chứng,manual-proposal,raw/dongthap
+Nghệ đen,Nghệ đen,Curcuma zedoaria Rosc,Curcuma,Rosc,Zingiberaceae,2757545,Curcuma zedoaria,ACCEPTED,ambiguous,xlsx ghi 2 tên khoa học (Curcuma zedoaria; C. zerumbet) - cần chọn; xlsx có nhiều tên: Curcuma zedoaria Rosc; Curcuma zerumbet Roxb; lấy tên đầu,xlsx#58,raw/dongthap
+Ngà voi,Ngà voi,Sansevieria cylindrica Bojor,Sansevieria,Bojor,Asparagaceae,10961470,Dracaena angolensis,SYNONYM,exact,GBIF: 'Sansevieria cylindrica' là synonym của Dracaena angolensis; họ xlsx=Liliaceae khác GBIF=Asparagaceae,xlsx#30,raw/angiang
+Ngải cứu,Ngải cứu,Artemisia vulgaris L,Artemisia,L,Asteraceae,3120946,Artemisia vulgaris,ACCEPTED,exact,,xlsx#16,raw/dongthap
+Ngải hắc hổ,Ngải hắc hổ,,,,,,,,unknown,cùng loài với '6. cây ngải hổ (ngãi hắc hổ)'; chưa xác định,,raw/angiang
+Ngải quắn,Ngải quắn,,,,,,,,unknown,cùng loài với '10. cây ngãi quắng'?; chưa xác định,,raw/angiang
+Ngải tú cầu,Ngải tú cầu,,,,,,,,unknown,cùng loài với '31. Ngãi tú cầu'; chưa xác định,,raw/angiang
+Ngải đen lá đỏ,Ngải đen lá đỏ,,,,,,,,unknown,cùng loài với '24. Ngãi đen mép lá đỏ'; chưa xác định,,raw/angiang
+Nhãn lòng,Nhãn lòng,Passiflora foetida L,Passiflora,L,Passifloraceae,2874211,Passiflora foetida,ACCEPTED,fuzzy,folder 'nhãn lòng' = 'nhãn lồng' (xlsx),xlsx#52,raw/angiang
+Rau bợ,Rau bợ,Marsilea quadrifolia L,Marsilea,L,Marsileaceae,5274875,Marsilea quadrifolia,ACCEPTED,exact,,xlsx#68,raw/tayninh
+Rau choại,Rau choại,Stenochlaena palustris (Burm. f.) Bedd,Stenochlaena,(Burm. f.) Bedd,Blechnaceae,4079023,Stenochlaena palustris,ACCEPTED,exact,,xlsx#32,raw/angiang
+Rau càng cua,Rau càng cua,Peperomia pellucida,Peperomia,,Piperaceae,3086412,Peperomia pellucida,ACCEPTED,exact,,xlsx#31,raw/angiang
+Rau muống tây ( tra chưa thấy ),Rau muống tây ( tra chưa thấy ),,,,,,,,unknown,chưa tra được (theo ghi chú trong tên folder),,raw/angiang
+Rau mương,Rau mương,Ludwigia prostrate,Ludwigia,,Onagraceae,5545149,Ludwigia prostrata,ACCEPTED,exact,sửa chính tả epithet ('Ludwigia prostrata'),xlsx#44,raw/angiang
+Rau trai,Rau trai,Commelina communis L,Commelina,L,Commelinaceae,2764179,Commelina communis,ACCEPTED,exact,,xlsx#59,raw/dongthap
+Sen,Sen,Nelumbo nuciera Gaertn,Nelumbo,Gaertn,Nelumbonaceae,2882449,Nelumbo nucifera,ACCEPTED,exact,sửa chính tả epithet ('Nelumbo nucifera'),xlsx#45,raw/angiang
+Sen tàu,Sen tàu,Firmiana simplex (L.),Firmiana,(L.),Malvaceae,3152111,Firmiana simplex,ACCEPTED,exact,họ xlsx=Sterculiaceae khác GBIF=Malvaceae,xlsx#37,raw/angiang
+Sả,Sả,Cymbopogon spp,Cymbopogon,,Poaceae,11771611,Cymbopogon,ACCEPTED,ambiguous,xlsx ghi 'Cymbopogon spp' - chưa tới loài; chỉ tới chi ('Cymbopogon'); chỉ xác định tới chi,xlsx#17,raw/dongthap
+Sục sạc ( lục lạc) 3 lá,Sục sạc ( lục lạc) 3 lá,Crotalaria mucronata Desv,Crotalaria,Desv,Fabaceae,2942716,Crotalaria pallida,SYNONYM,exact,GBIF: 'Crotalaria mucronata' là synonym của Crotalaria pallida,xlsx#33,_review/conflict_day_giac_vs_suc_sac
+Tai tượng xanh,Tai tượng xanh,Acalypha indica L.,Acalypha,L.,Euphorbiaceae,3056259,Acalypha indica,ACCEPTED,exact,,xlsx#60,raw/dongthap
+Tam phỏng,Tam phỏng,Cardiospermum halicacabum L,Cardiospermum,L,Sapindaceae,3189939,Cardiospermum halicacabum,ACCEPTED,exact,,xlsx#69,raw/tayninh
+Thanh Táo,Thanh Táo,Justicia gendarussa L. f.,Justicia,L. f.,Acanthaceae,7447231,Justicia gendarussa,ACCEPTED,ambiguous,xlsx ghi 2 tên khoa học (Justicia gendarussa; Gendarussa vulgaris - đồng nghĩa); xlsx có nhiều tên: Justicia gendarussa L. f.; Gendarussa vulgaris Nees; lấy tên đầu,xlsx#53,raw/angiang
+Thanh xà trắng,Thanh xà trắng,,,,,,,,unknown,chưa xác định,,raw/tayninh
+Thù lù,Thù lù,Physalis angulata L,Physalis,L,Solanaceae,5341792,Physalis angulata,ACCEPTED,exact,,xlsx#36,raw/angiang
+Thạch anh,Thạch anh,Euphorbia tithymaloides subs. padifolia,Euphorbia,subs. padifolia,Euphorbiaceae,3069168,Euphorbia tithymaloides,ACCEPTED,exact,bỏ phân loài ('Euphorbia tithymaloides'),xlsx#61,raw/dongthap
+Thổ nhân sâm 3 cạnh,Thổ nhân sâm 3 cạnh,Talinum triangulare (Jacq.) Willd,Talinum,(Jacq.) Willd,Talinaceae,3084670,Talinum fruticosum,SYNONYM,exact,GBIF: 'Talinum triangulare' là synonym của Talinum fruticosum; họ xlsx=Portulacaceae khác GBIF=Talinaceae,xlsx#35,raw/angiang
+Trinh nữ hoàng cung,Trinh nữ hoàng cung,Crinum latifolium L,Crinum,L,Amaryllidaceae,2853901,Crinum latifolium,ACCEPTED,exact,,xlsx#19,raw/dongthap
+Trúc bách hợp,Trúc bách hợp,,,,,,,,unknown,chưa xác định,,raw/tayninh
+Trắc Bách Diệp,Trắc Bách Diệp,Platycladus orientalis (L.) Franco,Platycladus,(L.) Franco,Cupressaceae,2684855,Platycladus orientalis,ACCEPTED,exact,,xlsx#18,raw/dongthap
+Tắc kè đá,Tắc kè đá,Drynaria bonii Christ,Drynaria,Christ,Polypodiaceae,4025506,Drynaria bonii,ACCEPTED,exact,,xlsx#34,raw/angiang
+Vú sữa đất,Vú sữa đất,Euphorbia thymifolia L,Euphorbia,L,Euphorbiaceae,3066919,Euphorbia thymifolia,ACCEPTED,exact,,xlsx#10,raw/angiang
+Vần xây,Vần xây,Abutilon indicum (L.) Sweet,Abutilon,(L.) Sweet,Malvaceae,3152634,Abutilon indicum,ACCEPTED,fuzzy,'vần xây' ~ 'vằn xoay'/cối xay; chưa kiểm chứng,xlsx#2,raw/dongthap
+Xạ can,Xạ can,Belamcanda chinensis (L.) DC,Belamcanda,(L.) DC,Iridaceae,5298546,Iris domestica,SYNONYM,exact,GBIF: 'Belamcanda chinensis' là synonym của Iris domestica,xlsx#6,raw/angiang
+Xạ đen,Xạ đen,Ehretia asperula Zoll. et Moritzi,Ehretia,Zoll. et Moritzi,Ehretiaceae,4067113,Ehretia asperula,ACCEPTED,exact,họ xlsx=Boraginaceae khác GBIF=Ehretiaceae,xlsx#62,raw/dongthap
+É tía,É tía,Ocimum tenuiflorum L,Ocimum,L,Lamiaceae,2927100,Ocimum tenuiflorum,ACCEPTED,exact,,xlsx#20,raw/tayninh
+Ô dước,Ô dước,Lindera aggregata (Sims) Kosterm.,Lindera,(Sims) Kosterm.,Lauraceae,7304587,Lindera aggregata,ACCEPTED,ambiguous,đề xuất 'Ô dược'; chưa kiểm chứng,manual-proposal,raw/angiang
+Đinh lăng,Đinh lăng,Polyscias fruticosa (L.) Harms,Polyscias,(L.) Harms,Araliaceae,3035652,Polyscias fruticosa,ACCEPTED,exact,,xlsx#13,raw/dongthap
+Đông Hầu Vàng,Đông Hầu Vàng,Turnera ulmifolia,Turnera,,Turneraceae,2874852,Turnera ulmifolia,ACCEPTED,exact,họ xlsx=Passifloraceae khác GBIF=Turneraceae,xlsx#64,raw/tayninh
+Đơn lá đỏ,Đơn lá đỏ,Excoecaria cochinchinensis Lour,Excoecaria,Lour,Euphorbiaceae,3071716,Excoecaria cochinchinensis,ACCEPTED,exact,,xlsx#5,raw/angiang
+Địa liền,Địa liền,Kaempferia galanga L,Kaempferia,L,Zingiberaceae,5301451,Kaempferia galanga,ACCEPTED,exact,,xlsx#4,raw/angiang
+Ổ Phụng,Ổ Phụng,Asplenium nidus L,Asplenium,L,Aspleniaceae,2650676,Asplenium nidus,ACCEPTED,fuzzy,xlsx alias 'Ráng ổ phụng' của Tổ chim; chưa kiểm chứng,xlsx#25,raw/tayninh
