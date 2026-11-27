@@ -1,4 +1,4 @@
-# Deep Ensemble (chưa đọc / placeholder)
+# Deep Ensemble (unread / placeholder)
 
 **Phiên bản**: 2026-11-27 - ghi chú tạm (chưa mở bài gốc)  
 **Link**: Liang et al. (1511.04636 hoặc 1512.02479?) — cần xác nhận  
