@@ -20,6 +20,6 @@ Thiếu dataset ảnh sinh vật đủ lớn + đủ sạch + đủ metadata (t�
 - Sinh vật nói chung; cây thuốc Việt Nam không phải focus → cần dùng làm **so sánh backbone**, không làm data chính.
 
 ## Dùng được gì cho Bài 2
-- **Nguồn so sánh long-tail + confounding**: benchmark "confounding species" và "rare species" của BioTrove đúng hai trục Bài 2 (cặp dễ nhầm + 72 loài đuôi). Có thể chạy lại benchmark confounding trên backbone BioTrove-CLIP như đối chứng cho "loài nào hay gây nhầm".
+- **Nguồn so sánh long-tail + confounding**: benchmark "confounding species" và "rare species" của BioTrove đúng hai trục Bài 2 (cặp dễ nhầm + 102 loài đuôi, RES-42). Có thể chạy lại benchmark confounding trên backbone BioTrove-CLIP như đối chứng cho "loài nào hay gây nhầm".
 - **CLIP-họ làm baseline**: suite CLIP của BioTrove là một lựa chọn backbone (nhỏ hơn, focus sinh vật) để so với BioCLIP.
 - Nếu muốn pretrain/loại dữ liệu phụ cho cây: BioTrove Plantae subset là nguồn ảnh cây công khai lớn; dùng kiểm tra chéo (không thay ảnh ViMeLeaf).

@@ -10,7 +10,7 @@ Mọi số liệu trích từ abstract/full-text đã mở; chưa chạy lại t
 
 | Backbone | Vì sao chọn/bỏ | Cấu hình đề xuất |
 |---|---|---|
-| **BioCLIP (10M, MIT)** | Đặc trưng sinh học (cây+động+vật+nấm) → hợp cây; checkpoint sẵn, nhẹ, chạy được GPU 8–12GB. Trùng với "foundation model cho cây" (B8) nhưng có ngôn ngữ + hierarchical | frozen, linear probe (không train backbone); k-shot {1,5,10} bằng prototype; macro-F1 (không top-1, do 72 loài đuôi); so split ngẫu nhiên vs chống rò rỉ |
+| **BioCLIP (10M, MIT)** | Đặc trưng sinh học (cây+động+vật+nấm) → hợp cây; checkpoint sẵn, nhẹ, chạy được GPU 8–12GB. Trùng với "foundation model cho cây" (B8) nhưng có ngôn ngữ + hierarchical | frozen, linear probe (không train backbone); k-shot {1,5,10} bằng prototype; macro-F1 (không top-1, do 102 loài đuôi); so split ngẫu nhiên vs chống rò rỉ |
 | **BioCLIP 2 (200M)** | Bản mới, "emergent" (giữ intra-species variation trong subspace trực giao) → hợp gộp nhiều khung hình video + cùng loài nhiều kiểu lá | chỉ so khi có resource; nếu chưa checkpoint dễ dùng thì bỏ, giữ BioCLIP gốc |
 | **DINOv2 (không ngôn ngữ)** | Đối chứng: đặc trưng tổng quát, không sinh vật → đo "lợi thế sinh học" của BioCLIP | frozen, linear probe, cùng cách; **khử trùng gần trùng bằng cosine DINOv2** (kỹ thuật Bài 1 dùng) |
 | **SimDINOv2-Plantae (2604.27538)** | SSL cây, affine/posterization (không blur/grayscale); iNaturalist-Plantae mạnh hơn ImageNet | fine-tune head nhẹ trên ViMeLeaf để đo "domain-specific SSL data có transfer sang cây thuốc Việt không" (câu hỏi mới) |
@@ -35,7 +35,7 @@ Ba hướng chính (từ các bài đọc + task liệt kê):
 2. **Balanced / dual-margin** — **dual-margin objective** (TaxoNet, 2512.18994) thay đổi decision boundary theo tần suất lớp trong không gian embedding; cùng họ với logit adjustment nhưng ở embedding.
 3. **Re-sampling** — over-sample hiếm / under-sample phổ biến (kỹ thuật kinh điển; không có trong 7 bài trên, ghi "chưa kiểm chứng trong phạm vi này").
 
-Áp cho ViMeLeaf (72 loài < 100 ảnh / 165): **logit adjustment + prevalence-adjusted softmax + từ chối conformal** là bộ hợp lý nhất; dual-margin nếu muốn fine-tune. Re-sampling dùng phụ, không làm chính (dễ overfit do ảnh hiếm quá ít).
+Áp cho ViMeLeaf (102 loài < 100 ảnh / 195, RES-42): **logit adjustment + prevalence-adjusted softmax + từ chối conformal** là bộ hợp lý nhất; dual-margin nếu muốn fine-tune. Re-sampling dùng phụ, không làm chính (dễ overfit do ảnh hiếm quá ít).
 
 ## Khoảng trống mà Bài 2 lấp (tóm)
 

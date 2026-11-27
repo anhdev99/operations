@@ -1,0 +1,20 @@
+﻿Phản biện RES-50: sửa số loài đuôi dài từ 72 → 102
+
+## Kiểm toán (RES-42)
+- Audit ViMeLeaf: 195 thư mục, 102 loài < 100 ảnh, 62102 ảnh
+- Lệnh tái lập: python units/research/experiments/vimeleaf/audit_dataset.py --root E:\ViMeLeaf_Dataset (không seed, tất định)
+- Chi tiết: RES-42 commit 2324208, bảng images_by_class_source.csv
+
+## Sửa
+- 72 loài → 102 loài trong 6 tệp trên develop:
+  - topics: vimeleaf-p2-selective-review.md, vimeleaf-3-paper-series.md
+  - papers: 2026-11-26-conformal-long-tailed-plants.md, 2026-11-26-few-shot-plant-disease-calibration.md, 2026-11-26-ood-detection-plant-pathology.md, 2026-11-26-open-world-medicinal-plant-taxonomic.md
+- Phần RES-49 (nhánh agent/RES-49, PR #14) chưa sửa
+
+## Mục "chưa kiểm chứng" (RES-50)
+- E-AURC công thức: vẫn ghi "chưa kiểm chứng" (vimeleaf-p2-selective-review.md:42)
+- Temperature scaling (1805.08206): chưa đọc, ghi "chưa kiểm chứng"
+- Deep Ensemble: đủ ghi chú (ghi "chưa đọc" trong Q2)
+
+## Xong khi
+git grep "72 loài" trên agent/RES-57 và agent/RES-49 không còn kết quả

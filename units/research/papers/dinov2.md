@@ -27,5 +27,5 @@ Self-supervised (SSL), ViT-1B huấn luyện trên dataset tự curate + đa ngu
 
 ### Dùng được gì cho Bài 2
 - **So backbone cho Bài 2:** (a) BioCLIP (cây sinh vật + ngôn ngữ), (b) DINOv2 (không sinh vật, không ngôn ngữ), (c) SimDINOv2-Plantae (SSL cây, affine/posterization).
-- Cấu hình đề xuất: **frozen + linear probe**, k-shot (1/5/10) bằng prototype, đo trên split chống rò rỉ + cặp dễ nhầm + 72 loài đuôi (<100 ảnh). Macro-F1 thay top-1 do mất cân bằng.
+- Cấu hình đề xuất: **frozen + linear probe**, k-shot (1/5/10) bằng prototype, đo trên split chống rò rỉ + cặp dễ nhầm + 102 loài đuôi (<100 ảnh, RES-42). Macro-F1 thay top-1 do mất cân bằng.
 - Nếu có đủ GPU: fine-tune SimDINOv2-Plantae head nhẹ trên ViMeLeaf để đo hiệu ứng "domain-specific SSL data" (iNaturalist Plantae) có transfer được sang cây thuốc Việt không — câu hỏi mới, chưa ai đo trên ViMeLeaf.
