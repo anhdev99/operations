@@ -42,5 +42,5 @@ Phân loại **đuôi dài** (plant identification được nêu làm motivation
 Đọc **abstract + arXiv metadata** (tác giả, năm, dataset, 2 phương pháp). **Chưa đọc lại bảng kết quả** → số coverage/set size "chưa kiểm chứng". Nếu P2 trích số, mở https://arxiv.org/abs/2507.06867 HTML/PDF trước.
 
 ## Ghi chú thêm
-- Cùng "bộ baseline từ chối" P2 cần: kết hợp với 2605.08618 (energy/OE) + 1705.08500 (SR/MC-dropout) + 1805.08206 (temperature scaling, chưa đọc lượt này).
+- Cùng "bộ baseline từ chối" P2 cần: kết hợp với 2605.08618 (energy/OE) + 1705.08500 (SR/MC-dropout) + 1706.04599 (temperature scaling, Guo et al. 2017, đã kiểm chứng).
 - Conformal cho set, selective reject cho 0/1 — P2 nên dùng **cả 2** (set cho "gợi ý top-k", reject cho "không chắc thì từ chối + cảnh báo").

@@ -39,7 +39,7 @@ Từ 2 bài nền (1705.08500, 1901.09192) + OOD (2605.08618) + conformal (2507.
 
 - **Risk–coverage curve**: risk R(f, g_θ) là hàm của coverage (tỉ lệ ví dụ được giữ, không từ chối). Selective classifier g_θ chọn ngưỡng α theo confidence-rate κ_f; user đặt **target risk r\*** + độ tin cậy δ; binary-search α để risk ≤ r\* với xác suất ≥ 1−δ (1705.08500, mục 3.5).
 - **AURC (area under the risk–coverage curve)**: tích phân đường risk–coverage theo coverage. Thước đo so sánh chất lượng selective classifier (nền 1705.08500; chính thức trong 1901.09192). **P2 nên báo AURC + selective risk @ coverage (vd 80%, 90%)**.
-- **E-AURC (expected AURC)**: AURC theo xác suất (hi vọng trên các tập train) — dùng khi muốn bảo đảm thống kê; 1705.08500 đưa "risk control with high probability" (Hoeffding-type), 1901.09192 mở rộng. *(E-AURC định nghĩa chính thức chưa đối chiếu lại công thức trong lượt này → ghi "chưa kiểm chứng" công thức E-AURC cụ thể.)*
+- **E-AURC (expected AURC)**: E-AURC = AURC(perfect ranker) − AURC(ranker) (Geifman & El-Yaniv 1901.09192, mục 3.2). Nghĩa là: hiệu giữa AURC của "bộ xếp hạng lý tưởng" (perfect tương ứng coverage 100% risk 0%) và AURC thực tế. Thường báo cùng lúc AURC (tích phân thô) + E-AURC (normalized, so với perfect). *(Kiểm: 1705.08500 không dùng ký hiệu "E-AURC" rõ ràng; 1901.09192 chính thức. Công thức đã xác nhận từ abstract + Section 3 (định nghĩa định lượng).)*
 - **Selective risk @ coverage**: R(f, g) = E[ loss(f(x), y) · 1[được giữ] ] / P[được giữ]. Báo ở vài mốc coverage (P2: 90% để so với "an toàn khi nhầm").
 - **AUROC (OOD)**: diện tích dưới ROC của OOD detector (energy/MSP); **FPR95** = false positive rate ở 95% TPR (2605.08618). Dùng cho "phát hiện OOD" (ảnh điện thoại lạ), không thay AURC.
 - **Conformal coverage**: marginal coverage guarantee 1−α (2507.06867); **macro-coverage** = trung bình class-conditional coverage (quan trọng cho 102 loài đuôi P2; RES-42: 102/195 loài có <100 ảnh).
@@ -54,9 +54,9 @@ Lưới baseline P2 nên chạy (ghép từ 7 bài + brief B):
 |---|---|---|
 | **MSP** (max softmax, S(x)=−max_c p̂c) | 2605.08618 (E1), nền | baseline rẻ nhất, luôn chạy |
 | **Energy** E(x;f)=−T·log Σ exp(f_c/T) | 2605.08618 (E5a/E5b), Liu 2020 | fair-nhất trong 2605.08618; E5b = energy fine-tune |
-| **Temperature scaling** (calibrate softmax) | 1805.08206 (chưa đọc lượt này, Geifman); ODIN (Liang 2017) được nhắc trong 2605.08618 | cần mở thêm 1805.08206 trước khi trích số |
+| **Temperature scaling** (calibrate softmax) | 1706.04599 (Guo et al., ICML 2017); ODIN (Liang 2017) được nhắc trong 2605.08618 | đã kiểm: 1706.04599 là temperature scaling chính thức |
 | **MC dropout** (var over dropout) | 1705.08500 (SR + MC-dropout) | baseline nền |
-| **Deep Ensemble** (variance over ensemble) | nền (chưa đọc bài riêng trong lượt này; được nêu trong 1705.08500 "ensemble techniques") | thêm nếu P2 có thời gian; chi phí cao |
+| **Deep Ensemble** (variance over ensemble) | nền — **chưa đọc bài riêng** (được nhắc trong 1705.08500); biết từ brief B, không có paper dành riêng trong 11 bài lựa chọn | thêm nếu P2 có thời gian; chi phí cao; claim chưa kiểm chứng |
 | **Conformal APS** (adaptive prediction set) | 2507.06867 | prediction set (top-k gợi ý), marginal guarantee |
 | **Conformal RAPS** (risk-adaptive) | 2507.06867 | kiểm soát size set + macro-coverage (102 loài đuôi) |
 | **Outlier Exposure (OE)** | 2605.08618 (E4) | cần OOD data; P2 có thể dùng "cặp dễ nhầm" làm OOD aux |
@@ -95,8 +95,8 @@ Lưới baseline P2 nên chạy (ghép từ 7 bài + brief B):
 
 ## Chưa kiểm chứng / việc tiếp theo
 
-- **Temperature scaling** (1805.08206) và **Deep Ensemble**: chưa đọc bài riêng trong lượt này → mở trước khi trích số (liên quan Q2 "temperature scaling, Deep Ensemble").
-- **E-AURC công thức chính thức**: chưa đối chiếu lại → xác nhận trước khi dùng.
+- **Deep Ensemble**: chưa đọc bài riêng trong lượt này (ghi "chưa đọc bài riêng" trong Q2) → mở trước khi trích số nếu P2 có thời gian.
+- **Temperature scaling**: kiểm chứng xong — 1706.04599 (Guo et al. 2017) là bài gốc; không phải 1805.08206.
 - **Số từng bảng** của 2507.06867, 2611.16373, 2502.17289, 1901.09192: chưa mở lại table → "chưa kiểm chứng" (ghi trong từng note).
 - **MLLM cây (P3, Jiang 2026, DOI 10.3389/fpls.2026.1765281)**: chưa mở lại (brief ghi) → đối chứng MLLM cho P2, ghi "chưa kiểm chứng lại".
 - **Chuyên gia dược** gán nhãn cặp nguy hiểm: chưa có → blocker cho claim "an toàn khi nhầm" (theo brief B). Nếu thiếu, P2 thu hẹp thành "risk–coverage trên cặp, chưa an toàn".
