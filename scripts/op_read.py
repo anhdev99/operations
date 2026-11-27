@@ -14,6 +14,7 @@ import urllib.request
 from common import credentials, load_sources, not_configured, ssl_context, write_snapshot
 
 PAGE_SIZE = 100
+DESC_MAX = 1200  # enough for a model to summarise a ticket
 RELATIONS = ("assignee", "responsible", "author", "watcher")
 
 
@@ -49,6 +50,10 @@ def fetch_relation(base, token, project, relation):
                 "relation": relation,
                 "dueDate": wp.get("dueDate"),
                 "updatedAt": wp.get("updatedAt"),
+                "description": ((wp.get("description") or {}).get("raw") or "")[:DESC_MAX],
+                "assignee": wp["_links"].get("assignee", {}).get("title"),
+                "responsible": wp["_links"].get("responsible", {}).get("title"),
+                "author": wp["_links"].get("author", {}).get("title"),
                 "url": f"{base.rstrip('/')}/work_packages/{wp['id']}",
             })
         if offset * PAGE_SIZE >= data["total"]:
@@ -68,16 +73,13 @@ def fetch_project(base, token, project):
     return list(merged.values())
 
 
-def main():
-    if len(sys.argv) != 2:
-        sys.exit(__doc__)
-    role = sys.argv[1]
+def read(role):
+    """Return {role, source, status, items}. Snapshot is written as a side effect (read-only against OpenProject)."""
     src = load_sources(role)
     cfg = src.get("openproject") or {}
     creds = credentials(src, ("OP_BASE_URL", "OP_TOKEN"))
     if not creds:
-        print(json.dumps(not_configured(role, "openproject"), ensure_ascii=False, indent=2))
-        return
+        return not_configured(role, "openproject")
     try:
         base, token = creds["OP_BASE_URL"], creds["OP_TOKEN"]
         items = []
@@ -89,6 +91,13 @@ def main():
         result = {"role": role, "source": "openproject", "status": "error",
                   "error": type(exc).__name__ + ": " + str(exc), "items": []}
     write_snapshot(role, "op.json", result)
+    return result
+
+
+def main():
+    if len(sys.argv) != 2:
+        sys.exit(__doc__)
+    result = read(sys.argv[1])
     print(json.dumps(result, ensure_ascii=False, indent=2))
     if result["status"] == "error":
         sys.exit(1)

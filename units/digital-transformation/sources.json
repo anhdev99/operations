@@ -7,6 +7,15 @@
   "github": {
     "owners": [
       "Dong-Thap-University"
+    ],
+    "watch": "review_requested"
+  },
+  "slack_groups": {
+    "Vận hành": [
+      "#operations"
+    ],
+    "Trao đổi nhóm": [
+      "#team-flexible"
     ]
   }
 }
