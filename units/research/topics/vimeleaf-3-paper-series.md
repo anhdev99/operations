@@ -12,7 +12,7 @@ Lệnh tái lập: đọc `manifest.csv`, `deleted_near_dups_log.csv`, `deleted_
 | Ảnh / video còn lại | 62.102 ảnh, 268 video (mp4/MOV) |
 | Nguồn | An Giang 27.186, Tây Ninh 22.174, Đồng Tháp 6.721, bổ sung v1 1.633, bổ sung v2 2.485, nhóm xung đột nhãn 2.171 (đếm theo manifest, gồm cả video) |
 | Thư mục lớp | 195; sau chuẩn hoá tên (bỏ số thứ tự, dấu, ngoặc) còn **~165 tên loài** |
-| Phân bố | ít nhất 20, trung vị 247, nhiều nhất 2.610 ảnh/tên; **72 tên < 100 ảnh** (đuôi dài) |
+| Phân bố | ít nhất 20, trung vị 247, nhiều nhất 2.610 ảnh/tên; **102 tên < 100 ảnh** (đuôi dài, RES-42 audit) |
 | Trùng lặp đã xoá | **37.980 ảnh gần trùng** (có cột `kept_path` chỉ ảnh được giữ) + 4.188 tệp rác, đều có log |
 | Trùng giữa nguồn | 30 tên loài có ở cả An Giang và bổ sung v1; loài gần như không trùng giữa 3 tỉnh (1 loài) |
 | Xung đột nhãn | `_review/conflict_day_giac_vs_suc_sac`: Dây giác và Sục sạc (lá 3 chét, dễ nhầm) |
@@ -30,7 +30,7 @@ Một sợi chỉ: **nhận dạng cây thuốc nam đáng tin cậy, từ dữ 
 | # | Bài | Câu hỏi nghiên cứu | Đóng góp dự kiến | Nơi nộp ứng viên (Scopus chưa tra) | Thời gian |
 |---|---|---|---|---|---|
 | 1 | **ViMeLeaf: bộ ảnh lá cây thuốc nam Việt Nam, khử trùng và split chống rò rỉ** (data paper) | Ảnh trùng làm accuracy bị thổi phồng bao nhiêu trên ảnh cây thuốc tự thu? | Công bố ~62k ảnh + video, ~165 loài, 3 tỉnh; log khử trùng; split theo nhóm trùng/đợt chụp; đo chênh lệch accuracy split ngẫu nhiên (trước khử trùng) và split sạch; baseline 3 seed | Data in Brief; Scientific Data | ~6 tuần |
-| 2 | **Nhận dạng loài dễ nhầm, đuôi dài, biết từ chối** | Mô hình nền (DINOv2/CLIP-họ) + dự đoán có chọn lọc giảm nhầm loài nguy hiểm bao nhiêu ở cùng độ phủ? | Benchmark cặp dễ nhầm (bắt đầu từ Dây giác/Sục sạc), đuôi dài 72 loài < 100 ảnh, chéo đợt chụp; đường risk–coverage; gộp nhiều khung hình video lúc suy luận | Ecological Informatics; Frontiers in Plant Science; Computers and Electronics in Agriculture | 2-3 tháng |
+| 2 | **Nhận dạng loài dễ nhầm, đuôi dài, biết từ chối** | Mô hình nền (DINOv2/CLIP-họ) + dự đoán có chọn lọc giảm nhầm loài nguy hiểm bao nhiêu ở cùng độ phủ? | Benchmark cặp dễ nhầm (bắt đầu từ Dây giác/Sục sạc), đuôi dài 102 loài < 100 ảnh, chéo đợt chụp; đường risk–coverage; gộp nhiều khung hình video lúc suy luận | Ecological Informatics; Frontiers in Plant Science; Computers and Electronics in Agriculture | 2-3 tháng |
 | 3 | **Ảnh → đồ thị tri thức → GraphRAG tiếng Việt có cảnh báo an toàn** | Lọc an toàn cứng theo KG có giảm câu trả lời nguy hiểm so với RAG thường và trộn mềm không? | KG ~66-80 loài từ metadata (đã chuyên gia duyệt); hệ thống chụp lá → nhận dạng (bài 2, từ chối khi không chắc) → hỏi đáp có trích căn cứ; benchmark an toàn tiếng Việt; thí nghiệm E1, E2 ở `experiments/backlog.md` | KSE; ACIIDS; JMIR Formative Research | 2-3 tháng |
 
 Quan hệ với đề tài cũ: bài 1 = #5 VNMedPlant-Clean (RES-26), bài 2 = T2, bài 3 = T3. T1 EduReg-Time vẫn là bài lõi của mạch văn bản trường; hai mạch chạy song song.
