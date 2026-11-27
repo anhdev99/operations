@@ -34,7 +34,7 @@ Phân loại **thực vật y học (medicinal plant)** theo **phân cấp taxon
 - **(b) Khác biệt / khoảng trống P2 lấp**:
   1. Bài này **phân cấp taxonomic**, P2 làm **cặp dễ nhầm có nhãn an toàn** (micro-level, không phải phylum→species).
   2. Bài này **không đo an toàn khi nhầm** (không cảnh báo độc); P2 có "an toàn khi nhầm" (độc/không dùng được) — nếu có chuyên gia dược.
-  3. Dataset **Ấn Độ SOTA**, P2 **Việt Nam/ĐNA** (cây thuốc nam, 3 tỉnh, đuôi dài 72 loài).
+   3. Dataset **Ấn Độ SOTA**, P2 **Việt Nam/ĐNA** (cây thuốc nam, 3 tỉnh, đuôi dài 102 loài, RES-42).
   4. Bài này **open-set nhận dạng**, P2 thêm **selective reject theo risk–coverage + OOD điện thoại**.
 - **(c) Rủi ro trùng**: **thấp–vừa** (cùng "open-set + cây thuốc" nhưng khác: phân cấp vs cặp dễ nhầm, không an toàn vs an toàn, Ấn Độ vs Việt). Trích rõ phần mới.
 - **(d) Baseline**: thêm "open-set phân cấp taxonomic" làm baseline so với "cặp dễ nhầm + selective reject". P2 nên so: (1) phân cấp kiểu bài này, (2) flat + MSP/energy, (3) conformal, (4) couple-aware selective (đóng góp P2).

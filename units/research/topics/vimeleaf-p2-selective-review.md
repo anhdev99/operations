@@ -42,7 +42,7 @@ Từ 2 bài nền (1705.08500, 1901.09192) + OOD (2605.08618) + conformal (2507.
 - **E-AURC (expected AURC)**: AURC theo xác suất (hi vọng trên các tập train) — dùng khi muốn bảo đảm thống kê; 1705.08500 đưa "risk control with high probability" (Hoeffding-type), 1901.09192 mở rộng. *(E-AURC định nghĩa chính thức chưa đối chiếu lại công thức trong lượt này → ghi "chưa kiểm chứng" công thức E-AURC cụ thể.)*
 - **Selective risk @ coverage**: R(f, g) = E[ loss(f(x), y) · 1[được giữ] ] / P[được giữ]. Báo ở vài mốc coverage (P2: 90% để so với "an toàn khi nhầm").
 - **AUROC (OOD)**: diện tích dưới ROC của OOD detector (energy/MSP); **FPR95** = false positive rate ở 95% TPR (2605.08618). Dùng cho "phát hiện OOD" (ảnh điện thoại lạ), không thay AURC.
-- **Conformal coverage**: marginal coverage guarantee 1−α (2507.06867); **macro-coverage** = trung bình class-conditional coverage (quan trọng cho 72 loài đuôi P2).
+- **Conformal coverage**: marginal coverage guarantee 1−α (2507.06867); **macro-coverage** = trung bình class-conditional coverage (quan trọng cho 102 loài đuôi P2; RES-42: 102/195 loài có <100 ảnh).
 
 **Khuyến nghị P2**: báo đồng thời **AURC + risk@90% + AUROC OOD + FPR95 + conformal marginal/macro-coverage**. Không chỉ accuracy.
 
@@ -58,11 +58,11 @@ Lưới baseline P2 nên chạy (ghép từ 7 bài + brief B):
 | **MC dropout** (var over dropout) | 1705.08500 (SR + MC-dropout) | baseline nền |
 | **Deep Ensemble** (variance over ensemble) | nền (chưa đọc bài riêng trong lượt này; được nêu trong 1705.08500 "ensemble techniques") | thêm nếu P2 có thời gian; chi phí cao |
 | **Conformal APS** (adaptive prediction set) | 2507.06867 | prediction set (top-k gợi ý), marginal guarantee |
-| **Conformal RAPS** (risk-adaptive) | 2507.06867 | kiểm soát size set + macro-coverage (72 loài đuôi) |
+| **Conformal RAPS** (risk-adaptive) | 2507.06867 | kiểm soát size set + macro-coverage (102 loài đuôi) |
 | **Outlier Exposure (OE)** | 2605.08618 (E4) | cần OOD data; P2 có thể dùng "cặp dễ nhầm" làm OOD aux |
 | **OOD-class auxiliary** | 2605.08618 (E3) | upper bound, đòi OOD có nhãn — chỉ làm reference |
 | **WOODS / SCONE (constrained, wild data)** | 2605.08618 | **không ổn định ở dataset vừa** (2605.08618) → P2 bỏ qua hoặc thử sau |
-| **Calibration local evidence (linear probe + patch)** | 2611.16373 | baseline few-shot cho 72 loài đuôi |
+| **Calibration local evidence (linear probe + patch)** | 2611.16373 | baseline few-shot cho 102 loài đuôi |
 | **Reject option tích hợp (SelectiveNet-style)** | 1901.09192 | so với threshold-naive (MSP/energy) |
 
 **Khuyến nghị P2 (trật tự chạy)**: MSP → energy (post-hoc + fine-tune) → temperature scaling → MC dropout → conformal APS/RAPS → (nâng cao) SelectiveNet-style reject. Bỏ WOODS/SCONE (không ổn định, chi phí). Deep Ensemble chỉ nếu so sánh cần.
@@ -81,14 +81,14 @@ Lưới baseline P2 nên chạy (ghép từ 7 bài + brief B):
 ## Khoảng trống mà P2 lấp được
 
 1. **Cặp dễ nhầm có nhãn an toàn**: chưa có benchmark "cặp loài cây thuốc dễ nhầm + mức nguy hiểm nếu nhầm" (độc/không dùng được). P2 bắt đầu từ Dây giác/Sục sạc (conflict ngày trong ViMeLeaf). *Cần chuyên gia dược gán nhãn nguy hiểm; nếu không, thu hẹp claim thành "đường risk–coverage trên cặp đã chọn, chưa gán an toàn" (theo brief B).*
-2. **Cây thuốc Việt Nam/ĐNA + đuôi dài 72 loài**: các bài trên (LifeCLEF Tây Âu, 2502.17289 Ấn Độ, 2605.08618 bệnh táo, 2507.06867 tổng quát, 2611.16373 bệnh) đều không cây thuốc Việt/ĐNA, không đuôi dài 72 loài <100 ảnh.
+2. **Cây thuốc Việt Nam/ĐNA + đuôi dài 102 loài**: các bài trên (LifeCLEF Tây Âu, 2502.17289 Ấn Độ, 2605.08618 bệnh táo, 2507.06867 tổng quát, 2611.16373 bệnh) đều không cây thuốc Việt/ĐNA, không đuôi dài 102 loài <100 ảnh (RES-42 audit: đếm từ manifest 195 thư mục, 102 loài <100 ảnh, 62102 ảnh).
 3. **OOD ảnh điện thoại (covariate shift)**: 2505.15008 (Know When to Abstain, brief B3) cùng hướng "selective + covariate shift" nhưng chưa cây. P2 đo OOD điện thoại (ảnh chụp thực địa) so với lab.
 4. **Ghép selective + an toàn (automation bias)**: brief B9 (2508.07617) cảnh báo "từ chối làm người dùng bỏ qua cảnh báo" (false negative +18%/+35% y khoa). P2 phải **đo hiệu ứng người dùng**, không chỉ AURC — nếu không reviewer hỏi "từ chối có làm bỏ lỡ cảnh báo độc không?".
 
 ## Phương pháp nên dùng làm baseline (tóm tắt)
 
 - **Backbone**: DINOv2/CLIP (theo brief) + linear probe (2611.16373).
-- **Từ chối**: MSP → energy (post-hoc + fine-tune, 2605.08618) → temperature scaling (1805.08206) → MC dropout (1705.08500) → conformal APS/RAPS (2507.06867, macro-coverage cho 72 loài) → SelectiveNet-style (1901.09192, nâng cao).
+- **Từ chối**: MSP → energy (post-hoc + fine-tune, 2605.08618) → temperature scaling (1805.08206) → MC dropout (1705.08500) → conformal APS/RAPS (2507.06867, macro-coverage cho 102 loài) → SelectiveNet-style (1901.09192, nâng cao).
 - **Thước đo**: AURC + selective risk@90% (1705.08500/1901.09192) + AUROC OOD + FPR95 (2605.08618) + conformal marginal/macro-coverage (2507.06867).
 - **OOD set near**: dùng "cặp dễ nhầm" (Dây giác↔Sục sạc) làm near-OOD (kiểu Flowers102 trong 2605.08618).
 - **An toàn**: gán nhãn nguy hiểm (chuyên gia dược) → đo risk khi nhầm đúng cặp nguy hiểm; thêm user study (B9) nếu có đối tượng.

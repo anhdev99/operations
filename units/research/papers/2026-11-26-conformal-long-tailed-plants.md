@@ -27,14 +27,14 @@ Phân loại **đuôi dài** (plant identification được nêu làm motivation
 - Conformal = prediction set (nhiều nhãn khả dĩ), khác "từ chối 0/1" (reject option) — P2 cần ghép cả hai.
 
 ## Liên quan ViMeLeaf Bài 2
-- **(a) Trùng một phần**: cùng "long-tail + cây + conformal" với P2 (đuôi dài 72 loài <100 ảnh). Nhưng P2 mới ở: (1) **cây thuốc Việt Nam** (không phải Pl@ntNet/iNat), (2) **cặp dễ nhầm có nhãn an toàn**, (3) **OOD điện thoại**, (4) kết hợp conformal với **selective reject + an toàn**.
-- **(b) Khoảng trống P2 lấp**: conformal trên dataset cây thuốc Việt + pair-easy-confused + OOD; đo macro-coverage cho loài hiếm (72 loài đuôi) thay vì chỉ marginal.
+- **(a) Trùng một phần**: cùng "long-tail + cây + conformal" với P2 (đuôi dài 102 loài <100 ảnh, RES-42). Nhưng P2 mới ở: (1) **cây thuốc Việt Nam** (không phải Pl@ntNet/iNat), (2) **cặp dễ nhầm có nhãn an toàn**, (3) **OOD điện thoại**, (4) kết hợp conformal với **selective reject + an toàn**.
+- **(b) Khoảng trống P2 lấp**: conformal trên dataset cây thuốc Việt + pair-easy-confused + OOD; đo macro-coverage cho loài hiếm (102 loài đuôi) thay vì chỉ marginal.
 - **(c) Rủi ro trùng**: **thấp** (khác dataset, khác mục tiêu an toàn). Nhưng **bắt buộc trích** vì cùng "conformal + long-tail + cây".
 - **(d) Baseline**: **conformal APS (adaptive prediction set) + RAPS (risk-adaptive)** — chính là 2 cái tên P2 hỏi (Q2: "conformal APS/RAPS"). Bài này + nền 1705.08500 cho P2 lưới: SR, MC-dropout, energy, temperature scaling, Deep Ensemble, conformal APS/RAPS. Đo **AURC + risk@coverage + coverage (conformal)**.
 
 ## Dùng được gì
 - **Conformal APS / RAPS** làm baseline từ chối cho P2 (đáp ứng Q2).
-- **Prevalence-adjusted softmax + macro-coverage** dùng khi P2 muốn đảm bảo 72 loài đuôi không bị bỏ khỏi prediction set.
+- **Prevalence-adjusted softmax + macro-coverage** dùng khi P2 muốn đảm bảo 102 loài đuôi không bị bỏ khỏi prediction set.
 - Pl@ntNet-300K làm dataset đối chứng (có thể so nếu P2 đủ dữ liệu).
 - Xác nhận "long-tail + conformal" là hướng đã có cho cây → P2 phải nêu phần mới (cây thuốc + an toàn + OOD).
 
