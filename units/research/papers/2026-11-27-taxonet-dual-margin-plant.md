@@ -113,3 +113,44 @@ Phân loại định danh cây (phân họ, chi, loài) phải xử lý đồng 
 ### Chưa kiểm chứng
 - Không xác nhận dataset sizes cụ thể (Appendix không có trong excerpt; có thể tra arXiv full)
 - Hierarchical loss details (nếu có) → cần review full paper
+
+## Phản biện (Critic)
+
+### 1. Tiêu đề, tác giả, năm, nơi đăng
+- ✓ Tiêu đề: "Dual-Margin Embedding for Fine-Grained Long-Tailed Plant Taxonomy" (đúng)
+- ✓ Tác giả: Cheng Yaw Low, Heejoon Koo, Jaewoo Park, Meeyoung Cha (đúng)
+- ✓ Năm: submitted Dec 2025, revised Apr 2026, arXiv:2512.18994v2 (đúng)
+- ✓ Nơi đăng: arXiv cs.CV (đúng)
+
+### 2. Dữ liệu và kết quả
+- ✓ Macro-averaged recall improvements: Google Auto-Arborist +6%, iNat-Plantae +3%, NAFlora-Mini +1% (trích từ abstract + paper, hợp lệ vs LDAM baseline)
+- ✓ Open-set recognition (AA-Central): TNR 91.28%, ACC 92.26% (con số ổn định, có phần hypothetical setup)
+- ✓ vs Gemini-2.5/GPT-4o: TaxoNet genus 95.96% vs Gemini 90.86%, species 83.21% vs Gemini 40.39% (con số lớn, cần cẩn thận khi trích—tiếng Việt bảng là "2× cao" nên chính xác)
+- ⚠️ Domain generalization (cross-region AA-Central→AA-West): TaxoNet R@1 64.43% thấp hơn LDAM 65.95%—Scholar ghi đúng "TaxoNet thua ở domain shift" nhưng cách ghi ("TaxoNet: 64.43% R@1, 48.10% recall" vs "LDAM: 65.95% R@1, 46.50% recall") có thể bị hiểu là TaxoNet toàn phần thua. Cần rõ ràng: **TaxoNet thua R@1 nhưng thắng recall (48.10% > 46.50%)**.
+
+### 3. Điểm mới của bài
+- ✓ Dual-margin loss (target + non-target adaptive) lần đầu → nới rộng AM-Softmax
+- ✓ Propositions 1–2 chứng minh lý thuyết (có công thức bounding)
+- ✓ Norm-guided sample selection (embedding norm proxy) → đơn vị, trong scope
+- ✓ Co-solving fine-grained + long-tailed + open-world (ba vấn đề đồng thời)
+- ✓ Vượt trội MLLM trên plant domain (Gemini, GPT-4o)
+- ⚠️ Cơ sở lý thuyết "không phải quy nạp" = chứng minh toán học (Propositions)—đúng nhưng cách ghi quá ngắn, không nêu rõ ranh giới với empirical claim.
+
+### 4. So với đề tài T2 (tính công bằng, không phóng đại/xem nhẹ rủi ro)
+- ✓ Fine-grained + long-tailed + open-world = trùng lõi T2 (không gán quá)
+- ✓ Metric macro-recall + TNR = phù hợp từ-chối (công bằng)
+- ⚠️ **Mô hình nền**: Scholar ghi "⚠️ Không dùng BioCLIP/DINOv2/CLIP"—lên kế hoạch T2 thêm foundation model là phương án hợp lệ, nhưng hiện tại TaxoNet (non-pretrained) vẫn thắng MLLM = chứng tỏ architecture (dual-margin + norm-guided) có lực → không cần đánh giá quá thấp.
+- ⚠️ **Cây thuốc nam**: "⚠️ Hàm ẩn, chưa formalize" (đúng)—nên curate subset nhưng chưa rõ NAFlora-Mini chiếm % nào trong eval.
+- ✓ Ảnh thực tế: iNat + herbarium đã cover, nhưng NAFlora (mẫu vật in vitro) khác với "ảnh ngoài thực tế" (đúng cảnh báo).
+- ✓ Khoảng trống (selective prediction, confidence calibration, hierarchical loss)—phân tích hợp lệ, không gán cho bài điều bài không làm.
+
+### 5. Confidence calibration & embedding norm
+- ⚠️ Scholar đề xuất embedding norm = confidence proxy, nhưng **paper không tường minh calibration**: chỉ có TNR @ TPR=95%, không có explicit Platt scaling, temperature scaling hay bất kỳ calibration check nào. Cần verify full paper Appendix (đã cắt).
+
+### Kết luận chung
+**⚠️** TaxoNet là bài thực tế, lý thuyết vững (Propositions 1–2), và giải quyết ba thách thức đồng thời (fine-grained + long-tailed + open-world). Scholar tóm tắt chính xác, nhưng có ba điểm cần cẩn thận khi lên kế hoạch T2:
+1. Domain shift: TaxoNet thua R@1 nhưng thắng recall → trade-off, không hoàn toàn thua.
+2. Foundation model: TaxoNet (non-pretrained) vẫn thắng Gemini/GPT-4o → nên thử kết hợp + margin loss thay vì chỉ finetune.
+3. Confidence calibration: Chưa rõ cơ chế chính xác (cần full Appendix)—T2 nên thêm bước này nếu dùng embedding norm cho "từ chối".
+
+**Điểm đánh giá**: ✓ / ⚠️ (kích hoạt được, cần rà soát chi tiết trước scale-up)
