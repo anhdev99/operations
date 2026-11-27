@@ -21,3 +21,13 @@ Dean thêm đề xuất từ các bài đã đọc: mục tiêu, dữ liệu, ba
 - Metric: Hit@1/Hit@3, MRR (so được với ShenNongDiet); **recall cảnh báo bắt buộc**, tỉ lệ khuyến nghị không phù hợp, độ chính xác từ chối (ba chỉ số tác giả đề xuất mà chưa làm); tỉ lệ truy vết bằng chứng; McNemar giữa (4) và (5), bootstrap 95% CI.
 - GPU: không bắt buộc nếu dùng LLM qua API và embedding nhỏ; nếu chạy LLM mở 7-8B hoặc embedding lớn cục bộ cần GPU khoảng 16-24 GB. Không fine-tune ở bước này.
 - Ghi chú: E1 và E2 chạy chung một KG và một bộ câu hỏi để tiết kiệm công gán nhãn.
+
+## E4 (T2) Từ chối khi không chắc trên cây thuốc nam dễ nhầm: mô hình nền + selective prediction so với TaxoNet
+
+- Nguồn: RES-53, bài TaxoNet (arXiv 2512.18994v2, `papers/2026-11-27-taxonet-dual-margin-plant.md`). Bài đã giải cùng lúc fine-grained + long-tailed + open-world bằng dual-margin loss và chọn mẫu theo norm embedding, nên rủi ro trùng phần phương pháp của T2 là cao. Bài không báo cáo calibration hay đường cong risk–coverage (Critic: chưa thấy trong phần đã đọc; chưa đối chiếu toàn văn). Giả thuyết đóng góp của T2 nên dịch sang: **từ chối có kiểm soát (selective prediction) trên cặp loài cây thuốc nam dễ nhầm, ảnh ngoài thực tế, dùng mô hình nền**.
+- Mục tiêu: so độ chính xác ở mức phủ cố định và khả năng từ chối loài chưa thấy giữa (i) mô hình nền + đầu phân loại thường, (ii) mô hình nền + dual-margin kiểu TaxoNet, (iii) (ii) + selective prediction/conformal.
+- Dữ liệu: ViMeLeaf / VNMedPlant-Clean (ảnh công bố được, đã loại supplement chưa rõ người chụp); tách riêng tập **cặp loài dễ nhầm** do người có chuyên môn duyệt; tập open-set bằng cách giữ lại một số loài khi huấn luyện. Không dùng ảnh/dữ liệu bệnh nhân.
+- Baseline: (1) BioCLIP zero-shot / linear probe; (2) DINOv2 + linear probe; (3) DINOv2/BioCLIP + LDAM; (4) + dual-margin TaxoNet (cài lại theo mô tả bài, chưa có mã thì ghi rõ); (5) (4) + ngưỡng softmax/norm, SelectiveNet hoặc conformal (APS).
+- Metric: macro-recall (so được với TaxoNet), top-1 trên tập cặp dễ nhầm; AURC và accuracy@coverage 80/90%; TNR@TPR95 và AUROC cho open-set; ECE trước/sau temperature scaling. Báo trung bình ± độ lệch chuẩn qua 3 seed.
+- GPU: có. Linear probe chạy được trên RTX 3060 12GB; fine-tune backbone ViT-B chạy trên Colab (chủ nhóm tự chạy).
+- Ghi chú: trước khi chạy, đối chiếu bảng số liệu toàn văn của TaxoNet (Critic mới kiểm được abstract) và tìm xem tác giả có công bố mã không.
