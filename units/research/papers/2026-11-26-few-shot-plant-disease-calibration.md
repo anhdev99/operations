@@ -31,14 +31,14 @@ Nhận dạng bệnh cây **few-shot** (ít nhãn/lớp) + **cross-domain**: CLI
 - Cross-domain 56.96% (21 lớp PlantDoc) — thấp so với in-domain, cho thấy generalisation vẫn yếu; P2 (điện thoại OOD) sẽ gặp tương tự.
 
 ## Liên quan ViMeLeaf Bài 2
-- **(a) Trùng một phần**: cùng "few-shot + cây + calibration" với P2 (đuôi dài 72 loài). Nhưng P2 mới ở: (1) **loài cây thuốc Việt** (không bệnh cây), (2) **cặp dễ nhầm có nhãn an toàn**, (3) **selective reject + risk–coverage**, (4) **OOD điện thoại**.
+- **(a) Trùng một phần**: cùng "few-shot + cây + calibration" với P2 (đuôi dài 102 loài, RES-42). Nhưng P2 mới ở: (1) **loài cây thuốc Việt** (không bệnh cây), (2) **cặp dễ nhầm có nhãn an toàn**, (3) **selective reject + risk–coverage**, (4) **OOD điện thoại**.
 - **(b) Khoảng trống P2 lấp**: few-shot **loài** (không bệnh) + an toàn khi nhầm + OOD điện thoại + từ chối.
 - **(c) Rủi ro trùng**: **thấp** (bệnh vs loài, không selective vs selective). Trích làm "few-shot cây + calibration đã có".
-- **(d) Baseline**: **calibration (local evidence) + linear probe trên CLIP/DINOv2** làm baseline cho 72 loài đuôi P2; so với conformal (2507.06867) + energy (2605.08618). Đo AURC/risk@coverage (P2 thêm phần selective bài này chưa có).
+- **(d) Baseline**: **calibration (local evidence) + linear probe trên CLIP/DINOv2** làm baseline cho 102 loài đuôi P2; so với conformal (2507.06867) + energy (2605.08618). Đo AURC/risk@coverage (P2 thêm phần selective bài này chưa có).
 
 ## Dùng được gì
 - **Calibration bằng patch evidence local + mô tả so sánh** làm kỹ thuật cho cặp giống nhau (Dây giác/Sục sạc: mô tả điểm khác biệt duy nhất).
-- **Linear probe + freeze encoder** = baseline nhẹ cho P2 (ít dữ liệu, 72 loài đuôi).
+- **Linear probe + freeze encoder** = baseline nhẹ cho P2 (ít dữ liệu, 102 loài đuôi).
 - Số đối chứng: 93.16%/79.30%/96.56% (in-domain 16-shot), 56.96% (cross-domain) — anchor "few-shot cây được nhưng cross-domain yếu".
 
 ## Mức chắc chắn

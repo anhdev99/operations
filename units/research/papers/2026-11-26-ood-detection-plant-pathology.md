@@ -29,7 +29,7 @@ OOD detection (tạo tín hiệu từ chối khi gặp ảnh ngoài phân bố) 
 ## Hạn chế
 - E3 (upper bound) đòi OOD có nhãn — hiếm đạt được trong thực tế.
 - WOODS/SCONE không ổn định ở dataset vừa (mục 4) — khó dùng.
-- Chỉ 5 lớp, apple foliar (một cây, một loại bệnh) — chưa cây thuốc, chưa đuôi dài 72 loài, chưa cặp dễ nhầm.
+- Chỉ 5 lớp, apple foliar (một cây, một loại bệnh) — chưa cây thuốc, chưa đuôi dài 102 loài, chưa cặp dễ nhầm.
 - Không đo selective risk–coverage (AURC) — chỉ AUROC/FPR95 (detection) chứ chưa "từ chối theo coverage".
 
 ## Liên quan ViMeLeaf Bài 2
