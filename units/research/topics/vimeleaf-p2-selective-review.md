@@ -88,7 +88,7 @@ Lưới baseline P2 nên chạy (ghép từ 7 bài + brief B):
 ## Phương pháp nên dùng làm baseline (tóm tắt)
 
 - **Backbone**: DINOv2/CLIP (theo brief) + linear probe (2611.16373).
-- **Từ chối**: MSP → energy (post-hoc + fine-tune, 2605.08618) → temperature scaling (1805.08206) → MC dropout (1705.08500) → conformal APS/RAPS (2507.06867, macro-coverage cho 102 loài) → SelectiveNet-style (1901.09192, nâng cao).
+- **Từ chối**: MSP → energy (post-hoc + fine-tune, 2605.08618) → temperature scaling (1706.04599) → MC dropout (1705.08500) → conformal APS/RAPS (2507.06867, macro-coverage cho 102 loài) → SelectiveNet-style (1901.09192, nâng cao).
 - **Thước đo**: AURC + selective risk@90% (1705.08500/1901.09192) + AUROC OOD + FPR95 (2605.08618) + conformal marginal/macro-coverage (2507.06867).
 - **OOD set near**: dùng "cặp dễ nhầm" (Dây giác↔Sục sạc) làm near-OOD (kiểu Flowers102 trong 2605.08618).
 - **An toàn**: gán nhãn nguy hiểm (chuyên gia dược) → đo risk khi nhầm đúng cặp nguy hiểm; thêm user study (B9) nếu có đối tượng.
