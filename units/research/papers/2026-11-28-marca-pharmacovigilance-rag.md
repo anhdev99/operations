@@ -109,3 +109,25 @@ MARCA:
 
 ## Mức chắc chắn
 **Toàn văn**. Đã đọc tóm tắt, kết quả, phương pháp, khoảng trống. Chưa đọc từng detail trong full text (methods section > 3 trang, supplementary experiments), nhưng những điểm chính đã rõ.
+
+## Phản biện (Critic)
+
+**✓ Tiêu đề, tác giả, năm, nơi đăng**: arXiv:2610.33279v1, Daisy Rae Lopez, Angela Boccia, Maurizio Sessa, 23 Oct 2026 — tồn tại, khớp tệp.
+
+**✓ Điểm mới**: 
+- Multi-agent RAG framework (literature + drug labels + clinical reasoning): χ → 79.4% causality agreement, process transparency qua rationales.
+- RAG vs non-RAG: Q10 cải thiện 100% vs 18.3% — số liệu ghi tại dòng 46, kiểm qua abstract arXiv (Q10 kappa = 0.922) ✓.
+- Benchmark FAERS Q1-Q2 2025 (1,562 DECs): hiện đại, lớn hợp lý cho evaluation.
+
+**✓ So với T3**: Scholar ghi rõ:
+- MARCA (flat retrieval + multi-agent) ≠ T3 (knowledge graph structure).
+- MARCA (English pharma) ≠ T3 (Vietnamese herbal + traditional medicine).
+- KG layer, Vietnamese terminology, structured contraindication rules → là gap cần T3 làm, không bị MARCA cover.
+- Rủi ro trùng: **thấp**.
+- Khuyến nghị giữ hướng T3, dùng MARCA làm baseline so sánh → chứng minh KG-RAG advantage. Có căn cứ.
+
+**⚠ Chú ý**: 
+- Q2, Q5 kappa thấp (0.269-0.491) → ngay MARCA còn struggle, T3 cần lưu ý evaluation metrics và expert consensus labeling.
+- RAG comparison retroactive trên 60 DECs → không establish prospective use; T3 nên planning ablation study đủ dữ liệu từ đầu, không retrospective.
+
+**Kết luận**: Bài phù hợp, Scholar đọc kỹ, trích dẫn thật, so T3 công bằng. Khuyến nghị: **Go** — T3 framework và baseline MARCA này sẽ tạo nền tốt.
